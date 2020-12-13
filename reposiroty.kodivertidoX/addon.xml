@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <addon id="reposiroty.kodivertidoX" name="Repositorio KODIvertiDO" version="1.0.0" provider-name="Mendelux">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="Repositorio KODIvertiDO">
+            <info compressed="false">https://raw.githubusercontent.com/mendelux/repositorioKodivertido/master/_repo/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/mendelux/repositorioKodivertido/master/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/mendelux/repositorioKodivertido/master/_repo/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Grupo KODIvertiDO</summary>
+            <description>Actualiza tu Addon KODIvertiDO X</description>
+            <platform>all</platform>
+    </extension>
+</addon>
