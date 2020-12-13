@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="reposiroty.kodivertidoX" name="KODIvertiDO Repo" version="1.1.0" provider-name="Mendelux">
+	<extension point="xbmc.addon.repository" name="KODIvertiDO official Repo">
+		<info compressed="false">http://perillas.mendelux.es/1xyz/repositorio/addons.xml</info>
+		<checksum>http://perillas.mendelux.es/1xyz/repositorio/addons.xml.md5</checksum>
+		<datadir zip="true">http://perillas.mendelux.es/1xyz/repositorio/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>KODIvertiDO official Repo</summary>
+   		<description lang="en">Instala el KODIvertiDO X</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
