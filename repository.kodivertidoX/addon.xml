@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="reposiroty.kodivertidoX" name="[B][COLOR lime]KODIvertiDO[/COLOR][COLOR lightblue] Repo[/COLOR][/B]" version="1.2" provider-name="Mendelux">
+<addon id="reposiroty.kodivertidoX" name="[B][COLOR lime]KODIvertiDO[/COLOR][COLOR lightblue] Repo[/COLOR][/B]" version="1.0" provider-name="Mendelux">
 	<extension point="xbmc.addon.repository" name="KODIvertiDO official Repo">
 		<info compressed="false">https://raw.githubusercontent.com/mendelux/repositorioKodivertido/master/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/mendelux/repositorioKodivertido/master/addons.xml.md5</checksum>
