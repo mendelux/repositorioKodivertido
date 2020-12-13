@@ -7,7 +7,7 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>KODIvertiDO official Repo</summary>
-   		<description lang="en">Instala el KODIvertiDO X</description>
+   		<description lang="en">Instala el Addon KODIvertiDO X</description>
 		<disclaimer></disclaimer>
 		<platform>all</platform>
 	</extension>
