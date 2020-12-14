@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon id="plugin.video.f4mTester" version="3.0.0" name="F4mTester" provider-name="Shani">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.video.F4mProxy" version="2.7.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+
+
+    <extension point="xbmc.addon.metadata">
+        <summary>f4mTester</summary>
+        <description></description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
   <addon id="plugin.video.kodivertido-X"
        name="KODIvertiDO X"
        version="1.0"
@@ -28,7 +45,7 @@
   </extension>
 </addon>
 
-    <addon id="repository.kodivertidoX" name="Repositorio KODIvertiDO" version="1.0.0" provider-name="Mendelux">
+    <addon id="repository.kodivertidoX" name="Repositorio KODIvertiDO" version="1.1.0" provider-name="Mendelux">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
