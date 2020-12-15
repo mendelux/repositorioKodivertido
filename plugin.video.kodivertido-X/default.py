@@ -558,24 +558,41 @@ def directs(params):
 
 def DailySport(params):
     url = params.get("url")
+    import ssl
+    try:
+        ssl._create_unverified_context
+    except AttributeError:
+        pass
+    else:
+        ssl._create_default_https_context = ssl._create_unverified_context    
     header = []
     header.append(["User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0"])
     read_url, read_header = plugintools.read_body_and_headers(url, headers=header)
     url = read_url.strip()
 
-    matches = re.findall(r'(?s)tr.*?td>(.*?)<.*?<td>(.+?)<|<td><a href="(.+?)">(.+?)<', url, re.DOTALL)
-    for time, title, url, day in matches:
-        plugintools . add_item ( action = "daily_1", title = "[B]" + "[COLOR lime]" + time + " " + "[/COLOR]" + "[COLOR yellow]" + title + "[/COLOR]" + day + "[/B]", url = url, thumbnail="https://i.imgur.com/xUvhv4k.jpg", folder = True )
+    matches = re.findall(r'colspan="5".*?center;">(.*?)<|tr>.*?\n.*?<td>(.*?)<.*?\n.*?<td>(.*?)<[\W\w]*?\<td.*?href="(.*?)">(.*?)<\/', url, re.DOTALL)
+    for time, title, title2, url, day in matches:
+        plugintools . add_item ( action = "daily_1", title = "[B]" + "[COLOR lime]" + time + " " + "[/COLOR]" + "[COLOR yellow]" + title + " " + title2 + "[/COLOR]" + day + "[/B]", url = url, thumbnail="https://i.imgur.com/xUvhv4k.jpg", folder = True )
         
 def daily_1 (params):
     url = "https://dailysport.site/" + params . get ( "url" )
+    import ssl
+    try:
+        ssl._create_unverified_context
+    except AttributeError:
+        pass
+    else:
+        ssl._create_default_https_context = ssl._create_unverified_context 
     header = [ ]
     header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0" ] )
     read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
     url = read_url . strip ( )        
-    matches =  re.findall(r'(?s)loader: engine.createLoaderClass.*?}\);.*?source:.*?window.atob.*?"(.+?)"', url, re.DOTALL)
+    matches =  re.findall(r"var player = new Clappr.Player\(\{\s.*?source: window.atob\('([^\']+)", url, re.DOTALL)
     for url in matches:
-         url = base64.b64decode(url)
+         try:
+            url = base64.b64decode(url)
+         except:
+             url = url   
          plugintools . add_item ( action = "resolve_without_resolveurl", title = "Ver Evento", url = url, thumbnail="https://i.imgur.com/GsOcanM.jpg", folder = False, isPlayable = True )
          
 

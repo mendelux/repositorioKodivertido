@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
   <addon id="plugin.video.kodivertido-X"
        name="KODIvertiDO X"
-       version="1.0"
+       version="1.1.0"
        provider-name="Grupo Kodidivertido">
   <requires>
 	  <import addon="script.module.beautifulsoup4" />
