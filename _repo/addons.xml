@@ -18,8 +18,8 @@
 </addon>
 
   <addon id="plugin.video.kodivertido-X"
-       name="KODIvertiDO X"
-       version="1.1.0"
+       name="[COLOR gold]KODIvertiDO[/COLOR][COLOR lime] X[/COLOR]"
+       version="1.2.0"
        provider-name="Grupo Kodidivertido">
   <requires>
 	  <import addon="script.module.beautifulsoup4" />
@@ -45,7 +45,7 @@
   </extension>
 </addon>
 
-    <addon id="repository.kodivertidoX" name="Repositorio KODIvertiDO" version="1.1.1" provider-name="Mendelux">
+    <addon id="repository.kodivertidoX" name="[COLOR gold]REpOsiTOriO[/COLOR][COLOR lime] KODIvertiDO[/COLOR]" version="1.2.0" provider-name="Mendelux">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>

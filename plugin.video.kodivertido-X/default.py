@@ -373,7 +373,7 @@ def deportes(params):
         action="DailySport",
         title="[COLOR yellow][B]Agenda DailySport[/B][/COLOR]",
         thumbnail="https://i.imgur.com/NCftJ3F.jpg",
-        url="https://dailysport.site/",
+        url="https://dailysport.website/",
         fanart="https://i.imgur.com/E7vzz9Q.jpg",
         folder=True)
     plugintools.add_item(
@@ -570,12 +570,12 @@ def DailySport(params):
     read_url, read_header = plugintools.read_body_and_headers(url, headers=header)
     url = read_url.strip()
 
-    matches = re.findall(r'colspan="5".*?center;">(.*?)<|tr>.*?\n.*?<td>(.*?)<.*?\n.*?<td>(.*?)<[\W\w]*?\<td.*?href="(.*?)">(.*?)<\/', url, re.DOTALL)
+    matches = re.findall(r'(?s)<td><b>(.*?)</b></td>|<tr>.*?<td>(.+?)</td>.*?<td>(.*?)</td>.*?<td><a href="(.*?)">(.*?)</a></td>', url, re.DOTALL)
     for time, title, title2, url, day in matches:
         plugintools . add_item ( action = "daily_1", title = "[B]" + "[COLOR lime]" + time + " " + "[/COLOR]" + "[COLOR yellow]" + title + " " + title2 + "[/COLOR]" + day + "[/B]", url = url, thumbnail="https://i.imgur.com/xUvhv4k.jpg", folder = True )
         
 def daily_1 (params):
-    url = "https://dailysport.site/" + params . get ( "url" )
+    url = "https://dailysport.website/" + params . get ( "url" )
     import ssl
     try:
         ssl._create_unverified_context
