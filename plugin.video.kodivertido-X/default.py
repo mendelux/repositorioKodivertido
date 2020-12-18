@@ -587,7 +587,7 @@ def daily_1 (params):
     header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0" ] )
     read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
     url = read_url . strip ( )        
-    matches =  re.findall(r"var player = new Clappr.Player\(\{\s.*?source: window.atob\('([^\']+)", url, re.DOTALL)
+    matches =  re.findall(r'(?s)loader: engine.createLoaderClass.*?}\);.*?source:.*?window.atob.*?"(.+?)"', url, re.DOTALL)
     for url in matches:
          try:
             url = base64.b64decode(url)
