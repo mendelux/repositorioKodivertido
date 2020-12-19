@@ -570,7 +570,7 @@ def DailySport(params):
     read_url, read_header = plugintools.read_body_and_headers(url, headers=header)
     url = read_url.strip()
 
-    matches = re.findall(r'(?s)<td><b>(.*?)</b></td>|<tr>.*?<td>(.+?)</td>.*?<td>(.*?)</td>.*?<td><a href="(.*?)">(.*?)</a></td>', url, re.DOTALL)
+    matches = re.findall(r'(?s)<td><b>(.+?)</b>|<td>(\d{1,2}.*?)<|<td>(\b.+?)</td>|<td><a href="(.+?)">(.+?)</a></td>', url, re.DOTALL)
     for time, title, title2, url, day in matches:
         plugintools . add_item ( action = "daily_1", title = "[B]" + "[COLOR lime]" + time + " " + "[/COLOR]" + "[COLOR yellow]" + title + " " + title2 + "[/COLOR]" + day + "[/B]", url = url, thumbnail="https://i.imgur.com/xUvhv4k.jpg", folder = True )
         
