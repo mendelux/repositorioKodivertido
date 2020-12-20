@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.The.Big.Bang" name="The Big Bang" version="0.0.1" provider-name="Hectobo Y David">
+  <requires>
+    <import addon="xbmc.python" version="2.26.0"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.requests-cache" />
+    <import addon="script.module.routing" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="main.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Bienvenido Al Big Bang</summary>
+    <description>Bienvenido Al Big Bang</description>
+    <disclaimer>ESTE ADDON NO CONTIENE ENLACES PROPIOS,SON RECOPILACIONES DE LA RED, SOLO SE CONECTA  A ESAS WEBS, ESTAS WEBS SON LAS RESPONSABLES DE LOS CONTENIDOS</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source>Fuentepalomitas.github.io</source>
+    <assets>
+    	<icon>icon.jpg</icon>
+    <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
