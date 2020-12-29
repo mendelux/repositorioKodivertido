@@ -19,7 +19,7 @@ import zipfile
 from xml.dom import minidom
 
 
-from Configparser import Configparser
+from ConfigParser import ConfigParser
 
 
 class Generator:
