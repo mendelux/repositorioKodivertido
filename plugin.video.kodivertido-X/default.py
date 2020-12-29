@@ -15,12 +15,14 @@ import xbmcplugin
 import requests, urllib2
 import base64
 import six
+
 myaddon = xbmcaddon.Addon()
 
 if six.PY2:
-    translatePath =  xbmc.translatePath
+    translatePath = xbmc.translatePath
 elif six.PY3:
- translatePath = xbmcvfs.translatePath 
+    translatePath = xbmcvfs.translatePath
+
 
 def log(message):
     xbmc.log(str(message), xbmc.LOGNOTICE)
@@ -44,35 +46,35 @@ def run():
 class Password:
     def __init__(self):
         self.password = plugintools.read("http://perillas.mendelux.es/password.txt").split('"')[1].split('"')[0]
-        self.profile = translatePath(xbmcaddon .Addon () .getAddonInfo ('profile')) if six.PY3 else translatePath(xbmcaddon .Addon () .getAddonInfo ('profile').decode("utf-8"))
-        self.passfile= self.profile+'clave.txt' 
-        
+        self.profile = translatePath(xbmcaddon.Addon().getAddonInfo('profile')) if six.PY3 else translatePath(
+            xbmcaddon.Addon().getAddonInfo('profile').decode("utf-8"))
+        self.passfile = self.profile + 'clave.txt'
+
     def check(self):
         global password_file
         if not os.path.isfile(self.passfile):
-                password = xbmcgui.Dialog().input('Introduzca la contraseña para entrar al Addon:')
-                if password == plugintools.read("http://perillas.mendelux.es/password.txt").split('"')[1].split('"')[0]:
-                        if not os.path.exists(self.profile): os.makedirs(self.profile)
-                        password_file= self.passfile
-                        f = open(password_file,'wb')
-                        f.write(password)
-                        return True
-                else:
-                        return False
-        else:
+            password = xbmcgui.Dialog().input('Introduzca la contraseña para entrar al Addon:')
+            if password == plugintools.read("http://perillas.mendelux.es/password.txt").split('"')[1].split('"')[0]:
+                if not os.path.exists(self.profile): os.makedirs(self.profile)
                 password_file = self.passfile
-                with open(self.passfile,'r') as f:
-                    password = f.read()
-                if password == plugintools.read("http://perillas.mendelux.es/password.txt").split('"')[1].split('"')[0]:
-                    return True
-                else:
-                    return False
- 
+                f = open(password_file, 'wb')
+                f.write(password)
+                return True
+            else:
+                return False
+        else:
+            password_file = self.passfile
+            with open(self.passfile, 'r') as f:
+                password = f.read()
+            if password == plugintools.read("http://perillas.mendelux.es/password.txt").split('"')[1].split('"')[0]:
+                return True
+            else:
+                return False
+
 
 def main_list(params):
-    
-    if Password().check()==True:
-        
+    if Password().check() == True:
+
         plugintools.add_item(
             action="",
             title="[COLOR gold][B]***********************************[/B][/COLOR]",
@@ -143,10 +145,10 @@ def main_list(params):
             fanart="https://i.imgur.com/bP8hAy7.jpg",
             folder=True)
     else:
-        xbmcgui .Dialog ().notification ('Info','Contraseña Incorrecta',xbmcgui .NOTIFICATION_ERROR ,4000 )
+        xbmcgui.Dialog().notification('Info', 'Contraseña Incorrecta', xbmcgui.NOTIFICATION_ERROR, 4000)
         os.remove(password_file)
-        main_list(params) 
-#  ###########################################  SUBMENUS   ###########################################
+        main_list(params)
+    #  ###########################################  SUBMENUS   ###########################################
 
 
 def kodivertido_tv(params):
@@ -393,7 +395,7 @@ def betas(params):
         thumbnail="https://i.imgur.com/SjSFzwc.jpg",
         url="http://perillas.mendelux.es/1xyz/kodivertido/videoclub",
         fanart="https://i.imgur.com/kdhPyKm.jpg",
-        folder=True)   
+        folder=True)
     plugintools.add_item(
         action="tv_betas",
         title="[B][LOWERCASE][CAPITALIZE][COLOR lime]*[COLOR turquoise][COLOR white] canales de la [COLOR gold]lista "
@@ -540,6 +542,7 @@ def kodivertido_taquillas(params):
                              thumbnail="https://i.imgur.com/yFFNYjF.jpg", fanart="https://i.imgur.com/GwEkCuA.jpg",
                              folder=False, isPlayable=True)
 
+
 # ########################################### DEPORTES Y DIRECTOS ###############################################
 
 
@@ -564,37 +567,42 @@ def DailySport(params):
     except AttributeError:
         pass
     else:
-        ssl._create_default_https_context = ssl._create_unverified_context    
+        ssl._create_default_https_context = ssl._create_unverified_context
     header = []
     header.append(["User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0"])
     read_url, read_header = plugintools.read_body_and_headers(url, headers=header)
     url = read_url.strip()
 
-    matches = re.findall(r'(?s)<td><b>(.+?)</b>|<td>(\d{1,2}.*?)<|<td>(\b.+?)</td>|<td><a href="(.+?)">(.+?)</a></td>', url, re.DOTALL)
+    matches = re.findall(r'(?s)<td><b>(.+?)</b>|<td>(\d{1,2}.*?)<|<td>(\b.+?)</td>|<td><a href="(.+?)">(.+?)</a></td>',
+                         url, re.DOTALL)
     for time, title, title2, url, day in matches:
-        plugintools . add_item ( action = "daily_1", title = "[B]" + "[COLOR lime]" + time + " " + "[/COLOR]" + "[COLOR fuchsia]" + title + "[/COLOR]" + " " + "[COLOR cyan]" + title2 + "[/COLOR]" + day + "[/B]", url = url, thumbnail="https://i.imgur.com/xUvhv4k.jpg", folder = True )
-        
-def daily_1 (params):
-    url = "https://dailysport.website/" + params . get ( "url" )
+        plugintools.add_item(action="daily_1",
+                             title="[B]" + "[COLOR lime]" + time + " " + "[/COLOR]" + "[COLOR fuchsia]" + title + "[/COLOR]" + " " + "[COLOR cyan]" + title2 + "[/COLOR]" + day + "[/B]",
+                             url=url, thumbnail="https://i.imgur.com/xUvhv4k.jpg", folder=True)
+
+
+def daily_1(params):
+    url = "https://dailysport.website/" + params.get("url")
     import ssl
     try:
         ssl._create_unverified_context
     except AttributeError:
         pass
     else:
-        ssl._create_default_https_context = ssl._create_unverified_context 
-    header = [ ]
-    header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0" ] )
-    read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
-    url = read_url . strip ( )        
-    matches =  re.findall(r'(?s)loader: engine.createLoaderClass.*?}\);.*?source:.*?window.atob.*?"(.+?)"', url, re.DOTALL)
+        ssl._create_default_https_context = ssl._create_unverified_context
+    header = []
+    header.append(["User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0"])
+    read_url, read_header = plugintools.read_body_and_headers(url, headers=header)
+    url = read_url.strip()
+    matches = re.findall(r'(?s)loader: engine.createLoaderClass.*?}\);.*?source:.*?window.atob.*?"(.+?)"', url,
+                         re.DOTALL)
     for url in matches:
-         try:
+        try:
             url = base64.b64decode(url)
-         except:
-             url = url   
-         plugintools . add_item ( action = "resolve_without_resolveurl", title = "Ver Evento", url = url, thumbnail="https://i.imgur.com/GsOcanM.jpg", folder = False, isPlayable = True )
-         
+        except:
+            url = url
+        plugintools.add_item(action="resolve_without_resolveurl", title="Ver Evento", url=url,
+                             thumbnail="https://i.imgur.com/GsOcanM.jpg", folder=False, isPlayable=True)
 
 
 def canalesd(params):
@@ -610,6 +618,7 @@ def canalesd(params):
                              title="[B][UPPERCASE][COLOR aquamarine]" + title + "[/COLOR][/UPPERCASE][/B]", url=url,
                              fanart=fanart, thumbnail=thumb, folder=False, isPlayable=True)
 
+
 # ###########################################  BETAS  ###############################################################
 
 
@@ -621,9 +630,10 @@ def videoclub(params):
     url = read_url.strip()
     matches = re.findall(r'(?s).*?tvg-name="(.*?)".*?tvg-logo="(.*?)".*?\n(.*?)\s', url, re.DOTALL)
     for title, thumb, url in matches:
-        plugintools.add_item(action="resolve_without_resolveurl", title="[B][UPPERCASE][COLOR chartreuse]" + title + "[/COLOR][/UPPERCASE][/B]", url=url, thumbnail=thumb,
+        plugintools.add_item(action="resolve_without_resolveurl",
+                             title="[B][UPPERCASE][COLOR chartreuse]" + title + "[/COLOR][/UPPERCASE][/B]", url=url,
+                             thumbnail=thumb,
                              fanart="https://i.imgur.com/GwEkCuA.jpg", folder=False, isPlayable=True)
-            
 
 
 def tv_betas(params):
@@ -637,7 +647,9 @@ def tv_betas(params):
         r'(?s).*?tvg-name="(.*?)".*?tvg-logo="(.*?)".*?group-title=".*?([A-Z]+ [A-Z]......).*?(http://listamy.com:8080/liHM1HdhS3/mWQ3MPr59p/.*?)\s',
         url, re.DOTALL)
     for title, thumb, title2, url in matches:
-        plugintools.add_item(action="resolve_without_resolveurl", title="[B][UPPERCASE][COLOR greenyellow]" + title2 + "[/COLOR][/UPPERCASE][/B]" + " " + "[B][UPPERCASE][COLOR magenta]" + title + "[/COLOR][/UPPERCASE][/B]", url=url, thumbnail=thumb,
+        plugintools.add_item(action="resolve_without_resolveurl",
+                             title="[B][UPPERCASE][COLOR greenyellow]" + title2 + "[/COLOR][/UPPERCASE][/B]" + " " + "[B][UPPERCASE][COLOR magenta]" + title + "[/COLOR][/UPPERCASE][/B]",
+                             url=url, thumbnail=thumb,
                              fanart="https://i.imgur.com/GwEkCuA.jpg", folder=False, isPlayable=True)
 
 
@@ -652,7 +664,9 @@ def deportes_betas(params):
         r'(?s).*?tvg-name="(.*?)".*?tvg-logo="(.*?)".*?group-title=".*?([A-Z]+ [A-Z]......).*?(http://listamy.com:8080/liHM1HdhS3/mWQ3MPr59p/.*?)\s',
         url, re.DOTALL)
     for title, thumb, title2, url in matches:
-        plugintools.add_item(action="resolve_without_resolveurl", title="[B][UPPERCASE][COLOR greenyellow]" + title2 + "[/COLOR][/UPPERCASE][/B]" + " " + "[B][UPPERCASE][COLOR magenta]" + title + "[/COLOR][/UPPERCASE][/B]", url=url, thumbnail=thumb,
+        plugintools.add_item(action="resolve_without_resolveurl",
+                             title="[B][UPPERCASE][COLOR greenyellow]" + title2 + "[/COLOR][/UPPERCASE][/B]" + " " + "[B][UPPERCASE][COLOR magenta]" + title + "[/COLOR][/UPPERCASE][/B]",
+                             url=url, thumbnail=thumb,
                              fanart="https://i2.wp.com/sportytell.com/wp-content/uploads/2019/11/Most-popular-sports-in-the-world-right-now.jpg?fit=1280%2C720&ssl=1",
                              folder=False, isPlayable=True)
 
@@ -666,7 +680,9 @@ def taquillas_betas(params):
 
     matches = re.findall(r'(?s).*?tvg-name="(.*?)".*?tvg-logo="(.*?)".*?(http.*?)\s', url, re.DOTALL)
     for title, thumb, url in matches:
-        plugintools.add_item(action="resolve_without_resolveurl", title="[B][UPPERCASE][COLOR greenyellow]" + title + "[/COLOR][/UPPERCASE][/B]", url=url, thumbnail="http://perillas.mendelux.es/1xyz/kodivertido/taquillas.png",
+        plugintools.add_item(action="resolve_without_resolveurl",
+                             title="[B][UPPERCASE][COLOR greenyellow]" + title + "[/COLOR][/UPPERCASE][/B]", url=url,
+                             thumbnail="http://perillas.mendelux.es/1xyz/kodivertido/taquillas.png",
                              fanart="https://i.imgur.com/E7vzz9Q.jpg",
                              folder=False, isPlayable=True)
 
@@ -678,9 +694,11 @@ def cochinos_betas(params):
     read_url, read_header = plugintools.read_body_and_headers(url, headers=header)
     url = read_url.strip()
 
-    matches = re.findall(r'(?s).*?tvg-name="(.*?)".*?(http://listamy.com:8080/liHM1HdhS3/mWQ3MPr59p/.*?)\s', url, re.DOTALL)
+    matches = re.findall(r'(?s).*?tvg-name="(.*?)".*?(http://listamy.com:8080/liHM1HdhS3/mWQ3MPr59p/.*?)\s', url,
+                         re.DOTALL)
     for title, url in matches:
-        plugintools.add_item(action="resolve_without_resolveurl", title="[B][UPPERCASE][COLOR greenyellow]" + title + "[/COLOR][/UPPERCASE][/B]", url=url,
+        plugintools.add_item(action="resolve_without_resolveurl",
+                             title="[B][UPPERCASE][COLOR greenyellow]" + title + "[/COLOR][/UPPERCASE][/B]", url=url,
                              thumbnail="https://i.imgur.com/29b9UAP.jpg", fanart="https://i.imgur.com/mxHSw8B.jpg",
                              folder=False, isPlayable=True)
 
@@ -771,6 +789,7 @@ def cuatrok1(params):
     log(matches)
     for title, url in matches:
         plugintools.add_item(action="elementum_gran", title=title, url=url, folder=False, isPlayable=True)
+
 
 # ########################################### PCTFenix  ###########################################
 

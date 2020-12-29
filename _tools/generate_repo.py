@@ -11,13 +11,15 @@
     This file is provided "as is", without any warranty whatsoever. Use as own risk
 """
 
-import os
-import hashlib
-import zipfile
-import shutil
 import datetime
+import hashlib
+import os
+import shutil
+import zipfile
 from xml.dom import minidom
-from ConfigParser import SafeConfigParser
+
+
+from Configparser import Configparser
 
 
 class Generator:
@@ -49,7 +51,7 @@ class Generator:
         self._generate_zip_files()
         self._copy_additional_files()
         # notify user
-        print "Finished updating addons xml, md5 files and zipping addons"
+        print("Finished updating addons xml, md5 files and zipping addons")
 
     def _pre_run(self):
 
@@ -70,7 +72,7 @@ class Generator:
         if os.path.isfile(addonid + os.path.sep + "addon.xml"):
             return
 
-        print "Create repository addon"
+        print("Create repository addon")
 
         with open(self.tools_path + os.path.sep + "template.xml", "r") as template:
             template_xml = template.read()
@@ -113,11 +115,11 @@ class Generator:
                     version = parent.getAttribute("version")
                     addonid = parent.getAttribute("id")
                 self._generate_zip_file(addon, version, addonid)
-            except Exception, e:
-                print e
+            except Exception as e:
+                print(e)
 
     def _generate_zip_file(self, path, version, addonid):
-        print "Generate zip file for " + addonid + " " + version
+        print("Generate zip file for " + addonid + " " + version)
         filename = path + "-" + version + ".zip"
         try:
             zip = zipfile.ZipFile(filename, 'w')
@@ -138,11 +140,11 @@ class Generator:
                 os.rename(self.output_path + addonid + os.path.sep + filename,
                     self.output_path + addonid + os.path.sep + filename + "." + datetime.datetime.now().strftime("%Y%m%d%H%M%S"))
             shutil.move(filename, self.output_path + addonid + os.path.sep + filename)
-        except Exception, e:
-            print e
+        except Exception as e:
+            print(e)
 
     def _generate_addons_file(self):
-        print "Generating addons.xml file"
+        print("Generating addons.xml file")
         # addon list
         addons = os.listdir(".")
         # final addons text
@@ -168,35 +170,35 @@ class Generator:
                     addon_xml += unicode(line.rstrip() + "\n", "utf-8")
                 # we succeeded so add to our final addons.xml text
                 addons_xml += addon_xml.rstrip() + "\n\n"
-            except Exception, e:
+            except Exception as e:
                 # missing or poorly formatted addon.xml
-                print "Excluding %s for %s" % (_path, e,)
+                print("Excluding %s for %s" % (_path, e,))
         # clean and add closing tag
         addons_xml = addons_xml.strip() + u"\n</addons>\n"
         # save file
         self._save_file(addons_xml.encode("utf-8"), file=self.output_path + "addons.xml")
 
     def _generate_md5_file(self):
-        print "Generating addons.xml.md5 file"
+        print("Generating addons.xml.md5 file")
         try:
             # create a new md5 hash
             m = hashlib.md5(open(self.output_path + "addons.xml").read()).hexdigest()
             # save file
             self._save_file(m, file=self.output_path + "addons.xml.md5")
-        except Exception, e:
+        except Exception as e:
             # oops
-            print "An error occurred creating addons.xml.md5 file!\n%s" % (e,)
+            print("An error occurred creating addons.xml.md5 file!\n%s" % (e,))
 
     def _save_file(self, data, file):
         try:
             # write data to the file
             open(file, "w").write(data)
-        except Exception, e:
+        except Exception as e:
             # oops
-            print "An error occurred saving %s file!\n%s" % (file, e,)
+            print("An error occurred saving %s file!\n%s" % (file, e,))
 
     def _copy_additional_files(self):
-        print "Copying changelogs, fanarts and icons"
+        print("Copying changelogs, fanarts and icons")
         global version, addonid
         try:
             # copy changelogs
@@ -205,21 +207,22 @@ class Generator:
             elif os.path.isfile(self.output_path + "changelog-" + version + ".txt"):
                 pass
         except Exception:
-            print "An error occurred while copying changelogs"
+            print("An error occurred while copying changelogs")
         try:
             if not os.path.isfile(self.output_path + addonid + "icon.png"):
                 shutil.copy(os.path.join(addonid + os.path.sep + "icon.png"), os.path.join(self.output_path + addonid + os.path.sep + "icon.png"))
             elif os.path.isfile(self.output_path + "icon.png"):
                 pass
         except Exception:
-            print "An error occurred while copying icons"
+            print("An error occurred while copying icons")
         try:
             if not os.path.isfile(self.output_path + addonid + "fanart.jpg"):
                 shutil.copy(os.path.join(addonid + os.path.sep + "fanart.jpg"), os.path.join(self.output_path + addonid + os.path.sep + "fanart.jpg"))
             elif os.path.isfile(self.output_path + "fanart.jpg"):
                 pass
         except Exception:
-            print "An error occurred while copying fanarts"
+            print("An error occurred while copying fanarts")
+
 
 if (__name__ == "__main__"):
     # start
