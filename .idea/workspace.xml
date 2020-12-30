@@ -2,111 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2818da07-459c-48ce-9fc0-79e6088f3b22" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-1.4.0.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/repositorioKodivertido.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/repositorioKodivertido.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X.1.4.0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/repository.kodivertidoX/repository.kodivertidoX-1.4.0.zip" beforeDir="false" afterPath="$PROJECT_DIR$/_repo/repository.kodivertidoX/repository.kodivertidoX-1.4.0.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_tools/generate_repo.py" beforeDir="false" afterPath="$PROJECT_DIR$/_tools/generate_repo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_tools/repo_prep.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.ArmageddonCleaner/Armageddon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.ArmageddonCleaner/Back.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.ArmageddonCleaner/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.ArmageddonCleaner/addon.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.ArmageddonCleaner/changelog.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.ArmageddonCleaner/default.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.ArmageddonCleaner/fanart.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.ArmageddonCleaner/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.ArmageddonCleaner/resources/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.ArmageddonCleaner/resources/libs/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.ArmageddonCleaner/resources/libs/wizard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.ArmageddonCleaner/resources/settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.ArmageddonCleaner/startup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.ArmageddonCleaner/uservar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/addon.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/changelog.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/credits.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/default.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/fanart.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/pyqrcode/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/pyqrcode/builder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/pyqrcode/png.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/pyqrcode/tables.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/art/ContentPanel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/art/fanart.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/libs/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/libs/autoexec.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/libs/debridit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/libs/downloader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/libs/extract.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/libs/loginit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/libs/notify.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/libs/skinSwitch.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/libs/speedtest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/libs/traktit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/libs/uploadLog.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/libs/wizard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/libs/yt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/libs/zfile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/1080i/APK.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/1080i/BuildUpdate.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/1080i/Contact.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/1080i/FirstRunBuild.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/1080i/FirstRunSaveData.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/1080i/LogViewer.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/1080i/Notifications.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/1080i/SpeedTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/1080i/Textbox.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/1080i/loguploader.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/1080i/main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Background/ContentPanel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Background/bgg2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Background/dialogheader.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Background/loguploader-black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Background/loguploader-dialog-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Background/loguploader-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Background/spmc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Button/DialogCloseButton-focus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Button/DialogCloseButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Button/KeyboardKey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Button/KeyboardKeyNF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Button/button-focus_grey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Button/button-focus_lightblue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Button/loguploader-dialogbutton-fo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Button/loguploader-dialogbutton-nofo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Button/scrollbar-V-background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Button/scrollbar-V-focus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Button/scrollbar-V.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Button/testbuttonfo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Button/testbuttonnf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/RadioButton/MenuItemFO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/RadioButton/MenuItemNF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/RadioButton/radiobutton-focus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/RadioButton/radiobutton-nofocus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Slider/osd_slider_nib.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Slider/osd_slider_nibNF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/Slider/slider1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/SpeedTest/bg_screen.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/SpeedTest/btn_start_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/ajax-loader-bar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/bg_screen.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/btn_start_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/btn_start_glow_active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/gauge_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/gauge_ic_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/ping_progress_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/ping_progress_glow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/recspeed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/speedtest_results_wtext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/skins/DefaultSkin/media/testing_ping.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/resources/tempaddon.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/startup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.BreakingBad/uservar.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +68,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\mende\AppData\Local\Programs\Python\Python39\python.exe" />
+      <option name="SDK_HOME" value="C:\AA_JAVI\addon kodivertido\REPOSITORIO\repositorioKodivertido\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/_tools" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -251,6 +149,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.create_repository" />
+      <item itemvalue="Python.generate_repo" />
+      <item itemvalue="Python.repo_prep" />
+      <item itemvalue="Python.repo_prep (1)" />
+      <item itemvalue="Python.repo_prep (2)" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.generate_repo" />
@@ -285,6 +190,8 @@
       <workItem from="1609270920006" duration="1120000" />
       <workItem from="1609273276432" duration="885000" />
       <workItem from="1609283615451" duration="2156000" />
+      <workItem from="1609285868173" duration="649000" />
+      <workItem from="1609287036824" duration="129000" />
     </task>
     <servers />
   </component>
@@ -301,6 +208,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -308,7 +216,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/generate_repo_py$repo_prep.coverage" NAME="repo_prep Coverage Results" MODIFIED="1609283988561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../kodivertidoRepoLocal" />
     <SUITE FILE_PATH="coverage/generate_repo_py$repo_prep__2_.coverage" NAME="repo_prep (2) Coverage Results" MODIFIED="1609284342485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/generate_repo_py$generate_repo.coverage" NAME="generate_repo Coverage Results" MODIFIED="1609285684288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_tools" />
+    <SUITE FILE_PATH="coverage/generate_repo_py$generate_repo.coverage" NAME="generate_repo Coverage Results" MODIFIED="1609287079641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_tools" />
     <SUITE FILE_PATH="coverage/generate_repo_py$repo_prep__1_.coverage" NAME="repo_prep (1) Coverage Results" MODIFIED="1609284073408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_tools" />
   </component>
 </project>
