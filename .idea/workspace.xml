@@ -1,69 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2818da07-459c-48ce-9fc0-79e6088f3b22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-1.4.0.zip.20201230011252" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/plugin.video.youtube/plugin.video.youtube-master-6.5.0.zip.20201230011252" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/repository.kodivertidoX/repository.kodivertidoX-1.4.0.zip.20201230011252" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.ArmageddonCleaner/script.ArmageddonCleaner-0.0.1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.BigBox.launcher/script.BigBox.launcher-1.3.zip.20201230011252" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.BreakingBad/script.BreakingBad-0.0.1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.The.Big.Bang/script.The.Big.Bang-0.0.1.zip.20201230011320" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.artwork.beef/script.artwork.beef-0.27.0.zip.20201230011252" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.common.plugin.cache/script.common.plugin.cache-2.5.8.zip.20201230011252" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.covenant.metadata/script.covenant.metadata-1.0.2.zip.20201230011252" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.extendedinfo/script.extendedinfo-5.6.0.zip.20201230011253" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.frequency.switcher/script.video.fswitch-2.1.1.zip.20201230011321" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.globalsearch/script.globalsearch-7.4.7.zip.20201230011254" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.kodispeedtest/script.kodispeedtest-0.0.5.zip.20201230011254" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.TvTap/script.module.TvTap-1.7.zip.20201230011309" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.aragon.net/script.module.aragon.net-1.0.zip.20201230011254" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.beautifulsoup4/script.module.beautifulsoup4-4.5.3.zip.20201230011254" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.certifi/script.module.certifi-2019.3.9.zip.20201230011254" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.cfscrape/script.module.cfscrape-1.9.4.4.zip.20201230011254" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.chardet/script.module.chardet-3.0.4.zip.20201230011255" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.dateutil/script.module.dateutil-2.5.3.zip.20201230011255" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.echo/script.module.echo-1.00.003.zip.20201230011255" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.httplib2/script.module.httplib2-0.8.0.zip.20201230011255" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.idna/script.module.idna-2.8.zip.20201230011256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.inputstreamhelper/script.module.inputstreamhelper-0.3.3.zip.20201230011256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.libtorrent/script.module.libtorrent-1.1.1g.zip.20201230011256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.liveresolver/script.module.liveresolver-0.1.50.zip.20201230011257" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.livestreamer/script.module.livestreamer-1.12.0.zip.20201230011258" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.mctools/script.module.mctools-1.5.0.zip.20201230011258" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.metahandler/script.module.metahandler-3.0.3.zip.20201230011258" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.mutagen/script.module.mutagen-1.41.1.zip.20201230011259" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.nanscrapers/script.module.nanscrapers-0.5.37.zip.20201230011300" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.neverwise/script.module.neverwise-master-1.1.0.zip.20201230011300" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.openscrapers/script.module.openscrapers-master-0.0.1.95.zip.20201230011302" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.parsedom/script.module.parsedom-2.5.2.zip.20201230011302" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.pyamf/script.module.pyamf-0.6.2.zip.20201230011303" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.pyrrent2http/script.module.pyrrent2http-0.9.8.zip.20201230011303" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.python.koding.aio/script.module.python.koding.aio-0.9.9.4.3.zip.20201230011303" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.python.requests/script.module.python.requests-2.16.3.zip.20201230011303" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.python.twitch/script.module.python.twitch-2.0.12.zip.20201230011304" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.pyxbmct/script.module.pyxbmct-1.2.0.zip.20201230011304" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.requests/script.module.requests-2.22.0.zip.20201230011304" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.resolveurl/script.module.resolveurl-5.0.42.zip.20201230011306" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.routing/script.module.routing-0.2.3.zip.20201230011306" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.simple.downloader/script.module.simple.downloader-1.9.5.zip.20201230011306" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.simpleplugin/script.module.simpleplugin-1.6.6.zip.20201230011306" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.six/script.module.six-1.13.0.zip.20201230011306" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.streamlink.base/script.module.streamlink.base-2018.02.07.zip.20201230011308" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.streamlink.crypto/script.module.streamlink.crypto-1.4.0.zip.20201230011309" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.t0mm0.common/script.module.t0mm0.common-2.1.2.zip.20201230011309" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.torrent.ts/script.module.torrent.ts-0.7.3.8.zip.20201230011309" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.torrent2http/script.module.torrent2http-0.2.8.zip.20201230011309" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.urllib3/script.module.urllib3-1.25.3.zip.20201230011309" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.urlresolver/script.module.urlresolver-5.0.63.zip.20201230011311" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.win_inet_pton/script.module.win_inet_pton-1.1.0.zip.20201230011311" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.module.youtube.dl/script.module.youtube.dl-18.425.0.zip.20201230011319" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.skin.helper.service/script.skin.helper.service-1.1.3.zip.20201230011319" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.skinshortcuts/script.skinshortcuts-1.0.18.zip.20201230011320" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/script.video.F4mProxy/script.video.F4mProxy-3.0.1.1.zip.20201230011320" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/service.xbmc.versioncheck/service.xbmc.versioncheck-0.5.8.zip.20201230011321" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/xbmc.python/xbmc.python-2.26.0.zip.20201230011321" beforeDir="false" />
-    </list>
+    <list default="true" id="2818da07-459c-48ce-9fc0-79e6088f3b22" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -249,7 +187,7 @@
       <workItem from="1609273276432" duration="885000" />
       <workItem from="1609283615451" duration="2156000" />
       <workItem from="1609285868173" duration="649000" />
-      <workItem from="1609287036824" duration="435000" />
+      <workItem from="1609287036824" duration="680000" />
     </task>
     <servers />
   </component>
