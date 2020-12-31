@@ -574,7 +574,7 @@ def kodivertido_taquillas2(params):
     read_url, read_header = plugintools.read_body_and_headers(url, headers=header)
     url = read_url.strip()
 
-    matches = re.findall(r'(?s)#EXTINF:-1.*?:(.*?)\n', url, re.DOTALL)
+    matches = re.findall(r'(?s)#EXTINF:-1.*?:(.*?)\n(.*?)\s', url, re.DOTALL)
     for title, url in matches:
         plugintools.add_item(action="resolve_without_resolveurl", title=title, url=url,
                              thumbnail="https://i.imgur.com/dQ8QClU.jpg", fanart="https://i.imgur.com/GwEkCuA.jpg",
