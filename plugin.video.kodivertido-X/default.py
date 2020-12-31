@@ -206,6 +206,28 @@ def kodivertido_tv(params):
                "-1280x720.jpg",
         folder=True)
 
+def kodivertido_taquillas(params):
+    plugintools.add_item(
+        action="kodivertido_taquillas1",
+        title="[COLOR lime][B]TAQUILLAS[/COLOR] [COLOR yellow]MOVISTAR[/B][/COLOR]",
+        thumbnail="http://perillas.mendelux.es/1xyz/kodivertido/taquillas.png",
+        url="http://perillas.mendelux.es/1xyz/kodivertido/taquillas1",
+        fanart="https://i.imgur.com/bP8hAy7.jpg",
+        folder=True)
+    plugintools.add_item(
+        action="kodivertido_taquillas2",
+        title="[COLOR lime][B]TAQUILLAS[/COLOR] [COLOR yellow]MOVISTAR 2[/B][/COLOR]",
+        thumbnail="http://perillas.mendelux.es/1xyz/kodivertido/taquillas.png",
+        url="http://perillas.mendelux.es/1xyz/kodivertido/taquillas2",
+        fanart="https://i.imgur.com/bP8hAy7.jpg",
+        folder=True)
+    plugintools.add_item(
+        action="kodivertido_taquillas3",
+        title="[COLOR lime][B]TAQUILLAS[/COLOR] [COLOR yellow]MOVISTAR 3[/B][/COLOR]",
+        thumbnail="http://perillas.mendelux.es/1xyz/kodivertido/taquillas.png",
+        url="http://perillas.mendelux.es/1xyz/kodivertido/taquillas3",
+        fanart="https://i.imgur.com/bP8hAy7.jpg",
+        folder=True)
 
 def cine_kodivertido(params):
     plugintools.add_item(  # GranTorrent
@@ -529,7 +551,10 @@ def kodivertido_cochinos(params):
 
 # ###########################################  TAQUILLAS  ###############################################################
 
-def kodivertido_taquillas(params):
+
+
+
+def kodivertido_taquillas1(params):
     url = params.get("url")
     header = []
     header.append(["User-Agent", "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"])
@@ -539,9 +564,34 @@ def kodivertido_taquillas(params):
     matches = re.findall(r'(?s)#EXTINF:-1,(.+?)\n.*?(.+?)\s', url, re.DOTALL)
     for title, url in matches:
         plugintools.add_item(action="resolve_without_resolveurl", title=title, url=url,
-                             thumbnail="https://i.imgur.com/yFFNYjF.jpg", fanart="https://i.imgur.com/GwEkCuA.jpg",
+                             thumbnail="https://i.imgur.com/dQ8QClU.jpg", fanart="https://i.imgur.com/GwEkCuA.jpg",
                              folder=False, isPlayable=True)
+        
+def kodivertido_taquillas2(params):
+    url = params.get("url")
+    header = []
+    header.append(["User-Agent", "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"])
+    read_url, read_header = plugintools.read_body_and_headers(url, headers=header)
+    url = read_url.strip()
 
+    matches = re.findall(r'(?s)#EXTINF:-1.*?:(.*?)\n', url, re.DOTALL)
+    for title, url in matches:
+        plugintools.add_item(action="resolve_without_resolveurl", title=title, url=url,
+                             thumbnail="https://i.imgur.com/dQ8QClU.jpg", fanart="https://i.imgur.com/GwEkCuA.jpg",
+                             folder=False, isPlayable=True)
+        
+def kodivertido_taquillas3(params):
+    url = params.get("url")
+    header = []
+    header.append(["User-Agent", "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"])
+    read_url, read_header = plugintools.read_body_and_headers(url, headers=header)
+    url = read_url.strip()
+
+    matches = re.findall(r'(?s)#EXTINF:-1.*?tvg-logo="([^"]+).*?,(.*?)\n(.*?)\s', url, re.DOTALL)
+    for thumb, title, url in matches:
+        plugintools.add_item(action="resolve_without_resolveurl", title=title, url=url,
+                             thumbnail=thumb, fanart="https://i.imgur.com/GwEkCuA.jpg",
+                             folder=False, isPlayable=True)        
 
 # ########################################### DEPORTES Y DIRECTOS ###############################################
 
