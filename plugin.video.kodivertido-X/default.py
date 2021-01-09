@@ -397,7 +397,7 @@ def deportes(params):
         action="DailySport",
         title="[COLOR yellow][B]Agenda DailySport[/B][/COLOR]",
         thumbnail="https://i.imgur.com/NCftJ3F.jpg",
-        url="https://dailysport.website/",
+        url="https://dailysport.cyou/",
         fanart="https://i.imgur.com/E7vzz9Q.jpg",
         folder=True)
     plugintools.add_item(
@@ -609,50 +609,85 @@ def directs(params):
                              url=url, fanart='https://i.imgur.com/E7vzz9Q.jpg', folder=False, isPlayable=True)
 
 
-def DailySport(params):
+
+def get_sucuri_cookie (data ): 
+    html = data
+    if not isinstance(html, str):
+        html = html.decode("utf-8", "strict")
+    if 'sucuri_cloudproxy_js' in html:
+        match = re.search(r"S\s*=\s*'([^']+)", html)
+        if match:
+            s = base64.b64decode(match.group(1))
+            if not isinstance(s, str):
+                s = s.decode("utf-8", "strict")
+            s = s.replace(' ', '')
+            s = re.sub(r'String\.fromCharCode\(([^)]+)\)', r'chr(\1)', s)
+            s = re.sub(r'\.slice\((\d+),(\d+)\)', r'[\1:\2]', s)
+            s = re.sub(r'\.charAt\(([^)]+)\)', r'[\1]', s)
+            s = re.sub(r'\.substr\((\d+),(\d+)\)', r'[\1:\1+\2]', s)
+            s = re.sub(r';location.reload\(\);', '', s)
+            s = re.sub(r'\n', '', s)
+            s = re.sub(r'document\.cookie', 'cookie', s)
+            cookie = ''
+            exec(s)
+            match = re.match('([^=]+)=(.*)', cookie)
+            if match:
+                return ({match.group(1): match.group(2)})
+            
+            
+def dailyy(url, cookies={}):
+    import re, requests
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:81.0) Gecko/20100101 Firefox/81.0",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3",
+        "Upgrade-Insecure-Requests": "1",
+        "Cache-Control": "max-age=0"} 
+    if cookies:
+        r = requests.get(url,headers=headers, cookies=cookies, verify=False)
+    else:
+        r = requests.get(url,headers=headers, verify=False)
+        contenido = r.content
+        return contenido  
+        
+                      
+def DailySport(params): 
+    plugintools.log("choposex.marcador ")    
+    plugintools.add_item(action="DailySport", title="[B][LOWERCASE][CAPITALIZE][COLOR fuchsia] agenda DailySport horarios[COLOR lime][/CAPITALIZE][/LOWERCASE][/B][/COLOR]",thumbnail="https://i.imgur.com/Vq1pYBs.jpg",url= "https://dailysport.pw/",fanart="https://i.imgur.com/py1aH72.jpg",folder=False ) 
+    plugintools.set_view(plugintools.LIST)
     url = params.get("url")
-    import ssl
-    try:
-        ssl._create_unverified_context
-    except AttributeError:
-        pass
-    else:
-        ssl._create_default_https_context = ssl._create_unverified_context
-    header = []
-    header.append(["User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0"])
-    read_url, read_header = plugintools.read_body_and_headers(url, headers=header)
-    url = read_url.strip()
+    web = urllib2.urlopen(urllib2.Request("https://pastebin.com/raw/UQ2qCnyX")).read()
+    s=''
+    local_remote = urllib2.urlopen(urllib2.Request("https://dailysport.cyou/")).read()
+ 
+    data = local_remote
+    import re, six, base64, requests
+    url=get_sucuri_cookie (data )
+    cookies = get_sucuri_cookie(dailyy(web, cookies=False))
+    url=dailyy(web, cookies)   
+    matches = plugintools.find_multiple_matches(url,'(?s)<td>\d\d.*?<.*?<td>.*?<|<a href="c.*?.php">.*?<')
+    for generos in matches: 
+        patron = plugintools.find_single_match(generos,'(?s)<td>(\d\d.*?)<.*?<td>(.*?)<|<a href="(c(.*?).php)">(.*?)<')
+        titulo = patron[0]  
+        titulo2 = patron[1]
+        canal = patron[4]
+        url = web+patron[2]
+        plugintools . add_item ( action = "marcadorlink" , title = "[B][LOWERCASE][CAPITALIZE][COLOR white]"+titulo+" [COLOR gold]"+canal+"  [COLOR aqua]" +titulo2+"[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", url = url, thumbnail =  '' , fanart='',  folder = False , isPlayable = True)        
 
-    matches = re.findall(r'(?s)<td><b>(.+?)</b>|<td>(\d{1,2}.*?)<|<td>(\b.+?)</td>|<td><a href="(.+?)">(.+?)</a></td>',
-                         url, re.DOTALL)
-    for time, title, title2, url, day in matches:
-        plugintools.add_item(action="daily_1",
-                             title="[B]" + "[COLOR lime]" + time + " " + "[/COLOR]" + "[COLOR fuchsia]" + title + "[/COLOR]" + " " + "[COLOR cyan]" + title2 + "[/COLOR]" + day + "[/B]",
-                             url=url, thumbnail="https://i.imgur.com/xUvhv4k.jpg", folder=True)
-
-
-def daily_1(params):
-    url = "https://dailysport.website/" + params.get("url")
-    import ssl
-    try:
-        ssl._create_unverified_context
-    except AttributeError:
-        pass
-    else:
-        ssl._create_default_https_context = ssl._create_unverified_context
-    header = []
-    header.append(["User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0"])
-    read_url, read_header = plugintools.read_body_and_headers(url, headers=header)
-    url = read_url.strip()
-    matches = re.findall(r'(?s)loader: engine.createLoaderClass.*?}\);.*?source:.*?window.atob.*?"(.+?)"', url,
-                         re.DOTALL)
-    for url in matches:
-        try:
-            url = base64.b64decode(url)
-        except:
-            url = url
-        plugintools.add_item(action="resolve_without_resolveurl", title="Ver Evento", url=url,
-                             thumbnail="https://i.imgur.com/GsOcanM.jpg", folder=False, isPlayable=True)
+def marcadorlink(params): 
+    plugintools.log("tvchopo.marcadorlink ")    
+ 
+    web = params.get("url")
+    local_remote = urllib2.urlopen(urllib2.Request("https://dailysport.cyou/")).read()
+ 
+    data = local_remote
+    import re, six, base64, requests
+    url=get_sucuri_cookie (data )
+    cookies = get_sucuri_cookie(dailyy(web, cookies=False))
+    url=dailyy(web, cookies) 
+    url9= plugintools.find_single_match(url,'(?s)p2pml.hlsjs.initClapprPlayer.*?var player = new Clappr.Player.*?window.atob."(.*?)"')
+    import base64
+    url= base64.b64decode(url9)
+    plugintools.play_resolved_url(url)
 
 
 def canalesd(params):
@@ -661,12 +696,9 @@ def canalesd(params):
     header.append(["User-Agent", "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"])
     read_url, read_header = plugintools.read_body_and_headers(url, headers=header)
     url = read_url.strip()
-    matches = re.findall(r'(?s)<title>.*?\[B](.*?)\[/B].*?<.*?url=(.*?)<.*?thumb.*?>(.*?)<.*?fan.*?>(.*?)<', url,
-                         re.DOTALL)
+    matches = re.findall(r'(?s)<title>.*?\[B](.*?)\[/B].*?<.*?url=(.*?)<.*?thumb.*?>(.*?)<.*?fan.*?>(.*?)<', url, re.DOTALL)
     for title, url, thumb, fanart in matches:
-        plugintools.add_item(action="resolve_without_resolveurl",
-                             title="[B][UPPERCASE][COLOR aquamarine]" + title + "[/COLOR][/UPPERCASE][/B]", url=url,
-                             fanart=fanart, thumbnail=thumb, folder=False, isPlayable=True)
+        plugintools.add_item(action="resolve_without_resolveurl", title="[B][UPPERCASE][COLOR aquamarine]" + title + "[/COLOR][/UPPERCASE][/B]", url=url, fanart=fanart, thumbnail=thumb, folder=False, isPlayable=True)
 
 
 # ###########################################  BETAS  ###############################################################
