@@ -652,7 +652,7 @@ def dailyy(url, cookies={}):
                       
 def DailySport(params): 
     plugintools.log("choposex.marcador ")    
-    plugintools.add_item(action="DailySport", title="[B][LOWERCASE][CAPITALIZE][COLOR fuchsia] agenda DailySport horarios[COLOR lime][/CAPITALIZE][/LOWERCASE][/B][/COLOR]",thumbnail="https://i.imgur.com/Vq1pYBs.jpg",url= "https://dailysport.pw/",fanart="https://i.imgur.com/py1aH72.jpg",folder=False ) 
+    plugintools.add_item(action="DailySport", title="[B][LOWERCASE][CAPITALIZE][COLOR fuchsia] agenda DailySport horarios[COLOR lime][/CAPITALIZE][/LOWERCASE][/B][/COLOR]",thumbnail="https://i.imgur.com/NCftJ3F.jpg",url= "https://dailysport.pw/",fanart="https://i.imgur.com/E7vzz9Q.jpg",folder=False ) 
     plugintools.set_view(plugintools.LIST)
     url = params.get("url")
     web = urllib2.urlopen(urllib2.Request("https://pastebin.com/raw/UQ2qCnyX")).read()
