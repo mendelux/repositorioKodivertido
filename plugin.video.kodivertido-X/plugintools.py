@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 #---------------------------------------------------------------------------
-# Plugin Tools v1.0.8
+# Plugin Tools v1.0.9
 #---------------------------------------------------------------------------
 # License: GPL (http://www.gnu.org/licenses/gpl-3.0.html)
 # Based on code from youtube, parsedom and pelisalacarta addons
-# Author: 
+# OrigAuthor: 
 # Jesús
 # tvalacarta@gmail.com
 # http://www.mimediacenter.info/plugintools
@@ -35,26 +35,28 @@
 # - Added set_view function
 # 1.0.8
 # - Added selector
+# 1.0.9
+# - Welcome Matrix
 #---------------------------------------------------------------------------
 
 import xbmc
 import xbmcplugin
 import xbmcaddon
 import xbmcgui
-
-import urllib
-import urllib2
 import re
 import sys
 import os
 import time
 import socket
-from StringIO import StringIO
+from io import BytesIO
 import gzip
-
+import six
+from six.moves import urllib_request
+from six.moves.urllib.parse import unquote_plus, quote_plus, urlencode
 module_log_enabled = False
 http_debug_log_enabled = False
-
+if six.PY3:
+    unicode = str
 LIST = "list"
 THUMBNAIL = "thumbnail"
 MOVIES = "movies"
@@ -137,7 +139,7 @@ def get_params():
                 if "=" in command:
                     split_command = command.split('=')
                     key = split_command[0]
-                    value = urllib.unquote_plus(split_command[1])
+                    value = unquote_plus(split_command[1])
                     commands[key] = value
                 else:
                     commands[command] = ""
@@ -149,17 +151,16 @@ def get_params():
 def read(url):
     _log("read "+url)
 
-    f = urllib2.urlopen(url)
+    f = urllib_request.urlopen(url)
     data = f.read()
     f.close()
-    
+    if not isinstance(data, str):
+        data = data.decode("utf-8", "strict")
     return data
 
 def read_body_and_headers(url, post=None, headers=[], follow_redirects=False, timeout=None):
-    _log("read_body_and_headers "+url)
+    xbmc.log("read_body_and_headers "+url, 2)
 
-    if post is not None:
-        _log("read_body_and_headers post="+post)
 
     if len(headers)==0:
         headers.append(["User-Agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:18.0) Gecko/20100101 Firefox/18.0"])
@@ -186,8 +187,8 @@ def read_body_and_headers(url, post=None, headers=[], follow_redirects=False, ti
         except ImportError:
             _log("read_body_and_headers ClientCookie not available")
             # ClientCookie isn't available either
-            urlopen = urllib2.urlopen
-            Request = urllib2.Request
+            urlopen = urllib_request.urlopen
+            Request = urllib_request.Request
         else:
             _log("read_body_and_headers ClientCookie available")
             # imported ClientCookie
@@ -198,8 +199,8 @@ def read_body_and_headers(url, post=None, headers=[], follow_redirects=False, ti
     else:
         _log("read_body_and_headers cookielib available")
         # importing cookielib worked
-        urlopen = urllib2.urlopen
-        Request = urllib2.Request
+        urlopen = urllib_request.urlopen
+        Request = urllib_request.Request
         cj = cookielib.MozillaCookieJar()
         # This is a subclass of FileCookieJar
         # that has useful load and save methods
@@ -223,15 +224,15 @@ def read_body_and_headers(url, post=None, headers=[], follow_redirects=False, ti
         # installed in the opener;
         # for fetching URLs
         if cookielib is not None:
-            _log("read_body_and_headers opener using urllib2 (cookielib)")
+            _log("read_body_and_headers opener using urllib_request (cookielib)")
             # if we use cookielib
             # then we get the HTTPCookieProcessor
-            # and install the opener in urllib2
+            # and install the opener in urllib_request
             if not follow_redirects:
-                opener = urllib2.build_opener(urllib2.HTTPHandler(debuglevel=http_debug_log_enabled),urllib2.HTTPCookieProcessor(cj),NoRedirectHandler())
+                opener = urllib_request.build_opener(urllib_request.HTTPHandler(debuglevel=http_debug_log_enabled),urllib_request.HTTPCookieProcessor(cj),NoRedirectHandler())
             else:
-                opener = urllib2.build_opener(urllib2.HTTPHandler(debuglevel=http_debug_log_enabled),urllib2.HTTPCookieProcessor(cj))
-            urllib2.install_opener(opener)
+                opener = urllib_request.build_opener(urllib_request.HTTPHandler(debuglevel=http_debug_log_enabled),urllib_request.HTTPCookieProcessor(cj))
+            urllib_request.install_opener(opener)
 
         else:
             _log("read_body_and_headers opener using ClientCookie")
@@ -246,12 +247,15 @@ def read_body_and_headers(url, post=None, headers=[], follow_redirects=False, ti
     # -------------------------------------------------
 
     # Contador
-    inicio = time.clock()
+    inicio = time.time()
+    
 
     # Diccionario para las cabeceras
     txheaders = {}
-
-    # Construye el request
+    if type(post) == dict: post = urlencode(post)
+    if post:
+        if isinstance(post, unicode):
+            post = post.encode('utf-8', 'strict')
     if post is None:
         _log("read_body_and_headers GET request")
     else:
@@ -263,7 +267,8 @@ def read_body_and_headers(url, post=None, headers=[], follow_redirects=False, ti
         _log("read_body_and_headers header %s=%s" % (str(header[0]),str(header[1])) )
         txheaders[header[0]]=header[1]
     _log("read_body_and_headers ---------------------------")
-
+    if post and six.PY3:
+        post = six.ensure_binary(post)
     req = Request(url, post, txheaders)
     if timeout is None:
         handle=urlopen(req)
@@ -282,11 +287,11 @@ def read_body_and_headers(url, post=None, headers=[], follow_redirects=False, ti
                 _log( "%s" % line )
     
     # Actualiza el almacén de cookies
-    cj.save(ficherocookies)
+    if cj:  cj.save(ficherocookies)
 
     # Lee los datos y cierra
     if handle.info().get('Content-Encoding') == 'gzip':
-        buf = StringIO( handle.read())
+        buf = BytesIO( handle.read())
         f = gzip.GzipFile(fileobj=buf)
         data = f.read()
     else:
@@ -306,28 +311,33 @@ def read_body_and_headers(url, post=None, headers=[], follow_redirects=False, ti
     '''
     # Lanza la petición
     try:
-        response = urllib2.urlopen(req)
+        response = urllib_request.urlopen(req)
     # Si falla la repite sustituyendo caracteres especiales
     except:
-        req = urllib2.Request(url.replace(" ","%20"))
+        req = urllib_request.Request(url.replace(" ","%20"))
     
         # Añade las cabeceras
         for header in headers:
             req.add_header(header[0],header[1])
-
-        response = urllib2.urlopen(req)
+        response = urllib_request.urlopen(req)
     '''
     
     # Tiempo transcurrido
-    fin = time.clock()
+    fin = time.time()
     _log("read_body_and_headers Downloaded in %d seconds " % (fin-inicio+1))
-    _log("read_body_and_headers body="+data)
-
+    if not isinstance(data, str):
+        try:
+            data = data.decode("utf-8", "strict")
+        except: data = str(data)    
     return data,returnheaders
 
-class NoRedirectHandler(urllib2.HTTPRedirectHandler):
+class NoRedirectHandler(urllib_request.HTTPRedirectHandler):
     def http_error_302(self, req, fp, code, msg, headers):
-        infourl = urllib.addinfourl(fp, headers, req.get_full_url())
+        try:
+            from urllib import addinfourl
+        except:
+            from six.moves.urllib import addinfourl    
+        infourl = addinfourl(fp, headers, req.get_full_url())
         infourl.status = code
         infourl.code = code
         return infourl
@@ -357,12 +367,15 @@ def find_single_match(text,pattern):
 
     return result
 
-def add_item( action="" , title="" , plot="" , url="" , thumbnail="" , fanart="" , show="" , episode="" , extra="", page="", info_labels = None, isPlayable = False , folder=True ):
+def add_item( action="" , title="" , plot="" , url="" , thumbnail="" , fanart="" , genre="", date="", credits="", show="" , episode="" , extra="", page="", sort=False, info_labels = None, isPlayable = False , folder=True ):
     _log("add_item action=["+action+"] title=["+title+"] url=["+url+"] thumbnail=["+thumbnail+"] fanart=["+fanart+"] show=["+show+"] episode=["+episode+"] extra=["+extra+"] page=["+page+"] isPlayable=["+str(isPlayable)+"] folder=["+str(folder)+"]")
 
-    listitem = xbmcgui.ListItem( title, iconImage="DefaultVideo.png", thumbnailImage=thumbnail )
+    listitem = xbmcgui.ListItem(title)
+    listitem.setArt({'poster': 'poster.png', 'banner': 'banner.png'})
+    listitem.setArt({'icon': thumbnail, 'thumb': thumbnail, 'poster': thumbnail,
+                    'fanart': fanart})
     if info_labels is None:
-        info_labels = { "Title" : title, "FileName" : title, "Plot" : plot }
+        info_labels = { "Title" : title, "FileName" : title, "Plot" : plot, "Genre": genre, "dateadded": date, "credits": credits }
     listitem.setInfo( "video", info_labels )
 
     if fanart!="":
@@ -376,12 +389,13 @@ def add_item( action="" , title="" , plot="" , url="" , thumbnail="" , fanart=""
     elif isPlayable:
         listitem.setProperty("Video", "true")
         listitem.setProperty('IsPlayable', 'true')
-        itemurl = '%s?action=%s&title=%s&url=%s&thumbnail=%s&plot=%s&extra=%s&page=%s' % ( sys.argv[ 0 ] , action , urllib.quote_plus( title ) , urllib.quote_plus(url) , urllib.quote_plus( thumbnail ) , urllib.quote_plus( plot ) , urllib.quote_plus( extra ) , urllib.quote_plus( page ))
+        itemurl = '%s?action=%s&title=%s&url=%s&thumbnail=%s&plot=%s&extra=%s&page=%s' % ( sys.argv[ 0 ] , action , quote_plus( title ) , quote_plus(url) , quote_plus( thumbnail ) , quote_plus( plot ) , quote_plus( extra ) , quote_plus( page ))
         xbmcplugin.addDirectoryItem( handle=int(sys.argv[1]), url=itemurl, listitem=listitem, isFolder=folder)
     else:
-        itemurl = '%s?action=%s&title=%s&url=%s&thumbnail=%s&plot=%s&extra=%s&page=%s' % ( sys.argv[ 0 ] , action , urllib.quote_plus( title ) , urllib.quote_plus(url) , urllib.quote_plus( thumbnail ) , urllib.quote_plus( plot ) , urllib.quote_plus( extra ) , urllib.quote_plus( page ))
+        itemurl = '%s?action=%s&title=%s&url=%s&thumbnail=%s&plot=%s&extra=%s&page=%s' % ( sys.argv[ 0 ] , action , quote_plus( title ) , quote_plus(url) , quote_plus( thumbnail ) , quote_plus( plot ) , quote_plus( extra ) , quote_plus( page ))
         xbmcplugin.addDirectoryItem( handle=int(sys.argv[1]), url=itemurl, listitem=listitem, isFolder=folder)
-
+    if sort:
+        xbmcplugin.addSortMethod(int(sys.argv[1]), xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
 def close_item_list():
     _log("close_item_list")
 
@@ -400,9 +414,9 @@ def direct_play(url):
     title = ""
 
     try:
-        xlistitem = xbmcgui.ListItem( title, iconImage="DefaultVideo.png", path=url)
+        xlistitem = xbmcgui.ListItem( title, path=url)
     except:
-        xlistitem = xbmcgui.ListItem( title, iconImage="DefaultVideo.png", )
+        xlistitem = xbmcgui.ListItem( title)
     xlistitem.setInfo( "video", { "Title": title } )
 
     playlist = xbmc.PlayList( xbmc.PLAYLIST_VIDEO )
@@ -424,7 +438,7 @@ def show_picture(url):
     local_file = os.path.join(local_folder,"temp.jpg")
 
     # Download picture
-    urllib.urlretrieve(url, local_file)
+    urllib_request.urlretrieve(url, local_file)
     
     # Show picture
     xbmc.executebuiltin( "SlideShow("+local_folder+")" )
