@@ -741,42 +741,36 @@ def hdrip(params):
     url = read_url.strip ()
 
     
-    matches = plugintools.find_multiple_matches(url,'(?s)<div class="imagen-post">.*?lazy-src=".*?"')              
+    matches = plugintools.find_multiple_matches(url,'(?s)class="imagen-post".*?href=".*?".*?lazy-src=".*?".*?inferior">..*?<')              
     next = plugintools.find_single_match ( url , '<link rel="next" href="([^"]+)"' )
     for match in matches:
-        patron = plugintools.find_single_match(match, r'(?s)class="imagen.*?href="(.*?nl/(.*?)/)".*?data-lazy-src="([^"]+)')
+        patron = plugintools.find_single_match(match, r'(?s)class="imagen-post".*?href="(.*?)".*?lazy-src="(.*?)".*?inferior">.(.*?)<')
         url = patron[0]  
-        title = patron[1]
-        thumb = patron[2]
+        title = patron[2]
+        thumb = patron[1]
         plugintools.add_item ( action = "hdrip1" , title = title , thumbnail = thumb , url = url , fanart = thumb , folder = True )
     plugintools.add_item ( action = "hdrip" , title = "PAGINA SIGUIENTE" , url = next , thumbnail = "https://i.imgur.com/cfwdN1c.jpg" , folder = True )
     
     
 def hdrip1(params):
     url = params.get ( "url" )
+    thumb = params.get ( "thumbnail" )
     request_headers = []
     request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
     read_url, response_headers = plugintools.read_body_and_headers ( url , headers = request_headers )
     url = read_url.strip ()
     
     
-    matches = plugintools.find_multiple_matches(url,'(?s).*?class="page".*?</p></div>')
-     
+    matches = plugintools.find_multiple_matches(url,'(?s)<tr class="lol">.*?\}')
+    plot =  plugintools.find_single_match(url,'(?s)active"><p>(.*?)<' )
     for match in matches:
-        patron = plugintools.find_single_match(match, r'(?s).*?<noscript><img src="([^"]+)".*?class="page">(.*?)<.*?class="tabcontent.*?<p>(.*?)<')
-        thumb = patron[0]  
-        title = patron[1]
-        info = patron[2]
-        plugintools.add_item ( action = "" , title = title , thumbnail = thumb , fanart = thumb , plot = info )
+        idioma = plugintools.find_single_match(match, r'(?s)<tr class="lol">.*?title="([^"]+)')
+        calidad = plugintools.find_single_match(match, r'(?s)<tr class="lol">.*?lazy-src=.*?<td>(.*?)<')
+        peso = plugintools.find_single_match(match, r'(?s)<tr class="lol">.*?lazy-src=.*?<td>.*?<.*?<td>(.*?)<')
+        url = plugintools.find_single_match(match, r"(?s)<tr class=.*?>.*?u:.*?'(.*?)'")
+        plugintools.add_item ( action = "link" , title = idioma + " " + calidad + " " + peso , thumbnail = thumb , url = url , fanart = thumb , plot = plot )
         
-    matches = plugintools.find_multiple_matches(url,'(?s).*?</td><td>.*?">Click Aquí<')
     
-    for match in matches:
-        patron2 = plugintools.find_single_match(match,'(?s).*?</td><td>(.*?)</td><td>(.*?)<.*?u=(.*?)"')
-        calidad = patron2[0]  
-        tan = patron2[1]
-        url = patron2[2]
-        plugintools.add_item ( action = "link" , title = calidad + tan , url = url , folder = False , isPlayable = True )   
 #    matches = re.findall ( r'(?s).*?<noscript><img src="([^"]+)".*?class="page">(.*?)<.*?class="tabcontent.*?<p>(.*?)<|.*?</td><td>(.*?)</td><td>(.*?)<.*?u=(.*?)"' , url , re.DOTALL )  #(?s).*?<title>(.*?)<|.*?<\/td><td>(.*?)<\/td><td>(.*?)<.*?href.*?u=(.*?)"
 #    for thumb , title , info , calidad , tam , url in matches:
 #        plugintools.add_item ( action = "link" , title = title + calidad + tam , thumbnail = thumb , url = url , plot = info , fanart = thumb , folder = True , isPlayable = True ) 
@@ -896,13 +890,13 @@ def grantorrent_search(params):
 
 #####################  REPRODUCTOR DE GRANTORRENT ##############
 
-def link(params): 
-    url = params.get ( "url" )
-    import re, six, base64, requests
-    #url = base64.b64encode( url )
-    url = (base64.b64decode(url.encode("utf-8", "strict"))).decode("utf-8", "strict")
-    plugintools.add_item ( action = "elementum" , title = "[B][COLOR lime]DESCARGAR[/COLOR][/B]" , url = url , folder = False , isPlayable = True )  
 
+def link(params):
+    import re, six, base64
+    url = params.get ( "url" )   
+    #url = (base64.b64decode(url).decode("utf-8"))
+    url = (base64.b64decode(url.encode("utf-8", "strict"))).decode("utf-8", "strict")
+    plugintools.add_item ( action = "elementum" , title = "[B][COLOR lime]REPRODUCIR" + "[/COLOR][/B]" , url = url , folder = False , isPlayable = True )
 
 
 
