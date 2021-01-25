@@ -718,16 +718,16 @@ def grantorrent(params):
 
     
 
-    plugintools.add_item(action = "hdrip" , title = "Grantorrent HDRip" , thumbnail = "https://i.imgur.com/uWqZDRQ.jpg" , url = "https://grantorrent.nl/categoria/HDRip-2/" , fanart = "https://i.ytimg.com/vi/7D82gt558g4/maxresdefault.jpg" , folder = True )
+    plugintools.add_item(action = "hdrip" , title = "[B][COLOR yellow]" + "Grantorrent HDRip" + "[/B][/COLOR]" , thumbnail = "https://i.imgur.com/uWqZDRQ.jpg" , url = "https://grantorrent.nl/categoria/HDRip-2/" , fanart = "https://i.ytimg.com/vi/7D82gt558g4/maxresdefault.jpg" , folder = True )
 
 
-    plugintools.add_item(action = "blueray" , title = "Grantorrent Bluray-1080p" , thumbnail = "https://i.imgur.com/uWqZDRQ.jpg" , url = "https://grantorrent.nl/categoria/BluRay-1080p/" , fanart = "https://i.ytimg.com/vi/7D82gt558g4/maxresdefault.jpg" , folder = True )
+    plugintools.add_item(action = "blueray" , title = "[B][COLOR yellow]" + "Grantorrent Bluray-1080p" + "[/B][/COLOR]" , thumbnail = "https://i.imgur.com/uWqZDRQ.jpg" , url = "https://grantorrent.nl/categoria/BluRay-1080p/" , fanart = "https://i.ytimg.com/vi/7D82gt558g4/maxresdefault.jpg" , folder = True )
 
 
-    plugintools.add_item(action = "cuatrok" , title = "Grantorrent 4K" , thumbnail = "https://i.imgur.com/uWqZDRQ.jpg" , url = "https://grantorrent.nl/categoria/4k-2/" , fanart = "https://i.ytimg.com/vi/7D82gt558g4/maxresdefault.jpg" , folder = True )
+    plugintools.add_item(action = "cuatrok" , title = "[B][COLOR yellow]" + "Grantorrent 4K" + "[/B][/COLOR]" , thumbnail = "https://i.imgur.com/uWqZDRQ.jpg" , url = "https://grantorrent.nl/categoria/4k-2/" , fanart = "https://i.ytimg.com/vi/7D82gt558g4/maxresdefault.jpg" , folder = True )
 
 
-    plugintools.add_item(action = "grantorrent_search" , title = "Buscar" , thumbnail = "https://i.imgur.com/uWqZDRQ.jpg" , url = "https://grantorrent.nl/?s=" , fanart = "https://i.ytimg.com/vi/7D82gt558g4/maxresdefault.jpg" , folder = True )
+    plugintools.add_item(action = "grantorrent_search" , title = "[B][COLOR yellow]" + "Buscar" + "[/B][/COLOR]" , thumbnail = "https://i.imgur.com/uWqZDRQ.jpg" , url = "https://grantorrent.nl/?s=" , fanart = "https://i.ytimg.com/vi/7D82gt558g4/maxresdefault.jpg" , folder = True )
 
 
 ######################  hdrip  ######################  hdrip  ######################  hdrip  ######################  hdrip  ######################  hdrip  ############################################  hdrip  ######################  hdrip  ######################  hdrip  ######################  hdrip  ######################  hdrip  ######################
@@ -749,7 +749,7 @@ def hdrip(params):
         title = patron[2]
         thumb = patron[1]
         plugintools.add_item ( action = "hdrip1" , title = title , thumbnail = thumb , url = url , fanart = thumb , folder = True )
-    plugintools.add_item ( action = "hdrip" , title = "PAGINA SIGUIENTE" , url = next , thumbnail = "https://i.imgur.com/cfwdN1c.jpg" , folder = True )
+    plugintools.add_item ( action = "hdrip" , title = "[B][COLOR lime]" + "PAGINA SIGUIENTE" + "[/B][/COLOR]" , url = next , thumbnail = "https://i.imgur.com/cfwdN1c.jpg" , folder = True )
     
     
 def hdrip1(params):
@@ -788,42 +788,34 @@ def blueray(params):
     url = read_url.strip ()
 
     
-    matches = plugintools.find_multiple_matches(url,'(?s)<div class="imagen-post">.*?lazy-src=".*?"')              
+    matches = plugintools.find_multiple_matches(url,'(?s)class="imagen-post".*?href=".*?".*?lazy-src=".*?".*?inferior">..*?<')              
     next = plugintools.find_single_match ( url , '<link rel="next" href="([^"]+)"' )
     for match in matches:
-        patron = plugintools.find_single_match(match, r'(?s)class="imagen.*?href="(.*?nl/(.*?)/)".*?data-lazy-src="([^"]+)')
+        patron = plugintools.find_single_match(match, r'(?s)class="imagen-post".*?href="(.*?)".*?lazy-src="(.*?)".*?inferior">.(.*?)<')
         url = patron[0]  
-        title = patron[1]
-        thumb = patron[2]
+        title = patron[2]
+        thumb = patron[1]
         plugintools.add_item ( action = "blueray1" , title = title , thumbnail = thumb , url = url , fanart = thumb , folder = True )
-    plugintools.add_item ( action = "blueray" , title = "PAGINA SIGUIENTE" , url = next , thumbnail = "https://i.imgur.com/cfwdN1c.jpg" , folder = True )
+    plugintools.add_item ( action = "blueray" , title = "[B][COLOR lime]" + "PAGINA SIGUIENTE" + "[/B][/COLOR]" , url = next , thumbnail = "https://i.imgur.com/cfwdN1c.jpg" , folder = True )
 
 
 def blueray1(params):
     url = params.get ( "url" )
+    thumb = params.get ( "thumbnail" )
     request_headers = []
     request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
     read_url, response_headers = plugintools.read_body_and_headers ( url , headers = request_headers )
     url = read_url.strip ()
     
-    
-    matches = plugintools.find_multiple_matches(url,'(?s).*?class="page".*?</p></div>')
      
+    matches = plugintools.find_multiple_matches(url,'(?s)<tr class="lol">.*?\}')
+    plot =  plugintools.find_single_match(url,'(?s)active"><p>(.*?)<' )
     for match in matches:
-        patron = plugintools.find_single_match(match, r'(?s).*?<noscript><img src="([^"]+)".*?class="page">(.*?)<.*?class="tabcontent.*?<p>(.*?)<')
-        thumb = patron[0]  
-        title = patron[1]
-        info = patron[2]
-        plugintools.add_item ( action = "" , title = title , thumbnail = thumb , fanart = thumb , plot = info )
-        
-    matches = plugintools.find_multiple_matches(url,'(?s).*?</td><td>.*?">Click Aquí<')
-    
-    for match in matches:
-        patron2 = plugintools.find_single_match(match,'(?s).*?</td><td>(.*?)</td><td>(.*?)<.*?u=(.*?)"')
-        calidad = patron2[0]  
-        tan = patron2[1]
-        url = patron2[2]
-        plugintools.add_item ( action = "link" , title = calidad + tan , url = url , folder = True , isPlayable = True )
+        idioma = plugintools.find_single_match(match, r'(?s)<tr class="lol">.*?title="([^"]+)')
+        calidad = plugintools.find_single_match(match, r'(?s)<tr class="lol">.*?lazy-src=.*?<td>(.*?)<')
+        peso = plugintools.find_single_match(match, r'(?s)<tr class="lol">.*?lazy-src=.*?<td>.*?<.*?<td>(.*?)<')
+        url = plugintools.find_single_match(match, r"(?s)<tr class=.*?>.*?u:.*?'(.*?)'")
+        plugintools.add_item ( action = "link" , title = idioma + " " + calidad + " " + peso , thumbnail = thumb , url = url , fanart = thumb , plot = plot )
 
 ######################  cuatrok  ######################  cuatrok  ######################  cuatrok  ######################  cuatrok  ######################  cuatrok  ######################
 
@@ -836,42 +828,34 @@ def cuatrok(params):
     url = read_url.strip ()
 
     
-    matches = plugintools.find_multiple_matches(url,'(?s)<div class="imagen-post">.*?lazy-src=".*?"')              
+    matches = plugintools.find_multiple_matches(url,'(?s)class="imagen-post".*?href=".*?".*?lazy-src=".*?".*?inferior">..*?<')              
     next = plugintools.find_single_match ( url , '<link rel="next" href="([^"]+)"' )
     for match in matches:
-        patron = plugintools.find_single_match(match, r'(?s)class="imagen.*?href="(.*?nl/(.*?)/)".*?data-lazy-src="([^"]+)')
+        patron = plugintools.find_single_match(match, r'(?s)class="imagen-post".*?href="(.*?)".*?lazy-src="(.*?)".*?inferior">.(.*?)<')
         url = patron[0]  
-        title = patron[1]
-        thumb = patron[2]
+        title = patron[2]
+        thumb = patron[1]
         plugintools.add_item ( action = "cuatrok1" , title = title , thumbnail = thumb , url = url , fanart = thumb , folder = True )
-    plugintools.add_item ( action = "blueray" , title = "PAGINA SIGUIENTE" , url = next , thumbnail = "https://i.imgur.com/cfwdN1c.jpg" , folder = True )
+    plugintools.add_item ( action = "cuatrok" , title = "[B][COLOR lime]" + "PAGINA SIGUIENTE" + "[/B][/COLOR]" , url = next , thumbnail = "https://i.imgur.com/cfwdN1c.jpg" , folder = True )
 
 
 def cuatrok1(params):
     url = params.get ( "url" )
+    thumb = params.get ( "thumbnail" )
     request_headers = []
     request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
     read_url, response_headers = plugintools.read_body_and_headers ( url , headers = request_headers )
     url = read_url.strip ()
     
-    
-    matches = plugintools.find_multiple_matches(url,'(?s).*?class="page".*?</p></div>')
      
+    matches = plugintools.find_multiple_matches(url,'(?s)<tr class="lol">.*?\}')
+    plot =  plugintools.find_single_match(url,'(?s)active"><p>(.*?)<' )
     for match in matches:
-        patron = plugintools.find_single_match(match, r'(?s).*?<noscript><img src="([^"]+)".*?class="page">(.*?)<.*?class="tabcontent.*?<p>(.*?)<')
-        thumb = patron[0]  
-        title = patron[1]
-        info = patron[2]
-        plugintools.add_item ( action = "" , title = title , thumbnail = thumb , fanart = thumb , plot = info )
-        
-    matches = plugintools.find_multiple_matches(url,'(?s).*?</td><td>.*?">Click Aquí<')
-    
-    for match in matches:
-        patron2 = plugintools.find_single_match(match,'(?s).*?</td><td>(.*?)</td><td>(.*?)<.*?u=(.*?)"')
-        calidad = patron2[0]  
-        tan = patron2[1]
-        url = patron2[2]
-        plugintools.add_item ( action = "link" , title = calidad + tan , url = url , folder = True , isPlayable = True )
+        idioma = plugintools.find_single_match(match, r'(?s)<tr class="lol">.*?title="([^"]+)')
+        calidad = plugintools.find_single_match(match, r'(?s)<tr class="lol">.*?lazy-src=.*?<td>(.*?)<')
+        peso = plugintools.find_single_match(match, r'(?s)<tr class="lol">.*?lazy-src=.*?<td>.*?<.*?<td>(.*?)<')
+        url = plugintools.find_single_match(match, r"(?s)<tr class=.*?>.*?u:.*?'(.*?)'")
+        plugintools.add_item ( action = "link" , title = idioma + " " + calidad + " " + peso , thumbnail = thumb , url = url , fanart = thumb , plot = plot )
         
         
 ######################  grantorrent_search  ######################  grantorrent_search  ######################  grantorrent_search  ######################  grantorrent_search  ######################  grantorrent_search  ######################        
@@ -883,9 +867,9 @@ def grantorrent_search(params):
     matches = re.findall ( r'(?s)class="imagen.*?href="(.*?nl/(.*?)/)".*?data-lazy-src="([^"]+)' , url , re.DOTALL )
     next = plugintools.find_single_match ( url , '(?s)<div class="nav-links">.*?next page-numbers" href="([^"]+)"' )
     for url , title , thumb in matches:
-        plugintools.add_item ( action = "hdrip1" , title = title , thumbnail = thumb , url = url , fanart = thumb ,
+        plugintools.add_item ( action = "hdrip1" , title ="[B][COLOR yellow]" + title + "[/B][/COLOR]", thumbnail = thumb , url = url , fanart = thumb ,
             folder = True )
-    plugintools.add_item ( action = "hdrip" , title = "PAGINA SIGUIENTE" , url = next ,
+    plugintools.add_item ( action = "hdrip" , title = "[B][COLOR lime]" + "PAGINA SIGUIENTE" + "[/B][/COLOR]" , url = next ,
         thumbnail = "https://i.imgur.com/cfwdN1c.jpg" , folder = True )        
 
 #####################  REPRODUCTOR DE GRANTORRENT ##############
@@ -896,7 +880,7 @@ def link(params):
     url = params.get ( "url" )   
     #url = (base64.b64decode(url).decode("utf-8"))
     url = (base64.b64decode(url.encode("utf-8", "strict"))).decode("utf-8", "strict")
-    plugintools.add_item ( action = "elementum" , title = "[B][COLOR lime]REPRODUCIR" + "[/COLOR][/B]" , url = url , folder = False , isPlayable = True )
+    plugintools.add_item ( action = "elementum" , title = "[B][COLOR lime]REPRODUCIR" + "[/COLOR][/B]" , url = url , thumbnail = "https://i.imgur.com/1VJQ5Qp.jpg" ,folder = False , isPlayable = True )
 
 
 
@@ -960,14 +944,14 @@ def fullbluray_1080p(params):
     read_url, response_headers = plugintools.read_body_and_headers ( url , headers = request_headers )
     url = read_url.strip ()
     
-    matches = plugintools.find_multiple_matches(url,r'(?s)<div class="mv-img">.*?</a>\n</div>')
+    matches = plugintools.find_multiple_matches(url,r'(?s).*?<div class="mv-img">.*?<img src="[^"]+.*?="[^"]+.*?href="[^"]+')
      
     for match in matches:
-        patron = plugintools.find_single_match(match, r'(?s).*?<div class="mv-img">\n<img src="([^"]+)".*?="([^"]+)".*?a href="([^"]+)"')
+        patron = plugintools.find_single_match(match, r'(?s).*?<div class="mv-img">.*?<img src="([^"]+).*?="([^"]+).*?href="([^"]+)')
         thumb = patron[0]  
         title = patron[1]
         url = patron[2]
-        plugintools.add_item (action = "fullbluray_1080p1" , title = title , url = url , thumbnail = (("https:") + thumb) , folder = True )
+        plugintools.add_item (action = "fullbluray_1080p1" , title ="[B][COLOR gold]" + title + "[/B][/COLOR]" , url = url , thumbnail = (("https:") + thumb) , folder = True )
 
 
 def fullbluray_1080p1(params):
@@ -982,7 +966,7 @@ def fullbluray_1080p1(params):
         patron = plugintools.find_single_match(match, r'(?s)"ctn-download-(.+?)".*?data-ut="(.+?)"')
         title = patron[0]  
         url = patron[1]
-        plugintools.add_item (action = "elementum_pctfenix1" , title = title , url = url , folder = False , isPlayable = True )
+        plugintools.add_item (action = "elementum_pctfenix1" , title = "[B][COLOR darkorange]" + title + "[/B][/COLOR]" , url = url , folder = False , isPlayable = True )
 
 
 ######################  bluray_1080p  ######################  bluray_1080p  ######################  bluray_1080p  ######################  bluray_1080p  ######################  bluray_1080p  ######################
@@ -1002,7 +986,7 @@ def bluray_1080p(params):
         thumb = patron[0]  
         title = patron[1]
         url = patron[2]
-        plugintools.add_item (action = "bluray_1080p1" , title = title , url = url , thumbnail = (("https:") + thumb) , folder = True )
+        plugintools.add_item (action = "bluray_1080p1" , title = "[B][COLOR gold]" + title + "[/B][/COLOR]" , url = url , thumbnail = (("https:") + thumb) , folder = True )
 
 
 def bluray_1080p1(params):
@@ -1017,7 +1001,7 @@ def bluray_1080p1(params):
         patron = plugintools.find_single_match(match, r'(?s)"ctn-download-(.+?)".*?data-ut="(.+?)"')
         title = patron[0]  
         url = patron[1]
-        plugintools.add_item (action = "elementum_pctfenix1" , title = title , url = url , folder = False , isPlayable = True )
+        plugintools.add_item (action = "elementum_pctfenix1" , title = "[B][COLOR darkorange]" + title + "[/B][/COLOR]" , url = url , folder = False , isPlayable = True )
 
 
 ######################  bluray_1080p  ######################  bluray_1080p  ######################  bluray_1080p  ######################  bluray_1080p  ######################  bluray_1080p  ######################
@@ -1037,7 +1021,7 @@ def dbremux_1080p(params):
         thumb = patron[0]  
         title = patron[1]
         url = patron[2]
-        plugintools.add_item (action = "dbremux_1080p1" , title = title , url = url , thumbnail = (("https:") + thumb) , folder = True )
+        plugintools.add_item (action = "dbremux_1080p1" , title = "[B][COLOR gold]" + title + "[/B][/COLOR]" , url = url , thumbnail = (("https:") + thumb) , folder = True )
 
 
 def dbremux_1080p1(params):
@@ -1052,7 +1036,7 @@ def dbremux_1080p1(params):
         patron = plugintools.find_single_match(match, r'(?s)"ctn-download-(.+?)".*?data-ut="(.+?)"')
         title = patron[0]  
         url = patron[1]
-        plugintools.add_item (action = "elementum_pctfenix1" , title = title , url = url , folder = False , isPlayable = True )
+        plugintools.add_item (action = "elementum_pctfenix1" , title = "[B][COLOR darkorange]" + title + "[/B][/COLOR]" , url = url , folder = False , isPlayable = True )
         
         
 ######################  cuatrok_uhdremux  ######################  cuatrok_uhdremux  ######################  cuatrok_uhdremux  ######################  cuatrok_uhdremux  ######################  cuatrok_uhdremux  ######################
@@ -1072,7 +1056,7 @@ def cuatrok_uhdremux(params):
         thumb = patron[0]  
         title = patron[1]
         url = patron[2]
-        plugintools.add_item (action = "cuatrok_uhdremux1" , title = title , url = url , thumbnail = (("https:") + thumb) , folder = True )
+        plugintools.add_item (action = "cuatrok_uhdremux1" , title = "[B][COLOR gold]" + title + "[/B][/COLOR]" , url = url , thumbnail = (("https:") + thumb) , folder = True )
 
 
 def cuatrok_uhdremux1(params):
@@ -1087,7 +1071,7 @@ def cuatrok_uhdremux1(params):
         patron = plugintools.find_single_match(match, r'(?s)"ctn-download-(.+?)".*?data-ut="(.+?)"')
         title = patron[0]  
         url = patron[1]
-        plugintools.add_item (action = "elementum_pctfenix1" , title = title , url = url , folder = False , isPlayable = True )
+        plugintools.add_item (action = "elementum_pctfenix1" , title = "[B][COLOR darkorange]" + title + "[/B][/COLOR]" , url = url , folder = False , isPlayable = True )
 
 
 ######################  cuatrok_uhdmicro  ######################  cuatrok_uhdmicro  ######################  cuatrok_uhdmicro  ######################  cuatrok_uhdmicro  ######################  cuatrok_uhdmicro  ######################
@@ -1107,7 +1091,7 @@ def cuatrok_uhdmicro(params):
         thumb = patron[0]  
         title = patron[1]
         url = patron[2]
-        plugintools.add_item (action = "cuatrok_uhdmicro1" , title = title , url = url , thumbnail = (("https:") + thumb) , folder = True )
+        plugintools.add_item (action = "cuatrok_uhdmicro1" , title = "[B][COLOR gold]" + title + "[/B][/COLOR]" , url = url , thumbnail = (("https:") + thumb) , folder = True )
 
 
 def cuatrok_uhdmicro1(params):
@@ -1122,7 +1106,7 @@ def cuatrok_uhdmicro1(params):
         patron = plugintools.find_single_match(match, r'(?s)"ctn-download-(.+?)".*?data-ut="(.+?)"')
         title = patron[0]  
         url = patron[1]
-        plugintools.add_item (action = "elementum_pctfenix1" , title = title , url = url , folder = False , isPlayable = True )
+        plugintools.add_item (action = "elementum_pctfenix1" , title = "[B][COLOR darkorange]" + title + "[/B][/COLOR]" , url = url , folder = False , isPlayable = True )
 
 
 ######################  cuatrok_uhdrip  ######################  cuatrok_uhdrip  ######################  cuatrok_uhdrip  ######################  cuatrok_uhdrip  ######################  cuatrok_uhdrip  ######################
@@ -1142,7 +1126,7 @@ def cuatrok_uhdrip(params):
         thumb = patron[0]  
         title = patron[1]
         url = patron[2]
-        plugintools.add_item (action = "cuatrok_uhdrip1" , title = title , url = url , thumbnail = (("https:") + thumb) , folder = True )
+        plugintools.add_item (action = "cuatrok_uhdrip1" , title = "[B][COLOR gold]" + title + "[/B][/COLOR]" , url = url , thumbnail = (("https:") + thumb) , folder = True )
 
 
 def cuatrok_uhdrip1(params):
@@ -1157,7 +1141,7 @@ def cuatrok_uhdrip1(params):
         patron = plugintools.find_single_match(match, r'(?s)"ctn-download-(.+?)".*?data-ut="(.+?)"')
         title = patron[0]  
         url = patron[1]
-        plugintools.add_item (action = "elementum_pctfenix1" , title = title , url = url , folder = False , isPlayable = True )
+        plugintools.add_item (action = "elementum_pctfenix1" , title = "[B][COLOR darkorange]" + title + "[/B][/COLOR]" , url = url , folder = False , isPlayable = True )
  
 
 ######################  cuatrok_webrip  ######################  cuatrok_webrip  ######################  cuatrok_webrip  ######################  cuatrok_webrip  ######################  cuatrok_webrip  ######################
@@ -1177,7 +1161,7 @@ def cuatrok_webrip(params):
         thumb = patron[0]  
         title = patron[1]
         url = patron[2]
-        plugintools.add_item (action = "cuatrok_webrip1" , title = title , url = url , thumbnail = (("https:") + thumb) , folder = True )
+        plugintools.add_item (action = "cuatrok_webrip1" , title = "[B][COLOR gold]" + title + "[/B][/COLOR]" , url = url , thumbnail = (("https:") + thumb) , folder = True )
 
 
 def cuatrok_webrip1(params):
@@ -1192,7 +1176,7 @@ def cuatrok_webrip1(params):
         patron = plugintools.find_single_match(match, r'(?s)"ctn-download-(.+?)".*?data-ut="(.+?)"')
         title = patron[0]  
         url = patron[1]
-        plugintools.add_item (action = "elementum_pctfenix1" , title = title , url = url , folder = False , isPlayable = True )
+        plugintools.add_item (action = "elementum_pctfenix1" , title = "[B][COLOR darkorange]" + title + "[/B][/COLOR]" , url = url , folder = False , isPlayable = True )
 
 
 ######################  full_uhdcuatrok  ######################  full_uhdcuatrok  ######################  full_uhdcuatrok  ######################  full_uhdcuatrok  ######################  full_uhdcuatrok  ######################
@@ -1212,7 +1196,7 @@ def full_uhdcuatrok(params):
         thumb = patron[0]  
         title = patron[1]
         url = patron[2]
-        plugintools.add_item (action = "full_uhdcuatrok1" , title = title , url = url , thumbnail = (("https:") + thumb) , folder = True )
+        plugintools.add_item (action = "full_uhdcuatrok1" , title = "[B][COLOR gold]" + title + "[/B][/COLOR]" , url = url , thumbnail = (("https:") + thumb) , folder = True )
 
 
 def full_uhdcuatrok1(params):
@@ -1227,7 +1211,7 @@ def full_uhdcuatrok1(params):
         patron = plugintools.find_single_match(match, r'(?s)"ctn-download-(.+?)".*?data-ut="(.+?)"')
         title = patron[0]  
         url = patron[1]
-        plugintools.add_item (action = "elementum_pctfenix1" , title = title , url = url , folder = False , isPlayable = True )
+        plugintools.add_item (action = "elementum_pctfenix1" , title = "[B][COLOR darkorange]" + title + "[/B][/COLOR]" , url = url , folder = False , isPlayable = True )
 
  
 ######################  microhd_1080p  ######################  microhd_1080p  ######################  microhd_1080p  ######################  microhd_1080p  ######################  microhd_1080p  ######################
@@ -1247,7 +1231,7 @@ def microhd_1080p(params):
         thumb = patron[0]  
         title = patron[1]
         url = patron[2]
-        plugintools.add_item (action = "microhd_1080p1" , title = title , url = url , thumbnail = (("https:") + thumb) , folder = True )
+        plugintools.add_item (action = "microhd_1080p1" , title = "[B][COLOR gold]" + title + "[/B][/COLOR]" , url = url , thumbnail = (("https:") + thumb) , folder = True )
 
 
 def microhd_1080p1(params):
@@ -1262,7 +1246,7 @@ def microhd_1080p1(params):
         patron = plugintools.find_single_match(match, r'(?s)"ctn-download-(.+?)".*?data-ut="(.+?)"')
         title = patron[0]  
         url = patron[1]
-        plugintools.add_item (action = "elementum_pctfenix1" , title = title , url = url , folder = False , isPlayable = True )    
+        plugintools.add_item (action = "elementum_pctfenix1" , title = "[B][COLOR darkorange]" + title + "[/B][/COLOR]" , url = url , folder = False , isPlayable = True )    
 
 
 ##-----------------cine_videoclub##-------------------cine_videoclub#-------------------#cine_videoclub#-----------------------------------------------------------

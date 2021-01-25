@@ -18,7 +18,7 @@
 </addon>
 
 <addon
-	id="plugin.video.kodivertido-X" version="3.5" name="[COLOR gold]KODIvertiDO[/COLOR][COLOR lime] X[/COLOR]" provider-name="Grupo KODIvertiDO">
+	id="plugin.video.kodivertido-X" version="4.0" name="[COLOR gold]KODIvertiDO[/COLOR][COLOR lime] X[/COLOR]" provider-name="Grupo KODIvertiDO">
 <requires>
     <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
@@ -133,7 +133,7 @@
     </extension>
 </addon>
 
-    <addon id="repository.kodivertidoX" name="[COLOR gold]REpOsiTOriO[/COLOR][COLOR lime] KODIvertiDO[/COLOR]" version="4.1.0" provider-name="Mendelux">
+    <addon id="repository.kodivertidoX" name="[COLOR gold]REpOsiTOriO[/COLOR][COLOR lime] KODIvertiDO[/COLOR]" version="4.5.0" provider-name="Mendelux">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
