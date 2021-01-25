@@ -61,6 +61,7 @@
       <change afterPath="$PROJECT_DIR$/_repo/script.video.F4mProxy/script.video.F4mProxy-3.0.1.1.zip.20210124193734" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/_repo/service.xbmc.versioncheck/service.xbmc.versioncheck-0.5.8.zip.20210124193735" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/_repo/xbmc.python/xbmc.python-2.26.0.zip.20210124193735" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_repo/addons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_repo/addons.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_repo/addons.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/_repo/addons.xml.md5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-3.1.zip" beforeDir="false" afterPath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-3.1.zip" afterDir="false" />
@@ -257,7 +258,7 @@
       <workItem from="1609434063816" duration="748000" />
       <workItem from="1610191564499" duration="1591000" />
       <workItem from="1610821432868" duration="183000" />
-      <workItem from="1611512492105" duration="969000" />
+      <workItem from="1611512492105" duration="1568000" />
     </task>
     <servers />
   </component>
