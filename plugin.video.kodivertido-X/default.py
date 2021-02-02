@@ -133,7 +133,7 @@ def main_list(params):
         plugintools.add_item(action = "kodivertido_tv" , title = "[COLOR lime][B]KODIvertiDO[/COLOR] [COLOR yellow]TV[/B][/COLOR]" , thumbnail = "http://perillas.mendelux.es/1xyz/kodivertido/tv.png" , url = "" , fanart = "https://i.imgur.com/bP8hAy7.jpg" , folder = True )
 
 
-        plugintools.add_item(action = "kodivertido_taquillas" , title = "[COLOR lime][B]TAQUILLAS[/COLOR] [COLOR yellow]MOVISTAR[/B][/COLOR]" , thumbnail = "http://perillas.mendelux.es/1xyz/kodivertido/taquillas.png" , url = "http://perillas.mendelux.es/1xyz/kodivertido/taquillas1" , fanart = "https://i.imgur.com/bP8hAy7.jpg" , folder = True )
+        plugintools.add_item(action = "kodivertido_iptv" , title = "[COLOR lime][B]LISTAS[/COLOR] [COLOR yellow] IPTV[/B][/COLOR]" , thumbnail = "https://i.imgur.com/5gKGBJv.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/lista_addon" , fanart = "https://i.imgur.com/mdBw4t6.jpg" , folder = True )
 
 
         plugintools.add_item(action = "cine_kodivertido" , title = "[COLOR lime][B]Cine [/B][/COLOR][COLOR aqua][B]KODI[/B][/COLOR][COLOR yellow][B]verti[/B][/COLOR][COLOR white][B]DO[/B][/COLOR]" , thumbnail = "https://cdn0.iconfinder.com/data/icons/film-making/49/10-512.png" , url = "" , fanart = "https://i.imgur.com/bP8hAy7.jpg" , folder = True )
@@ -357,6 +357,8 @@ def betas(params):
 
     plugintools.add_item (action = "cochinos_betas" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]*[COLOR turquoise][COLOR white] canales de la [COLOR gold]lista kodivertido COCHINOS[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/29b9UAP.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/cochinos_beta" , fanart = "https://i.imgur.com/mxHSw8B.jpg" , folder = True )
 
+
+    plugintools.add_item (action = "test_betas" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]*[COLOR turquoise][COLOR yellow] T [COLOR gold]E S T[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/29b9UAP.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/test_betas" , fanart = "https://i.imgur.com/mxHSw8B.jpg" , folder = True )
 
 
 
@@ -633,33 +635,33 @@ def kodivertido_cochinos(params):
 
 
 
-#########################################  TAQUILLAS   ###########################################   TAQUILLAS   ###########################################   TAQUILLAS   ####################################################################################  TAQUILLAS   ###########################################   TAQUILLAS   ###########################################   TAQUILLAS   ###########################################
-##-----------------kodivertido_TAQUILLAS##-------------------kodivertido_TAQUILLAS#-------------------#kodivertido_TAQUILLAS#-----------------------------------------------------------
-##-----------------kodivertido_TAQUILLAS##-------------------kodivertido_TAQUILLAS#-------------------#kodivertido_TAQUILLAS#-----------------------------------------------------------##-----------------kodivertido_TAQUILLAS##-------------------kodivertido_TAQUILLAS#-------------------#kodivertido_TAQUILLAS#-----------------------------------------------------------##-----------------kodivertido_TAQUILLAS##-------------------kodivertido_TAQUILLAS#-------------------#kodivertido_TAQUILLAS#-----------------------------------------------------------##-----------------kodivertido_TAQUILLAS##-------------------kodivertido_TAQUILLAS#-------------------#kodivertido_TAQUILLAS#-----------------------------------------------------------##-----------------kodivertido_TAQUILLAS##-------------------kodivertido_TAQUILLAS#-------------------#kodivertido_TAQUILLAS#-----------------------------------------------------------##-----------------kodivertido_TAQUILLAS##-------------------kodivertido_TAQUILLAS#-------------------#kodivertido_TAQUILLAS#-----------------------------------------------------------##-----------------kodivertido_TAQUILLAS##-------------------kodivertido_TAQUILLAS#-------------------#kodivertido_TAQUILLAS#-----------------------------------------------------------##-----------------kodivertido_TAQUILLAS##-------------------kodivertido_TAQUILLAS#-------------------#kodivertido_TAQUILLAS#-----------------------------------------------------------##-----------------kodivertido_TAQUILLAS##-------------------kodivertido_TAQUILLAS#-------------------#kodivertido_TAQUILLAS#-----------------------------------------------------------##-----------------kodivertido_TAQUILLAS##-------------------kodivertido_TAQUILLAS#-------------------#kodivertido_TAQUILLAS#-----------------------------------------------------------##-----------------kodivertido_TAQUILLAS##-------------------kodivertido_TAQUILLAS#-------------------#kodivertido_TAQUILLAS#-----------------------------------------------------------
-#########################################  TAQUILLAS   ###########################################   TAQUILLAS   ###########################################   TAQUILLAS   ####################################################################################  TAQUILLAS   ###########################################   TAQUILLAS   ###########################################   TAQUILLAS   ###########################################
+#########################################  IPTV   ###########################################   IPTV   ###########################################   IPTV   ####################################################################################  IPTV   ###########################################   IPTV   ###########################################   IPTV   ###########################################
+##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------
+##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------
+#########################################  IPTV   ###########################################   IPTV   ###########################################   IPTV   ####################################################################################  IPTV   ###########################################   IPTV   ###########################################   IPTV   ###########################################
 
 
 
 
 
-##-----------------kodivertido_taquillas1##-------------------kodivertido_taquillas1#-------------------#kodivertido_taquillas1#-----------------------------------------------------------
-##-----------------kodivertido_taquillas1##-------------------kodivertido_taquillas1#-------------------#kodivertido_taquillas1#-----------------------------------------------------------##-----------------kodivertido_taquillas1##-------------------kodivertido_taquillas1#-------------------#kodivertido_taquillas1#-----------------------------------------------------------##-----------------kodivertido_taquillas1##-------------------kodivertido_taquillas1#-------------------#kodivertido_taquillas1#-----------------------------------------------------------##-----------------kodivertido_taquillas1##-------------------kodivertido_taquillas1#-------------------#kodivertido_taquillas1#-----------------------------------------------------------##-----------------kodivertido_taquillas1##-------------------kodivertido_taquillas1#-------------------#kodivertido_taquillas1#-----------------------------------------------------------##-----------------kodivertido_taquillas1##-------------------kodivertido_taquillas1#-------------------#kodivertido_taquillas1#-----------------------------------------------------------##-----------------kodivertido_taquillas1##-------------------kodivertido_taquillas1#-------------------#kodivertido_taquillas1#-----------------------------------------------------------##-----------------kodivertido_taquillas1##-------------------kodivertido_taquillas1#-------------------#kodivertido_taquillas1#-----------------------------------------------------------##-----------------kodivertido_taquillas1##-------------------kodivertido_taquillas1#-------------------#kodivertido_taquillas1#-----------------------------------------------------------##-----------------kodivertido_taquillas1##-------------------kodivertido_taquillas1#-------------------#kodivertido_taquillas1#-----------------------------------------------------------##-----------------kodivertido_taquillas1##-------------------kodivertido_taquillas1#-------------------#kodivertido_taquillas1#-----------------------------------------------------------
+##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------
+##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------##-----------------kodivertido_IPTV##-------------------kodivertido_IPTV#-------------------#kodivertido_IPTV#-----------------------------------------------------------
 
 
-def kodivertido_taquillas1(params):
+def kodivertido_iptv(params):
     
 ##--------- CABECERA kodivertido_taquillas1-------------##--------- CABECERA kodivertido_taquillas1-------------##--------- CABECERA kodivertido_taquillas1-------------##--------- CABECERA kodivertido_taquillas1-------------##--------- CABECERA kodivertido_taquillas1-------------##--------- CABECERA kodivertido_taquillas1-------------##--------- CABECERA kodivertido_taquillas1-------------##--------- CABECERA kodivertido_taquillas1-------------##
     
-    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "http://perillas.mendelux.es/1xyz/kodivertido/taquillas.png" , fanart = "https://i.imgur.com/GwEkCuA.jpg" , folder = False )
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/5gKGBJv.jpg" , fanart = "https://i.imgur.com/mdBw4t6.jpg" , folder = False )
 
 
-    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]TA[COLOR yellow]QUI[COLOR greenyellow]LLAS 1[/B][/COLOR]" , thumbnail = "http://perillas.mendelux.es/1xyz/kodivertido/taquillas.png" , fanart = "https://i.imgur.com/GwEkCuA.jpg" , folder = False )
+    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]LISTA[COLOR yellow]QUI[COLOR greenyellow]IPTV 1[/B][/COLOR]" , thumbnail = "https://i.imgur.com/5gKGBJv.jpg" , fanart = "https://i.imgur.com/mdBw4t6.jpg" , folder = False )
 
 
-    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "http://perillas.mendelux.es/1xyz/kodivertido/taquillas.png" , fanart = "https://i.imgur.com/GwEkCuA.jpg" , folder = False )
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/5gKGBJv.jpg" , fanart = "https://i.imgur.com/mdBw4t6.jpg" , folder = False )
 
 
-    plugintools.add_item(action = "", title = "", thumbnail = "http://perillas.mendelux.es/1xyz/kodivertido/taquillas.png", fanart = "https://i.imgur.com/GwEkCuA.jpg", folder = False)
+    plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/5gKGBJv.jpg", fanart = "https://i.imgur.com/mdBw4t6.jpg", folder = False)
 
 
 
@@ -675,7 +677,7 @@ def kodivertido_taquillas1(params):
         patron = plugintools.find_single_match(match, r'(?s)#EXTINF:-1,(.+?)\n.*?(.+?)\s')
         title = patron[0]  
         url = patron[1]
-        plugintools.add_item (action = "resolve_without_resolveurl" , title = title , url = url , thumbnail = "http://perillas.mendelux.es/1xyz/kodivertido/taquillas.png" , fanart = "https://i.imgur.com/GwEkCuA.jpg" , folder = False , isPlayable = True )
+        plugintools.add_item (action = "resolve_without_resolveurl" , title = "[B][COLOR yellow]" + title + "[/COLOR][/B]" , url = url , thumbnail = "https://i.imgur.com/5gKGBJv.jpg" , fanart = "https://i.imgur.com/mdBw4t6.jpg" , folder = False , isPlayable = True )
        
         
 
@@ -1306,12 +1308,19 @@ def grantorrent_series_nor(params):
     
     url = params.get ( "url" )
     url = requests.get ( url ).text
-    matches = re.findall ( r'(?s)imagen-post">.*?href="(.+?.nl/series/(.*?)/)".*?src="(.+?)"' , url , re.DOTALL )
+    #matches = re.findall ( r'(?s)imagen-post">.*?href="(.+?.nl/series/(.*?)/)".*?src="(.+?)"' , url , re.DOTALL )
+    matches = plugintools.find_multiple_matches(url,r'(?s)imagen-post">.*?href=".+?.nl/series/.*?/".*?src=".+?"')
     next = plugintools.find_single_match ( url , '<link rel="next" href="([^"]+)"' )
     
-    for url , title , thumb in matches:
-        plugintools.add_item ( action = "grantorrent_series_nor2" , title = title , thumbnail = thumb , url = url , fanart = "https://i.imgur.com/3C0ZrFs.jpg" , folder = True )
-    plugintools.add_item ( action = "grantorrent_series_nor" , title = "PAGINA SIGUIENTE" , url = next , thumbnail = "https://i.imgur.com/cfwdN1c.jpg" , fanart = "https://i.imgur.com/3C0ZrFs.jpg" , folder = True )
+    for match in matches:
+        patron = plugintools.find_single_match(match, r'(?s)imagen-post">.*?href="(.+?.nl/series/(.*?)/)".*?src="(.+?)"')
+        url = patron[0]  
+        title = patron[1]
+        thumb = patron[2]
+        plugintools.add_item (action = "grantorrent_series_nor2" , title = "[B][COLOR darkorange]" + title + "[/B][/COLOR]" , thumbnail = thumb , url = url , fanart = "https://i.imgur.com/3C0ZrFs.jpg" , folder = True )    
+
+        #plugintools.add_item ( action = "grantorrent_series_nor2" , title = title , thumbnail = thumb , url = url , fanart = "https://i.imgur.com/3C0ZrFs.jpg" , folder = True )
+    plugintools.add_item ( action = "grantorrent_series_nor" , title = "[B][COLOR yellow]" +"PAGINA SIGUIENTE" + "[/B][/COLOR]" , url = next , thumbnail = "https://i.imgur.com/cfwdN1c.jpg" , fanart = "https://i.imgur.com/3C0ZrFs.jpg" , folder = True )
 
 
 def grantorrent_series_nor2(params):
@@ -1322,10 +1331,20 @@ def grantorrent_series_nor2(params):
     read_url, response_headers = plugintools.read_body_and_headers ( url , headers = request_headers )
     url = read_url.strip ()
 
-    matches = re.findall ( r'(?s)<div class="ima.*?<img src="([^"]+)".*?class="bold">Título original:\s(.*?)<.*?p>(.*?)<|<td><img src=".*?<td>(.*?)<.*?<td>(.*?)<.*?u=(.*?)"' , url , re.DOTALL )
-    
-    for thumb , title , info , cap , tam , url in matches:
-       plugintools.add_item ( action = "link1" , title = "[B][COLOR magenta]Titulo: [/COLOR][/B]" + title + " " + cap + " " + tam , plot = info , url = url , thumbnail = thumb , fanart = thumb , folder = True , isPlayable = False )
+    #matches = re.findall ( r'(?s)<div class="ima.*?<img src="([^"]+)".*?class="bold">Título original:\s(.*?)<.*?p>(.*?)<|<td><img src=".*?<td>(.*?)<.*?<td>(.*?)<.*?u=(.*?)"' , url , re.DOTALL )
+    #(?s)<div class="ima.*?<img src="([^"]+)".*?class="bold">Título original:\s(.*?)<.*?p>(.*?)<|<td><img src=".*?<td>(.*?)<.*?<td>(.*?)<.*?u.*?'(.*?)'
+    #for thumb , title , info , cap , tam , url in matches:
+       #plugintools.add_item ( action = "link1" , title = "[B][COLOR magenta]Titulo: [/COLOR][/B]" + title + " " + cap + " " + tam , plot = info , url = url , thumbnail = thumb , fanart = thumb , folder = True , isPlayable = False )
+    matches = plugintools.find_multiple_matches(url,r'(?s)<div class="ima.*?<img src="[^"]+".*?class="bold">Título original:\s.*?<.*?p>.*?<|<td><img src=".*?<td>.*?<.*?<td>.*?<.*?u.*?}')
+    for match in matches:
+        thumb = plugintools.find_single_match(match, r'(?s)<div class="ima.*?<img src="([^"]+)')
+        title = plugintools.find_single_match(match, r'(?s)>Título original:\s(.*?)<')
+        info = plugintools.find_single_match(match, r'(?s)>Título original:\s.*?<.*?p>(.*?)<')
+        capitulo = plugintools.find_single_match(match, r'(?s)<td><img src=".*?<td>(.*?)<')
+        peso = plugintools.find_single_match(match, r'(?s)<td><img src=".*?/td>.*?/td>.*?<td>(.*?)<')
+        url = plugintools.find_single_match(match, r"(?s)lol.*?u:.*?'([^']+)")
+        plugintools.add_item ( action = "resolve_without_resolveurl" , title = title , url = url , thumbnail = thumb , fanart = thumb , folder = False , isPlayable = True )
+
  
 
 def link1(params): 
@@ -1646,6 +1665,36 @@ def cochinos_betas(params):
         title = patron[0]
         url = patron[1]
         plugintools.add_item ( action = "resolve_without_resolveurl" , title = "[B][UPPERCASE][COLOR greenyellow]" + "* " + "[B][UPPERCASE][COLOR magenta]" + title + "[B][UPPERCASE][COLOR greenyellow]" + " *" + "[/COLOR][/UPPERCASE][/B]" , url = url , thumbnail = "https://i.imgur.com/29b9UAP.jpg" , fanart = "https://i.imgur.com/mxHSw8B.jpg" , folder = False , isPlayable = True )
+   
+   
+   
+   
+##-----------------TEST_betas##-------------------TEST_betas#-------------------#TEST_betas#-----------------------------------------------------------
+##-----------------TEST_betas##-------------------TEST_betas#-------------------#TEST_betas#-----------------------------------------------------------##-----------------TEST_betas##-------------------TEST_betas#-------------------#TEST_betas#-----------------------------------------------------------##-----------------TEST_betas##-------------------TEST_betas#-------------------#TEST_betas#-----------------------------------------------------------##-----------------TEST_betas##-------------------TEST_betas#-------------------#TEST_betas#-----------------------------------------------------------##-----------------TEST_betas##-------------------TEST_betas#-------------------#TEST_betas#-----------------------------------------------------------##-----------------TEST_betas##-------------------TEST_betas#-------------------#TEST_betas#-----------------------------------------------------------##-----------------TEST_betas##-------------------TEST_betas#-------------------#TEST_betas#-----------------------------------------------------------##-----------------TEST_betas##-------------------TEST_betas#-------------------#TEST_betas#-----------------------------------------------------------##-----------------TEST_betas##-------------------TEST_betas#-------------------#TEST_betas#-----------------------------------------------------------##-----------------TEST_betas##-------------------TEST_betas#-------------------#TEST_betas#-----------------------------------------------------------##-----------------TEST_betas##-------------------TEST_betas#-------------------#TEST_betas#-----------------------------------------------------------
+
+
+##--------- CABECERA TEST_betas-------------##--------- CABECERA TEST_betas-------------##--------- CABECERA TEST_betas-------------##--------- CABECERA TEST_betas-------------##--------- CABECERA TEST_betas-------------##--------- CABECERA TEST_betas-------------##--------- CABECERA TEST_betas-------------##--------- CABECERA TEST_betas-------------##
+ 
+  
+  
+  
+def test_betas(params):
+    
+    url = params.get ( "url" )
+    request_headers = []
+    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
+    read_url, response_headers = plugintools.read_body_and_headers ( url , headers = request_headers )
+    url = read_url.strip ()  
+  
+    matches = plugintools.find_multiple_matches ( url ,r'(?s)#EXTINF.*?http.*?\s' )
+    for match in matches:
+        patron = plugintools.find_single_match ( match , r'(?s)#EXTINF.*?name="([^"]+).*?logo.*?(http.*?)\s' )
+        title = patron[0]
+        url = patron[1]
+        
+        plugintools.add_item ( action = "resolve_without_resolveurl" , title = "[B][UPPERCASE][COLOR aqua]" + title + "[/COLOR][/UPPERCASE][/B]" , url = url , fanart = "https://i.imgur.com/mxHSw8B.jpg" , folder = False , isPlayable = True )
+  
+  
     
     
     
