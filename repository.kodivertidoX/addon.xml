@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <addon id="repository.kodivertidoX" name="[COLOR gold]REpOsiTOriO[/COLOR][COLOR lime] KODIvertiDO[/COLOR]" version="4.5.2" provider-name="Mendelux">
+    <addon id="repository.kodivertidoX" name="[COLOR gold]REpOsiTOriO[/COLOR][COLOR lime] KODIvertiDO[/COLOR]" version="4.5.4" provider-name="Mendelux">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
