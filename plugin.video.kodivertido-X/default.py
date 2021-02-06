@@ -315,7 +315,7 @@ def deportes(params):
     plugintools.add_item (action = "directs" , title = "[COLOR lime][B]Directos[/COLOR] [COLOR bluemarine]KODIvertiDO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E7vzz9Q.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/directos_dailysport" , fanart = "https://i.imgur.com/E7vzz9Q.jpg" , folder = True )
 
 
-    plugintools.add_item (action = "DailySport" , title = "[COLOR yellow][B]Agenda DailySport[/B][/COLOR]" , thumbnail = "https://i.imgur.com/NCftJ3F.jpg" , url = "https://dailysport.store/" , fanart = "https://i.imgur.com/E7vzz9Q.jpg" , folder = True )
+    plugintools.add_item (action = "DailySport" , title = "[COLOR yellow][B]Agenda DailySport[/B][/COLOR]" , thumbnail = "https://i.imgur.com/NCftJ3F.jpg" , url = "https://dailysport.monster/" , fanart = "https://i.imgur.com/E7vzz9Q.jpg" , folder = True )
 
 
     plugintools.add_item (action = "canalesd" , title = "[COLOR lime][B]Canales Deportivos[/B][/COLOR]" , thumbnail = "https://img96.xooimage.com/files/f/1/0/canales-3f3a25c.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/canalesdeportivos" , fanart = "https://i.imgur.com/E7vzz9Q.jpg" , folder = True )
@@ -1506,7 +1506,7 @@ def DailySport(params):
 
 def daily_1(params):
     
-    url = "https://dailysport.store/" + params.get("url")
+    url = "https://dailysport.monster/" + params.get("url")
     request_headers = []
     request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
     read_url, response_headers = plugintools.read_body_and_headers ( url , headers = request_headers )
