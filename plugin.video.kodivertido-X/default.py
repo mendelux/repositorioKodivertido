@@ -730,7 +730,7 @@ def iptv2(params):
     read_url, response_headers = plugintools.read_body_and_headers ( url , headers = request_headers )
     url = read_url.strip ()
     
-    matches = re.findall(r'(?s).*?tvg-name="([^"]+).+?logo="([^"]+).+?title="([^"]+).*?\n(.*?)\n', url, re.DOTALL)
+    matches = re.findall(r'(?s).*?tvg-name=".*?:(.*?)".+?logo="([^"]+).+?title="([^"]+).*?\n(.*?)\n', url, re.DOTALL)
  
     for title2, thumb, title1, url in matches: 
         plugintools.add_item (action = "resolve_without_resolveurl" , title = "[B][COLOR yellow]" + title1 + "[B][COLOR aqua]" + " " + title2 + "[/COLOR][/B]" , url = url , thumbnail = thumb , fanart = "https://i.imgur.com/mdBw4t6.jpg" , folder = False , isPlayable = True )        
