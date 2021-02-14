@@ -685,17 +685,29 @@ def iptv1(params):
 
     plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/5gKGBJv.jpg", fanart = "https://i.imgur.com/mdBw4t6.jpg", folder = False)
 
-   
-    url = params.get ( "url" )
-    request_headers = []
-    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
-    read_url, response_headers = plugintools.read_body_and_headers ( url , headers = request_headers )
-    url = read_url.strip ()
+    import urllib
+     
+    url3 = params.get("url")
+    request_headers=[]
+    request_headers.append(["User-Agent","Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"])
+    body,response_headers = plugintools.read_body_and_headers( url3, headers=request_headers)
+    url = body.strip()
     
-    matches = re.findall(r'(?s).*?name="([^"]+).*?\s(http.*?)\n', url, re.DOTALL)
- 
-    for title, url in matches:
-       plugintools.add_item (action = "resolve_without_resolveurl" , title = "[B][COLOR yellow]" + title +"[/COLOR][/B]" , url = url, thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/mdBw4t6.jpg" , folder = False , isPlayable = True )        
+    #matches = re.findall(r'(?s).*?tvg-name=".*?:(.*?)".+?logo="([^"]+).+?title="([^"]+).*?\n(.*?)\n', url, re.DOTALL)
+    matches = plugintools.find_multiple_matches(url,r'(?s)#EXTINF.+?name=".+?\:.*?".*?logo="[^"]+.*?\n.*?\s')
+    
+    #for title2, thumb, title, url in matches:
+    for generos in matches:
+        patron = plugintools.find_single_match(generos,r'(?s)#EXTINF.+?name=".+?\:(.*?)".*?logo="([^"]+).*?\n(.*?)\s')
+        title = patron[0]
+        thumb = patron[1]
+        url = patron[2]
+        server = plugintools.find_single_match(url,'http://(.*?):.*?/')
+        import socket
+        equipo_remoto = server
+        servidor= socket.gethostbyname(equipo_remoto) 
+        url=url.replace(server,servidor)   
+        plugintools.add_item (action = "resolve_without_resolveurl" , title = "[B][COLOR yellow]" + title + "[/COLOR][/B]" , url = url, thumbnail = thumb , fanart = "https://i.imgur.com/mdBw4t6.jpg" , folder = False , isPlayable = True )        
 
     '''
     matches = plugintools.find_multiple_matches(url,r'(?s)#EXTINF:.*?\n.*?\s')
