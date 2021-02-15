@@ -358,7 +358,7 @@ def betas(params):
     plugintools.add_item (action = "cochinos_betas" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]*[COLOR turquoise][COLOR white] canales de la [COLOR gold]lista kodivertido COCHINOS[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/29b9UAP.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/cochinos_beta" , fanart = "https://i.imgur.com/mxHSw8B.jpg" , folder = True )
 
 
-    plugintools.add_item (action = "test_betas" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]*[COLOR turquoise][COLOR yellow] T [COLOR gold]E S T[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/29b9UAP.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/test_betas" , fanart = "https://i.imgur.com/mxHSw8B.jpg" , folder = True )
+    #plugintools.add_item (action = "test_betas" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]*[COLOR turquoise][COLOR yellow] T [COLOR gold]E S T[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/29b9UAP.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/test_betas" , fanart = "https://i.imgur.com/mxHSw8B.jpg" , folder = True )
 
 
 
@@ -1727,12 +1727,18 @@ def cochinos_betas(params):
     read_url, response_headers = plugintools.read_body_and_headers ( url , headers = request_headers )
     url = read_url.strip ()
     
-    matches = plugintools.find_multiple_matches ( url ,r'(?s)#EXTINF:.*?\n.*?\s' )
+    matches = plugintools.find_multiple_matches ( url ,r'(?s)#EXTINF.+?name=".*?".*?logo=".*?"+.*?\n.*?\s' )
     for match in matches:
-        patron = plugintools.find_single_match ( match , r'(?s)#EXTINF:.*?,(.*?)\n(.*?)\s' )
+        patron = plugintools.find_single_match ( match , r'(?s)#EXTINF.+?name="(.*?)".*?logo="(.*?)"+.*?\n(.*?)\s' )
         title = patron[0]
-        url = patron[1]
-        plugintools.add_item ( action = "resolve_without_resolveurl" , title = "[B][UPPERCASE][COLOR greenyellow]" + "* " + "[B][UPPERCASE][COLOR magenta]" + title + "[B][UPPERCASE][COLOR greenyellow]" + " *" + "[/COLOR][/UPPERCASE][/B]" , url = url , thumbnail = "https://i.imgur.com/29b9UAP.jpg" , fanart = "https://i.imgur.com/mxHSw8B.jpg" , folder = False , isPlayable = True )
+        url = patron[2]
+        thumb = patron[1]
+        if thumb.startswith("http://"):
+            thumb= thumb 
+        else:
+            thumb = "https://i.imgur.com/29b9UAP.jpg"  
+                 
+        plugintools.add_item ( action = "resolve_without_resolveurl" , title = "[B][UPPERCASE][COLOR greenyellow]" + "* " + "[B][UPPERCASE][COLOR magenta]" + title + "[B][UPPERCASE][COLOR greenyellow]" + " *" + "[/COLOR][/UPPERCASE][/B]" , url = url , thumbnail = thumb , fanart = "https://i.imgur.com/mxHSw8B.jpg" , folder = False , isPlayable = True )
    
    
    
