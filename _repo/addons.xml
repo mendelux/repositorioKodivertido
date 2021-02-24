@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
 <addon
-	id="plugin.video.kodivertido-X" version="7.1" name="[COLOR gold]KODIvertiDO[/COLOR][COLOR lime] X[/COLOR]" provider-name="Grupo KODIvertiDO">
+	id="plugin.video.kodivertido-X" version="7.2" name="[COLOR gold]KODIvertiDO[/COLOR][COLOR lime] X[/COLOR]" provider-name="Grupo KODIvertiDO">
 <requires>
     <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
@@ -30,7 +30,7 @@
 		<platform>all</platform>
 <assets>
         <icon>icon.gif</icon>
-        <fanart>fanart.png</fanart>
+        <fanart>fanart.jpg</fanart>
     </assets>
 		<language>es</language>
 	</extension>
