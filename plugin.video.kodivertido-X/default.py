@@ -191,11 +191,11 @@ def kodivertido_tv(params):
 
 
 
-    plugintools.add_item(action = "kodivertido_tdt" , title = "[COLOR darkorange][B]Kodivertido [COLOR blue]TDT[/B][/COLOR]" , thumbnail = "http://perillas.mendelux.es/1xyz/kodivertido/tdt.png" , url = "http://perillas.mendelux.es/1xyz/kodivertido/kodivertido_tdt" , fanart = "https://i.imgur.com/bP8hAy7.jpg" , folder = True )
+    plugintools.add_item(action = "kodivertido_tdt" , title = "[COLOR darkorange][B]Kodivertido [COLOR blue]TDT[/B][/COLOR]" , thumbnail = "http://perillas.mendelux.es/1xyz/kodivertido/tdt.png" , url = "http://perillas.mendelux.es/1xyz/kodivertido/kodivertido_tdt" , fanart = "https://i.imgur.com/urYNkVc.jpg" , folder = True )
 
-    plugintools.add_item(action = "kodivertido_movistar" , title = "[COLOR darkorange][B]Kodivertido [COLOR blue]MOVISTAR+[/B][/COLOR]" , thumbnail = "http://perillas.mendelux.es/1xyz/kodivertido/vomistar.png" , url = "http://perillas.mendelux.es/1xyz/kodivertido/kodivertido_mvstar" , fanart = "https://i.imgur.com/bP8hAy7.jpg" , folder = True )
+    plugintools.add_item(action = "kodivertido_movistar" , title = "[COLOR darkorange][B]Kodivertido [COLOR blue]MOVISTAR+[/B][/COLOR]" , thumbnail = "http://perillas.mendelux.es/1xyz/kodivertido/vomistar.png" , url = "http://perillas.mendelux.es/1xyz/kodivertido/kodivertido_mvstar" , fanart = "https://i.imgur.com/wcf3nYG.jpg" , folder = True )
 
-    plugintools.add_item(action = "kodivertido_documentales" , title = "[COLOR darkorange][B]Kodivertido [COLOR blue]DOCUMENTALES[/B][/COLOR]" , thumbnail = "https://i.imgur.com/Ds14DOT.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/kodivertido_documentales" , fanart = "https://i.imgur.com/bP8hAy7.jpg" , folder = True )
+    plugintools.add_item(action = "kodivertido_documentales" , title = "[COLOR darkorange][B]Kodivertido [COLOR blue]DOCUMENTALES[/B][/COLOR]" , thumbnail = "https://i.imgur.com/Ds14DOT.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/kodivertido_documentales" , fanart = "https://i.imgur.com/UB9BlgK.jpg" , folder = True )
 
     plugintools.add_item(action = "kodivertido_infantiles" , title = "[COLOR darkorange][B]Kodivertido [COLOR blue]INFANTILES[/B][/COLOR]" , thumbnail = "https://www.conmishijos.com/uploads/ocio_familia/television_boing.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/kodivertido_infantiles" , fanart = "https://i.imgur.com/ZXFHwWI.jpg" , folder = True )
 
@@ -1417,13 +1417,13 @@ def kodivertido_iptv(params):
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
 
 
-    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV [/B][/COLOR]" , thumbnail = "https://i.imgur.com/5gKGBJv.jpg" , fanart = "https://i.imgur.com/E1eqVTq.jpg" , folder = False )
+    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV [/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/E1eqVTq.jpg" , folder = False )
 
 
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
 
 
-    plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/5gKGBJv.jpg", fanart = "https://i.imgur.com/mdBw4t6.jpg", folder = False)
+    plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/mdBw4t6.jpg", folder = False)
 
     
     plugintools.add_item(action = "iptv1" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 1[/B][/COLOR]" , url = "http://perillas.mendelux.es/1xyz/kodivertido/lista_addon", thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )

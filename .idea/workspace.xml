@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2818da07-459c-48ce-9fc0-79e6088f3b22" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-8.0.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-8.1.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_repo/addons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_repo/addons.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_repo/addons.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/_repo/addons.xml.md5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-7.6.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-8.0.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/plugin.video.kodivertido-X/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.kodivertido-X/addon.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugin.video.kodivertido-X/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.kodivertido-X/default.py" afterDir="false" />
     </list>
