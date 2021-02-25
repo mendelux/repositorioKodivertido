@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2818da07-459c-48ce-9fc0-79e6088f3b22" name="Default Changelist" comment="" />
+    <list default="true" id="2818da07-459c-48ce-9fc0-79e6088f3b22" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/icon.gif" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

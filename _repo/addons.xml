@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
 <addon
-	id="plugin.video.kodivertido-X" version="7.5" name="[B][COLOR white]KODI[COLOR gold]verti[COLOR yellow]DO[COLOR lime] X[/COLOR][/B]" provider-name="equipo KODIvertiDO">
+	id="plugin.video.kodivertido-X" version="7.6" name="[B][COLOR white]KODI[COLOR gold]verti[COLOR yellow]DO[COLOR lime] X[/COLOR][/B]" provider-name="equipo KODIvertiDO">
 <requires>
     <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
@@ -23,7 +23,7 @@
                 <platform>all</platform>
 		<summary lang="en">kodivertido</summary>
 		<summary lang="da">kodivertido</summary>
-		<description lang="en">[B][LOWERCASE][CAPITALIZE][COLOR white]KODIvertiDO X addon dedicado a todos los miembros del grupo KODIvertiDO [COLOR aqua] Todo un gran Grupo de Amigos [COLOR yellow]Mendelux[/COLOR][/CAPITALIZE][/LOWERCASE][/B]</description>
+		<description lang="en">[B][LOWERCASE][CAPITALIZE][COLOR white]kodivertidoX addon dedicado a la buena gente de KODIvertiDO [COLOR aqua] Todo un placer [COLOR yellow]Mendelux[/COLOR][/CAPITALIZE][/LOWERCASE][/B]</description>
 		<website></website>
 		<license>GPL 2.0</license>
 		<platform>all</platform>
