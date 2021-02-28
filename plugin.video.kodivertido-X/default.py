@@ -126,37 +126,37 @@ def main_list(params):
 
 ##--------- CABECERA -------------##--------- CABECERA -------------##--------- CABECERA -------------##--------- CABECERA -------------##
 
-            plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/rpIKSHm.jpg", fanart = "https://i.imgur.com/jXzIxPF.jpg",  folder = False )
+            plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/rpIKSHm.jpg", fanart = "https://i.imgur.com/n8F1hk2.jpg",  folder = False )
 
 
-            plugintools.add_item(action = "" , title = "[B][COLOR white]            M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U[/B][/COLOR]",  thumbnail ="https://i.imgur.com/rpIKSHm.jpg", fanart = "https://i.imgur.com/jXzIxPF.jpg", folder = False )
+            plugintools.add_item(action = "" , title = "[B][COLOR white]            M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U[/B][/COLOR]",  thumbnail ="https://i.imgur.com/rpIKSHm.jpg", fanart = "https://i.imgur.com/n8F1hk2.jpg", folder = False )
 
 
-            plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/rpIKSHm.jpg", fanart = "https://i.imgur.com/jXzIxPF.jpg",  folder = False )
+            plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/rpIKSHm.jpg", fanart = "https://i.imgur.com/n8F1hk2.jpg",  folder = False )
 
 
-            plugintools.add_item(action = "" , title = "", thumbnail ="https://i.imgur.com/rpIKSHm.jpg", fanart = "https://i.imgur.com/bP8hAy7.jpg",  folder = False )
-
-
-
-
-            plugintools.add_item(action = "kodivertido_tv" , title = "[COLOR lime][B]KODIvertiDO[/COLOR] [COLOR yellow]TV[/B][/COLOR]" , thumbnail = "http://perillas.mendelux.es/1xyz/kodivertido/tv.png" , url = "" , fanart = "https://i.imgur.com/bP8hAy7.jpg" , folder = True )
-
-
-            plugintools.add_item(action = "kodivertido_iptv" , title = "[COLOR lime][B]LISTAS[/COLOR] [COLOR yellow] IPTV[/B][/COLOR]" , thumbnail = "https://i.imgur.com/5gKGBJv.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/lista_addon" , fanart = "https://i.imgur.com/bP8hAy7.jpg" , folder = True )
-
-
-            plugintools.add_item(action = "cine_kodivertido" , title = "[COLOR lime][B]Cine [/B][/COLOR][COLOR aqua][B]KODI[/B][/COLOR][COLOR yellow][B]verti[/B][/COLOR][COLOR white][B]DO[/B][/COLOR]" , thumbnail = "https://cdn0.iconfinder.com/data/icons/film-making/49/10-512.png" , url = "" , fanart = "https://i.imgur.com/bP8hAy7.jpg" , folder = True )
-
-
-            plugintools.add_item(action = "series" , title = "[COLOR lime][B]SERIES [/B][/COLOR][COLOR aqua][B]KODI[/B][/COLOR][COLOR yellow][B]verti[/B][/COLOR][COLOR white][B]DO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/GNCzAMt.jpg" , url = "" , fanart = "https://i.imgur.com/bP8hAy7.jpg" , folder = True )
-
-
-            plugintools.add_item(action = "kodivertido_tvinternete" , title = "[COLOR lime][B]DEPORTES[/COLOR] y [COLOR yellow]TV [COLOR yellow]DE INTERNET[/B][/COLOR]" , thumbnail = "https://i.imgur.com/O3Eb6MR.jpg" , fanart = "https://i.imgur.com/O3Eb6MR.jpg" , folder = True )
+            plugintools.add_item(action = "" , title = "", thumbnail ="https://i.imgur.com/rpIKSHm.jpg", fanart = "https://i.imgur.com/n8F1hk2.jpg",  folder = False )
 
 
 
-            plugintools.add_item(action = "betas" , title = "[COLOR lightpink]KODI[/COLOR][COLOR red]vertido[/COLOR][COLOR lightpink]DO[/COLOR][COLOR red][B] BETAS[/B][/COLOR]" , thumbnail = "https://images.emojiterra.com/google/android-pie/512px/2622.png" , url = "http://perillas.mendelux.es/1xyz/kodivertido/videoclub" , fanart = "https://i.imgur.com/bP8hAy7.jpg" , folder = True )
+
+            plugintools.add_item(action = "kodivertido_tv" , title = "[COLOR lime][B]KODIvertiDO[/COLOR] [COLOR yellow]TV[/B][/COLOR]" , thumbnail = "http://perillas.mendelux.es/1xyz/kodivertido/tv.png" , url = "" , fanart = "https://i.imgur.com/n8F1hk2.jpg" , folder = True )
+
+
+            plugintools.add_item(action = "kodivertido_iptv" , title = "[COLOR lime][B]LISTAS[/COLOR] [COLOR yellow] IPTV[/B][/COLOR]" , thumbnail = "https://i.imgur.com/wn3vGhZ.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/lista_addon" , fanart = "https://i.imgur.com/n8F1hk2.jpg" , folder = True )
+
+
+            plugintools.add_item(action = "cine_kodivertido" , title = "[COLOR lime][B]Cine [/B][/COLOR][COLOR aqua][B]KODI[/B][/COLOR][COLOR yellow][B]verti[/B][/COLOR][COLOR white][B]DO[/B][/COLOR]" , thumbnail = "https://cdn0.iconfinder.com/data/icons/film-making/49/10-512.png" , url = "" , fanart = "https://i.imgur.com/n8F1hk2.jpg" , folder = True )
+
+
+            plugintools.add_item(action = "series" , title = "[COLOR lime][B]SERIES [/B][/COLOR][COLOR aqua][B]KODI[/B][/COLOR][COLOR yellow][B]verti[/B][/COLOR][COLOR white][B]DO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/GNCzAMt.jpg" , url = "" , fanart = "https://i.imgur.com/n8F1hk2.jpg" , folder = True )
+
+
+            plugintools.add_item(action = "kodivertido_tvinternete" , title = "[COLOR lime][B]DEPORTES[/COLOR] y [COLOR yellow]TV [COLOR yellow]DE INTERNET[/B][/COLOR]" , thumbnail = "https://i.imgur.com/O3Eb6MR.jpg" , fanart = "https://i.imgur.com/n8F1hk2.jpg" , folder = True )
+
+
+
+            plugintools.add_item(action = "betas" , title = "[COLOR lightpink]KODI[/COLOR][COLOR red]vertido[/COLOR][COLOR lightpink]DO[/COLOR][COLOR red][B] BETAS[/B][/COLOR]" , thumbnail = "https://images.emojiterra.com/google/android-pie/512px/2622.png" , url = "http://perillas.mendelux.es/1xyz/kodivertido/videoclub" , fanart = "https://i.imgur.com/n8F1hk2.jpg" , folder = True )
 
         else:
             xbmcgui.Dialog().notification('Info', 'Contraseña Incorrecta', xbmcgui.NOTIFICATION_ERROR, 4000)
@@ -972,11 +972,12 @@ def lasopciones(params):
         thumb = patron[1]
         grupo_canales = patron[2]
         url = patron[3]             
-        #url2 = url + "|User-Agent=VLC"
+        url2 = url.replace('sansat.net','152.89.63.250')
+        
         if categoria in grupo_canales:
-            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
+            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url2, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
         elif categoria == "Todos":
-            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
+            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url2, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
         else:
             pass
     
