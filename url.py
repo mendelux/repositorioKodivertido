@@ -1,5 +1,10 @@
-from urllib import request
+from urllib import request as urlrequest
 
-response = request.urlopen('http://sansat.net:25461/get.php?username=02023095082495&password=QUfJsvIiu1TDyDC&type=m3u_plus&output=mpegts')
-for line in response:
-    print(line.decode('utf-8').rstrip())
+proxy_host = '116.197.131.19:8080'    # host and port of your proxy
+url = 'http://sansat.net:25461/02023095082495/QUfJsvIiu1TDyDC/14991'
+
+req = urlrequest.Request(url)
+req.set_proxy(proxy_host, 'http')
+
+response = urlrequest.urlopen(req)
+print(response.read().decode('utf-8'))
