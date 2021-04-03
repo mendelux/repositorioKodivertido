@@ -753,10 +753,9 @@ def iptv1(params):
          
     for match in matches:
         
-        patron = plugintools.find_single_match(match, r'(?s)#EXTINF.*?tvg-id.*?group-title="([^"]+).*?,(.*?)\n(http.*?)\s')
+        patron = plugintools.find_single_match(match, r'(?s)#EXTINF.*?tvg-id.*?group-title.*?,(.*?)\n(http.*?)\s')
         name = patron[0]
-        grupo_canales = patron[1]
-        url = patron[2]             
+        url = patron[1]             
                 
         plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
   
