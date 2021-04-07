@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2818da07-459c-48ce-9fc0-79e6088f3b22" name="Default Changelist" comment="" />
+    <list default="true" id="2818da07-459c-48ce-9fc0-79e6088f3b22" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/url.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -231,8 +233,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/generate_repo_py$generate_repo.coverage" NAME="generate_repo Coverage Results" MODIFIED="1617750267695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_tools" />
   </component>
 </project>
