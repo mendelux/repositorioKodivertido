@@ -212,6 +212,7 @@
       <workItem from="1617479186692" duration="557000" />
       <workItem from="1617750256190" duration="825000" />
       <workItem from="1617913719455" duration="18000" />
+      <workItem from="1617923915217" duration="398000" />
     </task>
     <servers />
   </component>
@@ -232,5 +233,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/generate_repo_py$generate_repo.coverage" NAME="generate_repo Coverage Results" MODIFIED="1617923924537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_tools" />
   </component>
 </project>
