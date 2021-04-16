@@ -691,148 +691,177 @@ def kodivertido_iptv(params):
     plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/mdBw4t6.jpg", folder = False)
 
     
-    plugintools.add_item(action = "iptv14" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 1[COLOR dodgerblue] Xtream[COLOR lime]Codes[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+    plugintools.add_item(action = "iptv14" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 1[COLOR dodgerblue] stream[COLOR lime]iptvesun[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
     
     
-    plugintools.add_item(action = "iptv2" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR greenyellow]--[COLOR yellow] IPTV[COLOR lime] GranQuilito [COLOR aqua]2[/B][/COLOR]" , url = "http://perillas.mendelux.es/1xyz/kodivertido/listasIPTV/quilito2.txt", thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+    plugintools.add_item(action = "iptv2" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR greenyellow]--[COLOR yellow] IPTV[COLOR lime] 2[COLOR dodgerblue] stream[COLOR lime]iptvesun[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
 
-
-    plugintools.add_item(action = "iptv3" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] GranQuilito [COLOR aqua]3[/B][/COLOR]" , url = "http://perillas.mendelux.es/1xyz/kodivertido/listasIPTV/quilito3.txt", thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+    
+    plugintools.add_item(action = "sansat" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 3 [COLOR cyan] Servidor [COLOR yellow]SAMSAT[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
     
     
-    plugintools.add_item(action = "sansat" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 4 [COLOR cyan] Servidor [COLOR yellow]SAMSAT[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+    plugintools.add_item(action = "sansat2" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 4 [COLOR cyan] Servidor [COLOR yellow]SAMSAT[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
     
     
-    plugintools.add_item(action = "sansat2" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 5 [COLOR cyan] Servidor [COLOR yellow]SAMSAT[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+    plugintools.add_item(action = "iptv6" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 5[COLOR dodgerblue] Grupo [COLOR lime]KODIvedertiDO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
     
     
-    plugintools.add_item(action = "iptv6" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 6[COLOR dodgerblue] Grupo [COLOR lime]KODIvedertiDO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
-    
-    
-    plugintools.add_item(action = "iptv7" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 7[COLOR dodgerblue] Grupo [COLOR lime]KODIvedertiDO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+    plugintools.add_item(action = "iptv7" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 6[COLOR dodgerblue] Grupo [COLOR lime]KODIvedertiDO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
     
 
-    plugintools.add_item(action = "iptv8" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 8[COLOR dodgerblue] Grupo [COLOR lime]KODIvedertiDO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+    plugintools.add_item(action = "iptv8" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 7[COLOR dodgerblue] Grupo [COLOR lime]KODIvedertiDO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
     
     
-    plugintools.add_item(action = "iptv9" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 9[COLOR dodgerblue] Grupo [COLOR lime]KODIvedertiDO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+    plugintools.add_item(action = "iptv9" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 8[COLOR dodgerblue] Grupo [COLOR lime]KODIvedertiDO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
         
     
-    plugintools.add_item(action = "iptv10" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 10[COLOR dodgerblue] Grupo [COLOR lime]KODIvedertiDO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )    
+    plugintools.add_item(action = "iptv10" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 9[COLOR dodgerblue] Grupo [COLOR lime]KODIvedertiDO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )    
 
 
 
-    plugintools.add_item(action = "iptv11" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 11[COLOR dodgerblue] Crystal[COLOR lime]OTT[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+    plugintools.add_item(action = "iptv11" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 10[COLOR dodgerblue] Crystal[COLOR lime]OTT[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
     
 
 
-    plugintools.add_item(action = "iptv12" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 12[COLOR dodgerblue] PnTV[COLOR lime]OTT[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+    plugintools.add_item(action = "iptv12" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 11[COLOR dodgerblue] PnTV[COLOR lime]OTT[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
 
 
     
-    plugintools.add_item(action = "iptv13" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 13[COLOR dodgerblue] Toa[COLOR lime]im[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+    plugintools.add_item(action = "iptv13" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 12[COLOR dodgerblue] Toa[COLOR lime]im[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
 
-
-
-    plugintools.add_item(action = "iptv15" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 15[COLOR dodgerblue] 8868[COLOR lime] KODIvertiDO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )    
     
 
-
-    plugintools.add_item(action = "iptv16" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 16[COLOR dodgerblue] D[COLOR lime]MX[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )    
+    plugintools.add_item(action = "iptv16" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 13[COLOR dodgerblue] D[COLOR lime]MX[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )    
   
 
 
-    plugintools.add_item(action = "iptv17" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 17[COLOR dodgerblue] D[COLOR lime]MX[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )    
+    plugintools.add_item(action = "iptv17" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 14[COLOR dodgerblue] D[COLOR lime]MX[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )    
 
 
 
-    plugintools.add_item(action = "iptv18" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 18[COLOR dodgerblue] LISTA[COLOR lime]MANI[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )    
+    plugintools.add_item(action = "iptv18" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 15[COLOR dodgerblue] LISTA[COLOR lime]MANI[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )    
 
 
 
-    #plugintools.add_item(action = "iptv19" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 19[COLOR dodgerblue] LISTA[COLOR lime]MANI[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )    
+            
 
-        
+
+
+##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##
+
+
+def iptv14(params):
+    
+    
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV 2 [COLOR cyan] stream[COLOR lime]iptvesun [/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
+    
+
+
+    plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg", folder = False)
+
+    
+    categorias = []
+    url = "http://152.89.63.249:88/get.php?username=MAnfeqxENDfHPrc&password=FquT1MHRDagzJoR&output=ts&type=m3u_plus"  
+    header = []
+    header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0" ] )
+    read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
+    url = read_url.strip ()  
+    matches = plugintools.find_multiple_matches(url, 'group-title="([^"]+)') 
+    for categoria in sorted(matches): 
+        if categoria not in categorias: 
+            categorias.append(categoria)
+    
+    
+    categorias.append("Todos")
+    for x in sorted(categorias):
+        plugintools . add_item ( action = "iptv14_op" , title =  x , url = x, thumbnail =  params.get("thumbnail") , fanart="https://i.imgur.com/d3Lq6JS.jpg", folder = True)
+
+def iptv14_op(params):
+    
+    categoria = params.get("title")
+    url3 = "http://152.89.63.249:88/get.php?username=MAnfeqxENDfHPrc&password=FquT1MHRDagzJoR&output=ts&type=m3u_plus"
+    request_headers = [ ]
+    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
+    read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
+    url = read_url.strip ( )
+    
+    #matches = re.findall(r'(?s)#EXTINF.*?name="([^"]+).*?logo="([^"]+).*?group-title="([^"]+).*?(http.*?)\s', url, re.DOTALL)
+    matches = re.findall(r'(?s)#EXTINF.*?name="([^"]+).*?logo="(.*?)".*?group-title="([^"]+).*?(http.*?)\s', url, re.DOTALL)
+      
+         
+    for name, thumb, grupo_canales, url in matches:                  
+        url2 = url.replace('stream.iptvesun.com','152.89.63.249')
+        if categoria in grupo_canales:
+            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url2, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
+        elif categoria == "Todos":
+            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url2, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
+        else:
+            pass
+
+
 ##--------- CABECERA kodivertido_iptv2-------------##--------- CABECERA kodivertido_ipv2-------------##--------- CABECERA kodivertido_iptv2-------------##--------- CABECERA kodivertido_iptv2-------------##--------- CABECERA kodivertido_iptv2-------------##--------- CABECERA kodivertido_iptv2-------------##--------- CABECERA kodivertido_iptv2-------------##--------- CABECERA kodivertido_iptv2-------------##
-
 
 
 def iptv2(params):
     
+    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
 
 
-    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV GranQuilito [COLOR aqua]2[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
+    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV 2 [COLOR cyan] stream[COLOR lime]iptvesun [/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
 
 
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
+    
 
 
     plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg", folder = False)
+
+    
+    categorias = []
+    url = "http://152.89.63.249:88/get.php?username=JCE7ABZktANKeUg&password=DUJGCd6kP0xvrPt&output=ts&type=m3u_plus"  
+    header = []
+    header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0" ] )
+    read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
+    url = read_url.strip ()  
+    matches = plugintools.find_multiple_matches(url, 'group-title="([^"]+)') 
+    for categoria in sorted(matches): 
+        if categoria not in categorias: 
+            categorias.append(categoria)
+    
+    
+    categorias.append("Todos")
+    for x in sorted(categorias):
+        plugintools . add_item ( action = "iptv2_op" , title =  x , url = x, thumbnail =  params.get("thumbnail") , fanart="https://i.imgur.com/d3Lq6JS.jpg", folder = True)
+
+def iptv2_op(params):
+    categoria = params.get("title")
+    url3 = "http://152.89.63.249:88/get.php?username=JCE7ABZktANKeUg&password=DUJGCd6kP0xvrPt&output=ts&type=m3u_plus"
+    request_headers = [ ]
+    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
+    read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
+    url = read_url.strip ( )
+    
+    #matches = re.findall(r'(?s)#EXTINF.*?name="([^"]+).*?logo="([^"]+).*?group-title="([^"]+).*?(http.*?)\s', url, re.DOTALL)
+    matches = re.findall(r'(?s)#EXTINF.*?name="([^"]+).*?logo="(.*?)".*?group-title="([^"]+).*?(http.*?)\s', url, re.DOTALL)
+      
+         
+    for name, thumb, grupo_canales, url in matches:                  
+        url2 = url.replace('stream.iptvesun.com','152.89.63.249')
+        if categoria in grupo_canales:
+            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url2, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
+        elif categoria == "Todos":
+            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url2, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
+        else:
+            pass
+
   
-              
-    
-    url3 = "http://perillas.mendelux.es/1xyz/kodivertido/listasIPTV/quilito2.txt"
-    request_headers = [ ]
-    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
-    read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
-    url = read_url.strip ( )
-    
-    #matches = re.findall(r'(?s)#EXTINF.*?name="([^"]+).*?logo="([^"]+).*?group-title="([^"]+).*?(http.*?)\s', url, re.DOTALL)
-    matches = plugintools.find_multiple_matches(url,r'(?s)#EXTINF.*?\nhttp.*?\s')
-    grupo_canales = plugintools.find_single_match(matches,r'(?s)#EXTINF.*?group-title="([^"]+).*?\nhttp.*?\s')      
-    plugintools.add_item (action = "", title = "[B][COLOR yellow]------ " + grupo_canales + " ------[/COLOR][/B]", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg")
-         
-    for match in matches:
-        
-        patron = plugintools.find_single_match(match, r'(?s)#EXTINF.*?tvg-logo="([^"]+).*?,(.*?)\n(http.*?)\s')
-        thumb = patron[0]
-        name = patron[1]
-        url = patron[2]             
-        plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
-
-
-
-##--------- CABECERA kodivertido_iptv3-------------##--------- CABECERA kodivertido_ipv2-------------##--------- CABECERA kodivertido_iptv3-------------##--------- CABECERA kodivertido_iptv3-------------##--------- CABECERA kodivertido_iptv3-------------##--------- CABECERA kodivertido_iptv3-------------##--------- CABECERA kodivertido_iptv3-------------##--------- CABECERA kodivertido_iptv3-------------##
-    
-
-def iptv3(params):
-    
-    
-        
-    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
-
-
-    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV GranQuilito [COLOR aqua]3[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
-
-
-    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
-
-
-    plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg", folder = False)
-
-
-    
-    url3 = "http://perillas.mendelux.es/1xyz/kodivertido/listasIPTV/quilito3.txt"
-    request_headers = [ ]
-    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
-    read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
-    url = read_url.strip ( )
-    
-    #matches = re.findall(r'(?s)#EXTINF.*?name="([^"]+).*?logo="([^"]+).*?group-title="([^"]+).*?(http.*?)\s', url, re.DOTALL)
-    matches = plugintools.find_multiple_matches(url,r'(?s)#EXTINF.*?\nhttp.*?\s')
-    grupo_canales = plugintools.find_single_match(matches,r'(?s)#EXTINF.*?group-title="([^"]+).*?\nhttp.*?\s')      
-    plugintools.add_item (action = "", title = "[B][COLOR yellow]------ " + grupo_canales + " ------[/COLOR][/B]", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg")
-         
-    for match in matches:
-        
-        patron = plugintools.find_single_match(match, r'(?s)#EXTINF.*?tvg-logo="([^"]+).*?,(.*?)\n(http.*?)\s')
-        thumb = patron[0]
-        name = patron[1]
-        url = patron[2]             
-        plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
-   
-    
 
 ##--------- CABECERA kodivertido_iptv4-------------##--------- CABECERA kodivertido_ipv4-------------##--------- CABECERA kodivertido_iptv4-------------##--------- CABECERA kodivertido_iptv4-------------##--------- CABECERA kodivertido_iptv4-------------##--------- CABECERA kodivertido_iptv4-------------##--------- CABECERA kodivertido_iptv4-------------##--------- CABECERA kodivertido_iptv4-------------##
 
@@ -854,7 +883,7 @@ def sansat(params):
 
     
     categorias = []
-    url = "http://sansat.net:25461/get.php?username=02023095082495&password=QUfJsvIiu1TDyDC&type=m3u_plus&output=mpegts"  
+    url = "http://152.89.63.250:25461/get.php?username=02023095082495&password=QUfJsvIiu1TDyDC&type=m3u_plus&output=mpegts"  
     header = []
     header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0" ] )
     read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
@@ -872,7 +901,7 @@ def sansat(params):
 
 def lasopciones(params):    
     categoria = params.get("title")
-    url3 = "http://sansat.net:25461/get.php?username=02023095082495&password=QUfJsvIiu1TDyDC&type=m3u_plus&output=mpegts"
+    url3 = "http://152.89.63.250:25461/get.php?username=02023095082495&password=QUfJsvIiu1TDyDC&type=m3u_plus&output=mpegts"
     request_headers = [ ]
     request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
     read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
@@ -918,7 +947,7 @@ def sansat2(params):
 
     
     categorias = []
-    url = "http://sansat.net:25461/get.php?username=02027852236127&password=KSL1SnedRtLQnsZ&type=m3u_plus&output=mpegts"  
+    url = "http://152.89.63.250:25461/get.php?username=02027852236127&password=KSL1SnedRtLQnsZ&type=m3u_plus&output=mpegts"  
     header = []
     header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0" ] )
     read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
@@ -936,7 +965,7 @@ def sansat2(params):
 
 def lasopciones2(params):    
     categoria = params.get("title")
-    url3 = "http://sansat.net:25461/get.php?username=02027852236127&password=KSL1SnedRtLQnsZ&type=m3u_plus&output=mpegts"
+    url3 = "http://152.89.63.250:25461/get.php?username=02027852236127&password=KSL1SnedRtLQnsZ&type=m3u_plus&output=mpegts"
     request_headers = [ ]
     request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
     read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
@@ -1367,91 +1396,6 @@ def iptv13(params):
         plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
 
 
-##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv14-GrupoKODIvertiDO-------------##
-
-
-def iptv14(params):   
-         
-
-    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
-
-
-    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV 1 [COLOR cyan] Xtream[COLOR lime]Codes[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
-
-
-    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
-    
-
-
-    plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg", folder = False)
-
-    
-    categorias = []
-    url = "http://exchange.jinbox.nl:1339/get.php?username=sammy.muniz1&password=3R1EJuyw2Zxr&output=ts&type=m3u_plus"  
-    header = []
-    header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0" ] )
-    read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
-    url = read_url.strip ()  
-    matches = plugintools.find_multiple_matches(url, 'group-title="([^"]+)') 
-    for categoria in sorted(matches): 
-        if categoria not in categorias: 
-            categorias.append(categoria)
-    
-    
-    categorias.append("Todos")
-    for x in sorted(categorias):
-        plugintools . add_item ( action = "iptv14_op" , title =  x , url = x, thumbnail =  params.get("thumbnail") , fanart="https://i.imgur.com/d3Lq6JS.jpg", folder = True)
-
-
-def iptv14_op(params):    
-    categoria = params.get("title")
-    url3 = "http://exchange.jinbox.nl:1339/get.php?username=sammy.muniz1&password=3R1EJuyw2Zxr&output=ts&type=m3u_plus"
-    request_headers = [ ]
-    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
-    read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
-    url = read_url.strip ( )
-    
-    matches = re.findall(r'(?s)#EXTINF.*?name="([^"]+).*?group-title="([^"]+).*?(http.*?)\s', url, re.DOTALL)
-              
-    for name, grupo_canales, url in matches:                            
-        if categoria in grupo_canales:
-            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
-        elif categoria == "Todos":
-            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
-        else:
-            pass
-
-
-##--------- CABECERA kodivertido_iptv15-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv15-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv15-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv15-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv15-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv15-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv15-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv15-GrupoKODIvertiDO-------------##
-
-
-def iptv15(params):   
-         
-
-    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
-
-
-    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV 15 [COLOR cyan] 8868[COLOR lime] KODIvertiDO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
-
-
-    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
-    
-
-
-    plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg", folder = False)
-
-    
-    url = "http://perillas.mendelux.es/1xyz/kodivertido/listasIPTV/tv_channels_8868.txt"  
-    header = []
-    header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0" ] )
-    read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
-    url = read_url.strip ()  
-  
-  
-    matches = re.findall(r'(?s)#EXTINF.*?,(.*?)\n(http.*?)\s', url, re.DOTALL)
-    for name, url in matches:                
-        plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
-
 
 ##--------- CABECERA kodivertido_iptv16-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv16-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv16-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv16-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv16-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv16-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv16-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv16-GrupoKODIvertiDO-------------##
 
@@ -1619,60 +1563,6 @@ def iptv18_op(params):
         else:
             pass
 
-'''
-def iptv19(params):   
-         
-
-    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
-
-
-    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV 19 [COLOR cyan] LISTA[COLOR lime]MANI[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
-
-
-    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
-    
-
-
-    plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg", folder = False)
-
-    
-    categorias = []
-    url = "http://listamy.com:8080/get.php?username=marivi&password=12345&type=m3u_plus&output=mpegts"  
-    header = []
-    header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0" ] )
-    read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
-    url = read_url.strip ()  
-    matches = plugintools.find_multiple_matches(url, 'group-title="([^"]+)') 
-    for categoria in sorted(matches): 
-        if categoria not in categorias: 
-            categorias.append(categoria)
-    
-    
-    categorias.append("Todos")
-    for x in sorted(categorias):
-        plugintools . add_item ( action = "iptv19_op" , title =  x , url = x, thumbnail =  params.get("thumbnail") , fanart="https://i.imgur.com/d3Lq6JS.jpg", folder = True)
-
-
-def iptv19_op(params):    
-    categoria = params.get("title")
-    url3 = "http://listamy.com:8080/get.php?username=marivi&password=12345&type=m3u_plus&output=mpegts"
-    request_headers = [ ]
-    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
-    read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
-    url = read_url.strip ( )
-    
-    matches = re.findall(r'(?s)#EXTINF.*?name="([^"]+).*?logo="(.*?)".*?group-title="([^"]+).*?(http.*?)\s', url, re.DOTALL)
-              
-    for name, thumb, grupo_canales, url in matches:                            
-        if categoria in grupo_canales:
-            if thumb == "":  
-                thumb = "https://i.imgur.com/E1eqVTq.jpg"    
-            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
-        elif categoria == "Todos":
-            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
-        else:
-            pass
-'''
 
 #plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=NAME&amp;url=urllib.quote_plus(URL)
 
