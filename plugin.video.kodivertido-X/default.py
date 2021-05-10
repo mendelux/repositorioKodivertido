@@ -999,12 +999,10 @@ def xtreamcodes(params):
     matches = plugintools.find_multiple_matches(url, 'group-title="([^"]+)') 
     for categoria in sorted(matches): 
         if categoria not in categorias:
-            if categoria == "SPAIN":  
-                categoria == "ESPAÑA"
             categorias.append(categoria)
     
     
-    categorias.append("[COLOR lime]"+"Todos")
+    categorias.append("TODOS LOS CANALES")
     for x in sorted(categorias):
         plugintools . add_item ( action = "xtreamcodes22" , title =  x , url = x, thumbnail =  "https://i.imgur.com/1IufVPK.jpg" , fanart="https://i.imgur.com/d3Lq6JS.jpg", folder = True)
 

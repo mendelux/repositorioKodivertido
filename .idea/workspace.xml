@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2818da07-459c-48ce-9fc0-79e6088f3b22" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-10.6.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_repo/addons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_repo/addons.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_repo/addons.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/_repo/addons.xml.md5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-10.5.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-10.8.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/plugin.video.kodivertido-X/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.kodivertido-X/addon.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugin.video.kodivertido-X/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.kodivertido-X/default.py" afterDir="false" />
     </list>
@@ -226,6 +224,7 @@
       <workItem from="1619166391427" duration="29000" />
       <workItem from="1619291329985" duration="308000" />
       <workItem from="1619890074670" duration="288000" />
+      <workItem from="1620638587900" duration="333000" />
     </task>
     <servers />
   </component>
@@ -248,6 +247,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/generate_repo_py$generate_repo.coverage" NAME="generate_repo Coverage Results" MODIFIED="1619890084898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_tools" />
+    <SUITE FILE_PATH="coverage/generate_repo_py$generate_repo.coverage" NAME="generate_repo Coverage Results" MODIFIED="1620638920737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_tools" />
   </component>
 </project>
