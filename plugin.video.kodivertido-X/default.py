@@ -696,6 +696,9 @@ def kodivertido_iptv(params):
 
     plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/mdBw4t6.jpg", folder = False)
     
+
+    plugintools.add_item(action = "xtreamcodesUseragent" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]Mendelux [COLOR yellow]X[COLOR greenyellow]tream[COLOR lime]co[COLOR dodgerblue]d[COLOR lime]es[COLOR red] *[/B][/COLOR]" , thumbnail = "https://i.imgur.com/30Tq1VI.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+
     
     plugintools.add_item(action = "xtreamcodes2" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] Xtream[COLOR lime] Co[COLOR dodgerblue]des[COLOR lime] **[/B][/COLOR]" , thumbnail = "https://i.imgur.com/1IufVPK.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
 
@@ -1792,6 +1795,44 @@ def iptv28_op(params):
             plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
         else:
             pass
+
+
+
+##--------- CABECERA xtreamcodesUseragent-------------##--------- CABECERA xtreamcodesUseragent-------------##--------- CABECERA xtreamcodesUseragent-------------##--------- CABECERA xtreamcodesUseragent-------------##--------- CABECERA xtreamcodesUseragent-------------##--------- CABECERA xtreamcodesUseragent-------------##--------- CABECERA xtreamcodesUseragent-------------##--------- CABECERA xtreamcodesUseragent-------------##
+
+
+
+def xtreamcodesUseragent(params):
+    
+    
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/O3Eb6MR.jpg" , fanart = "https://i.imgur.com/b03DryQ.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] KODI[COLOR lime]verti[COLOR dodgerblue]DO[COLOR lime] TV [COLOR red]**[/B][/COLOR]" , thumbnail = "https://i.imgur.com/O3Eb6MR.jpg", fanart = "https://i.imgur.com/b03DryQ.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/O3Eb6MR.jpg" , fanart = "https://i.imgur.com/b03DryQ.jpg" , folder = False )
+    
+
+
+    plugintools.add_item(action = "", title = "[B][COLOR yellow]********[COLOR chartreuse] Tarda en cargar pero es [COLOR yellow]MUY [COLOR chartreuse]estable [COLOR yellow]********[/B][/COLOR]", thumbnail = "https://i.imgur.com/UkdNAKr.jpg", fanart = "https://i.imgur.com/b03DryQ.jpg", folder = False)
+
+    
+    url = "http://ns3173312.ip-51-210-33.eu:8000/get.php?username=iOSnopCadr988h&password=tosoNoSuppotersaA127&type=m3u_plus&output=mpegts"  
+    header = []
+    header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0" ] )
+    read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
+    url = read_url.strip ()  
+    
+  
+    matches = re.findall(r'(?s)#EXTINF.*?name="([^"]+).*?\n(http://51.210.33.224:8000/.*?/iOSnopCadr988h/tosoNoSuppotersaA127/\d*\.\w+)', url, re.DOTALL)
+    for name, url in matches:
+        url2 = url + '|User-agent=cp_525'                
+        plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url2, thumbnail = "https://i.imgur.com/iAFDyH3.jpg", fanart = "https://i.imgur.com/b03DryQ.jpg" , folder = False , isPlayable = True )
+    
+
+
+
 
 
 #plugin://plugin.video.f4mTester/?streamtype=HLSRETRY&amp;name=NAME&amp;url=urllib.quote_plus(URL)
