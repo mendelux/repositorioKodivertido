@@ -152,7 +152,7 @@ def main_list(params):
             plugintools.add_item(action = "series" , title = "[COLOR lime][B]SERIES [/B][/COLOR][COLOR aqua][B]KODI[/B][/COLOR][COLOR yellow][B]verti[/B][/COLOR][COLOR white][B]DO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/GNCzAMt.jpg" , url = "" , fanart = "https://i.imgur.com/n8F1hk2.jpg" , folder = True )
 
 
-            plugintools.add_item(action = "kodivertido_tvinternete" , title = "[COLOR lime][B]DEPORTES[/COLOR] y [COLOR yellow]TV [COLOR yellow]DE INTERNET[/B][/COLOR]" , thumbnail = "https://i.imgur.com/O3Eb6MR.jpg" , fanart = "https://i.imgur.com/n8F1hk2.jpg" , folder = True )
+            plugintools.add_item(action = "kodivertido_tvinternete" , title = "[COLOR lime][B]DEPORTES[/COLOR] y [COLOR yellow]DIRECTOS [COLOR yellow]DE INTERNET[/B][/COLOR]" , thumbnail = "https://i.imgur.com/O3Eb6MR.jpg" , fanart = "https://i.imgur.com/n8F1hk2.jpg" , folder = True )
 
 
 
@@ -276,7 +276,7 @@ def cine_kodivertido(params):
     
     
     
-    plugintools.add_item(action = "cine_quillito" , title = "[COLOR lightpink]KODI[/COLOR][COLOR aqua]vertido[/COLOR][COLOR lightpink]DO[/COLOR][COLOR yellow][B] CINE QUILLITO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/pmzImSy.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/cine_quillito" , fanart = "https://i.imgur.com/hkSsTLk.jpg" , folder = True )
+    plugintools.add_item(action = "quillito" , title = "[COLOR lightpink]KODI[/COLOR][COLOR aqua]vertido[/COLOR][COLOR lightpink]DO[/COLOR][COLOR yellow][B] CINE QUILLITO[/B][/COLOR]" , thumbnail = "https://i.imgur.com/hkSsTLk.jpg" , url = "http://perillas.mendelux.es/1xyz/kodivertido/cine_quillito" , fanart = "https://i.imgur.com/hkSsTLk.jpg" , folder = True )
     
 
     
@@ -695,6 +695,12 @@ def kodivertido_iptv(params):
 
 
     plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/mdBw4t6.jpg", folder = False)
+    
+    
+    plugintools.add_item(action = "xtreamcodes2" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] Xtream[COLOR lime] Co[COLOR dodgerblue]des[COLOR lime] **[/B][/COLOR]" , thumbnail = "https://i.imgur.com/1IufVPK.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+
+
+    plugintools.add_item(action = "xtreamcodes3" , title = "[B][COLOR lime]KODI[COLOR aqua]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR lightpink] Xtream[COLOR lime] Co[COLOR dodgerblue]des[COLOR lime] **[/B][/COLOR]" , thumbnail = "https://i.imgur.com/1IufVPK.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
 
     
     plugintools.add_item(action = "iptv14" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV[COLOR lime] 1[COLOR dodgerblue] stream[COLOR lime]iptvesun[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
@@ -1036,8 +1042,100 @@ def xtreamcodes22(params):
         else:
             pass
 
+############---------------XtreamCodes2-------------------####-------------XtreamCodes2--------------####-----------------XtreamCodes2-----------------XtreamCodes2-------------------------------------##
 
 
+def xtreamcodes2(params):
+    
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] Xtream [COLOR cyan]Codes[COLOR lime] ** [/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
+    
+
+
+    plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg", folder = False)
+
+    
+
+    url3 = "http://51.91.73.99:25461/get.php?username=spain&password=XDWu1KatRP&type=m3u_plus&output=mpegts"
+    request_headers = [ ]
+    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
+    read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
+    url = read_url.strip ( )
+    
+    #matches = re.findall(r'(?s)#EXTINF.*?name="([^"]+).*?logo="([^"]+).*?group-title="([^"]+).*?(http.*?)\s', url, re.DOTALL)
+    matches = re.findall(r'(?s)#EXTINF.*?tvg-name="ES: ([^"]+).*?logo="(.*?)".*?title="([^"]+).*?(http://51.91.73.99:25461/spain/XDWu1KatRP/\d*)', url, re.DOTALL)
+      
+         
+    for name, thumb, grupo_canales, url in matches:                  
+            
+        plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = "https://i.imgur.com/adU8K2G.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
+        
+
+def xtreamcodes3(params):  
+    
+    
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] KODIvertiDO [COLOR cyan] Xtream [COLOR lime]Codes[/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/E1eqVTq.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg", folder = False)
+
+    
+    categorias = []
+    url = "http://144.76.154.85:9900/get.php?username=mytvonline&password=pa3w0qg0do&type=m3u_plus&output=mpegts"  
+    header = []
+    header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0" ] )
+    read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
+    url = read_url.strip ()  
+    matches = plugintools.find_multiple_matches(url, 'group-title="([^"]+)') 
+    for categoria in sorted(matches): 
+        if categoria not in categorias:
+            categorias.append(categoria)
+    
+    
+    categorias.append("TODOS LOS CANALES")
+    for x in sorted(categorias):    
+        plugintools . add_item ( action = "xtreamcodes322" , title =  x , url = x, thumbnail =  "https://i.imgur.com/adU8K2G.jpg" , fanart="https://i.imgur.com/d3Lq6JS.jpg", folder = True)
+
+
+def xtreamcodes322(params):    
+    categoria = params.get("title")
+    url3 = "http://144.76.154.85:9900/get.php?username=mytvonline&password=pa3w0qg0do&type=m3u_plus&output=mpegts"
+    request_headers = [ ]
+    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
+    read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
+    url = read_url.strip ( )
+    
+    matches = re.findall(r'(?s)#EXTINF.*?name="([^"]+).*?logo="(.*?)".*?group-title="([^"]+).*?(http://144.76.154.85:9900/mytvonline/pa3w0qg0do/\d+)', url, re.DOTALL)
+    #matches = plugintools.find_multiple_matches(url,r'(?s)#EXTINF.*?name.*?logo.*?group.*?http.*?\s')
+      
+    for name, thumb, grupo_canales, url in matches: 
+        
+        name = name.replace('[ES] ','')
+        name = name.replace('[SP] ','')       
+        if categoria in grupo_canales:
+            if thumb == "":
+                thumb = "https://i.imgur.com/adU8K2G.jpg"    
+            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
+        elif categoria == "Todos":
+            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
+        else:
+            pass
+
+
+
+                
+    
  
    
 ##--------- CABECERA kodivertido_iptv6-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_ipv6-------------##--------- CABECERA kodivertido_iptv6-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv6-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv6-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv6-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv6-GrupoKODIvertiDO-------------##--------- CABECERA kodivertido_iptv6-GrupoKODIvertiDO-------------##
@@ -2832,22 +2930,52 @@ def resolve_lista(params):
 ##-----------------cine_Quillito##-------------------cine_Quillito#-------------------#cine_Quillito#-----------------------------------------------------------##-----------------cine_Quillito##-------------------cine_Quillito#-------------------#cine_Quillito#-----------------------------------------------------------##-----------------cine_Quillito##-------------------cine_Quillito#-------------------#cine_Quillito#-----------------------------------------------------------##-----------------cine_Quillito##-------------------cine_Quillito#-------------------#cine_Quillito#-----------------------------------------------------------##-----------------cine_Quillito##-------------------cine_Quillito#-------------------#cine_Quillito#-----------------------------------------------------------##-----------------cine_Quillito##-------------------cine_Quillito#-------------------#cine_Quillito#-----------------------------------------------------------##-----------------cine_Quillito##-------------------cine_Quillito#-------------------#cine_Quillito#-----------------------------------------------------------##-----------------cine_Quillito##-------------------cine_Quillito#-------------------#cine_Quillito#-----------------------------------------------------------##-----------------cine_Quillito##-------------------cine_Quillito#-------------------#cine_Quillito#-----------------------------------------------------------##-----------------cine_Quillito##-------------------cine_Quillito#-------------------#cine_Quillito#-----------------------------------------------------------##-----------------cine_Quillito##-------------------cine_Quillito#-------------------#cine_Quillito#-----------------------------------------------------------
 
 
+
+def quillito(params):
+    
+    
+    plugintools.add_item(action = "", title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail = "", fanart = "https://i.imgur.com/vidaiwp.jpg", folder = False )
+
+
+    plugintools.add_item(action = "", title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR magenta]CINE [COLOR springgreen]QUILLITO[/B][/COLOR]", thumbnail = "", fanart = "https://i.imgur.com/vidaiwp.jpg", folder = False )
+
+
+    plugintools.add_item(action = "", title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail = "", fanart = "https://i.imgur.com/vidaiwp.jpg", folder = False )
+
+
+    plugintools.add_item(action = "", title = "", thumbnail = "", fanart = "", folder = False )
+
+    
+ 
+    plugintools.add_item(action = "cine_quillito", title = "[B][COLOR cyan]S[COLOR yellow]A[COLOR aqua]L[COLOR magenta]A[COLOR springgreen] 1[/B][/COLOR]", url = "http://perillas.mendelux.es/1xyz/kodivertido/cine_quillito", thumbnail = "https://i.imgur.com/JFjIyDR.jpg", fanart = "https://i.imgur.com/vidaiwp.jpg", folder = True )
+   
+    
+    plugintools.add_item(action = "cine_quillito2", title = "[B][COLOR cyan]S[COLOR yellow]A[COLOR aqua]L[COLOR magenta]A[COLOR lime] 2[/B][/COLOR]", thumbnail = "https://i.imgur.com/PqRU085.jpg", fanart = "https://i.imgur.com/vidaiwp.jpg", folder = True )
+    
+    
+    plugintools.add_item(action = "cine_quillito_series", title = "[B][COLOR cyan]S[COLOR yellow]A[COLOR aqua]L[COLOR magenta]A[COLOR lightpink] SERIES[/B][/COLOR]", thumbnail = "https://i.imgur.com/oBnRRFV.jpg", fanart = "https://i.imgur.com/fPTFrGq.jpg", folder = True )    
+
+
+
+
+
+
                        
 def cine_quillito(params): 
     
 
     ##--------- CABECERA Cine_Quillito-------------##--------- CABECERA Cine_Quillito-------------##--------- CABECERA Cine_Quillito-------------##--------- CABECERA Cine_Quillito-------------##--------- CABECERA Cine_Quillito-------------##--------- CABECERA Cine_Quillito-------------##--------- CABECERA Cine_Quillito-------------##--------- CABECERA Cine_Quillito-------------##
 
-    plugintools.add_item(action = "", title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail = "https://i.imgur.com/pmzImSy.jpg", fanart = "https://i.imgur.com/hkSsTLk.jpg", folder = False )
+    plugintools.add_item(action = "", title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail = "", fanart = "https://i.imgur.com/vidaiwp.jpg", folder = False )
 
 
-    plugintools.add_item(action = "", title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR magenta]CINE [COLOR springgreen]QUILLITO[/B][/COLOR]", thumbnail = "https://i.imgur.com/pmzImSy.jpg", fanart = "https://i.imgur.com/hkSsTLk.jpg", folder = False )
+    plugintools.add_item(action = "", title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR magenta]CINE [COLOR springgreen]QUILLITO [COLOR purple] SALA 1[/B][/COLOR]", thumbnail = "", fanart = "https://i.imgur.com/vidaiwp.jpg", folder = False )
 
 
-    plugintools.add_item(action = "", title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail = "https://i.imgur.com/pmzImSy.jpg", fanart = "https://i.imgur.com/hkSsTLk.jpg", folder = False )
+    plugintools.add_item(action = "", title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail = "", fanart = "https://i.imgur.com/vidaiwp.jpg", folder = False )
 
 
-    plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/YrZFYhW.jpg", fanart = "https://i.imgur.com/hkSsTLk.jpg", folder = False )
+    plugintools.add_item(action = "", fanart = "", folder = False )
 
 
     categorias = []
@@ -2887,7 +3015,58 @@ def cineQuillito_op(params):
         else:
             pass       
           
+
+
+
+def cine_quillito2(params):    #peliculaszona2
     
+    url3 = "http://perillas.mendelux.es/1xyz/kodivertido/peliculaszona2"
+    request_headers = [ ]
+    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
+    read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
+    url = read_url.strip ( )
+    
+    matches = re.findall(r'(?s)#EXTINF.*?logo="(.*?)".*?,.(.*?)\n(http.*?SAtP)', url, re.DOTALL)
+    for thumb, name, url in matches:                  
+        plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = thumb, fanart = "https://i.imgur.com/vidaiwp.jpg" , folder = False , isPlayable = True )
+        
+        
+def cine_quillito_series(params):  #ListasSeries       
+
+    url3 = "http://perillas.mendelux.es/1xyz/kodivertido/ListasSeries"
+    request_headers = [ ]
+    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
+    read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
+    url = read_url.strip ( )
+    series = []
+    matches = plugintools.find_multiple_matches(url, r'(?s)#EXTINF.*?,\s+(.*?)\d') 
+    matches2 = plugintools.find_multiple_matches(url, r'(?s)#EXTINF.*?,\s+\d.*?\d+(.*?)\n')
+    for categoria in sorted(matches): 
+        if categoria not in series: 
+            series.append(categoria)
+    for categoria2 in sorted(matches2):
+        if categoria2 not in series:
+            series.append(categoria2)
+                    
+    for name in sorted(series):  
+                            
+        plugintools.add_item (action = "quillitoResolver", title = name , thumbnail = "https://i.imgur.com/UkdNAKr.jpg", fanart = "https://i.imgur.com/vidaiwp.jpg" , folder = True , isPlayable = False )
+ 
+def quillitoResolver(params):
+    
+    url3 = "http://perillas.mendelux.es/1xyz/kodivertido/ListasSeries"
+    title = params.get ( "title")
+    request_headers = [ ]
+    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
+    read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
+    url = read_url.strip ( )
+    
+    matches = re.findall(r'(?s)#EXTINF.*?,\s*(.*?)\n(http.*?.mkv)', url, re.DOTALL)
+    for titulo, url in matches:
+        if title in titulo:
+            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + titulo + "[/COLOR][/B]", url = url, thumbnail = "https://i.imgur.com/UkdNAKr.jpg", fanart = "https://i.imgur.com/vidaiwp.jpg" , folder = False , isPlayable = True )
+  
+     
 
 
 
@@ -3197,18 +3376,37 @@ def parse_guiatv ( params ):
   
  
 def adictos ( params ):
-    url = params.get("url")  
-    header = [ ]
-    header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0" ] )
-    header . append ( [ "Referer" , "https://adictosaldeporte.com/" ] )
-    read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
-    url = read_url . strip ( )    
-    bloque = plugintools.find_single_match(url,'<div class="imagenes">(.*?)</h4>')
-    matches = re.findall(r'(?s)<td>.*?<a href="(.*?)" title="(.*?) en.*?><img src="(.*?)"',bloque)
-    for url,title,thumb in matches: 
-        plugintools . add_item ( action = 'adictos1' , title = title, url ='https:'+ url,thumbnail ='https://adictosalatele.com'+ thumb , fanart="http://perillas.mendelux.es/1xyz/kodivertido/KODIVERTIDOX.gif", folder =False,isPlayable= True)
+    url = params.get ( "url" )
+    request_headers = []
+    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
+    read_url, response_headers = plugintools.read_body_and_headers ( url , headers = request_headers )
+    url = read_url.strip ()
+    #url = body.strip ().decode ("utf-8" , "ignore")
+    
+    matches = plugintools.find_multiple_matches(url,r'(?s)<td>.*?href=".*?" title=".*?src=".*?"')
+    
+    for match in matches:
+        patron = plugintools.find_single_match ( match , r'(?s)<a href="(.*?)".*?title="(.*?) en.*?src="(.*?)"' )
+        title = patron[1]
+        thumb = "https://adictosalatele.com" + patron[2]
+        url ='https:'+ patron[0]
+        plugintools.add_item ( action = "adictos1" , title = "[B][UPPERCASE][COLOR yellow]" + title + "[/COLOR][/UPPERCASE][/B]" , url = url , thumbnail = thumb , fanart = "https://i.imgur.com/5UwkEwQ.jpg" , folder =False,isPlayable= True )
+
 def adictos1 ( params ):
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/RKM3S9q.jpg" , fanart = "https://i.imgur.com/5UwkEwQ.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR red]T[COLOR lime]D[COLOR aqua]T[/B][/COLOR]" , thumbnail = "https://i.imgur.com/RKM3S9q.jpg" , fanart = "https://i.imgur.com/5UwkEwQ.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] kodivertidoXZ[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/RKM3S9q.jpg" , fanart = "https://i.imgur.com/5UwkEwQ.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/RKM3S9q.jpg", fanart = "https://i.imgur.com/5UwkEwQ.jpg", folder = False)
+
     url = params.get('url')
+   
+    ##########--------------------- WIGISTREAM-----------------############    
     request_headers=[]
     request_headers.append(["User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0"])
     body,response_headers = plugintools.read_body_and_headers(url, headers=request_headers)
@@ -3217,25 +3415,30 @@ def adictos1 ( params ):
         url ='https:'+ plugintools.find_single_match(url,'(?s)<div class="video">.*?src="(.*?)"')
     else:
         url ='https:'+ plugintools.find_single_match(url,'(?s)<center><textarea.*?src="(.*?)"')
-    #plugintools . add_item ( action = "" , title =url,url = url,thumbnail =  "" , fanart="special://home/addons/plugin.video.iberika/tenor.gif", folder = True)
+    
+    url_paso1=url
+    
     request_headers=[]
     request_headers.append(["User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0"])
-    request_headers.append(["Referer","https://adictosalatele.com/tve-1-en-directo-online-gratis/"])
+    request_headers.append(["Referer",url])
+    body,response_headers = plugintools.read_body_and_headers(url, headers=request_headers)
+        
+    url2 = body.strip()   
+    url = plugintools.find_single_match(url2,'(?s)<iframe src="(https.*?wigistream.*?)"')        
+    
+    if url=='':
+        url=url_paso1    
+    
+    request_headers=[]
+    request_headers.append(["User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0"])
+    request_headers.append(["Referer",url])
     body,response_headers = plugintools.read_body_and_headers(url, headers=request_headers)
     url = body.strip()   
-    url = plugintools.find_single_match(url,'(?s)<iframe src="(https.*?wigistream.*?)"')
-    #plugintools . add_item ( action = "" , title =url,url = url,thumbnail =  "" , fanart="special://home/addons/plugin.video.iberika/tenor.gif", folder = True)
-    request_headers=[]
-    request_headers.append(["User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0"])
-    request_headers.append(["Referer","https://adictosalatele.com/tve-1-en-directo-online-gratis/"])
-    body,response_headers = plugintools.read_body_and_headers(url, headers=request_headers)
-    url = body.strip()    
-    pack = plugintools.find_single_match(url,'(?s)(eval\(function\(p,a,c,k,e,d.*?)</script>')
-    unpacked = jsunpack.unpack(pack).replace('\\', '')
-    finalurl = plugintools.find_single_match(unpacked,'(?s)player=new Clappr.Player.*?source."(.*?)"')
-    plugintools . play_resolved_url ( finalurl )                                
-    #plugintools . add_item ( action = "" , title =finalurl,url = finalurl,thumbnail =  "" , fanart="special://home/addons/plugin.video.iberika/tenor.gif", folder =True)   
+    url = plugintools.find_single_match(url,'(?s)source.*?(https.*?m3u8.*?).,')
     
+    plugintools . add_item ( action = "" , title =url, folder = False)
+    plugintools . play_resolved_url ( url )
+
     
 ##--------- CABECERA daqueen_tv-------------##--------- CABECERA daqueen_tv-------------##--------- CABECERA daqueen_tv-------------##--------- CABECERA daqueen_tv-------------##--------- CABECERA daqueen_tv-------------##--------- CABECERA daqueen_tv-------------##--------- CABECERA daqueen_tv-------------##--------- CABECERA daqueen_tv-------------##    
  
@@ -3571,9 +3774,9 @@ def daqueen(params):
         folder=True )      
     plugintools.add_item(  #adictosaldeporte  
         action="adictosdeporte", 
-        title="[COLOR gold]Canales de Deportes[/COLOR] [COLOR red]NECESARIO VPN[/COLOR]",
+        title="[COLOR gold]Adictosaldeporte[/COLOR] [COLOR red]NECESARIO VPN[/COLOR]",
         thumbnail="https://i.imgur.com/RjQPYIB.jpg",
-        url= "https://adictosaldeporte.com/",
+        url= "https://adictosaldeporte.com/deportes/",
         fanart="https://i.imgur.com/RjQPYIB.jpg",
         folder=True )
 
@@ -3587,8 +3790,8 @@ def daddylive (params):
     read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
     url = read_url . strip ( )
  
-    matches =  re.findall(r'(?s)(\d\d:\d\d)\s(.+?):\s(.+?)<|href="(.+?)".*?#ff0000;">(.*?)<', url, re.DOTALL)
-    for hora, liga, partido, url, canal in matches:  
+    matches =  re.findall(r'(?s).*?<hr>(\d\d:\d\d)\s(.*?)<.*?href="(.*?)".*?>(.*?)<|.*?#ff0000;".+?href="(.*?)"', url, re.DOTALL)
+    for hora, partido, url, canal in matches:  
         plugintools . add_item ( action = "wstream2" , title = "[COLOR lime]"+hora+"[/COLOR]" + "  " + "[COLOR darkorange]"+liga+"[/COLOR]" + "  " + "[COLOR blue]"+partido+"[/COLOR]" + "  " + "[COLOR yellow]"+canal+"[/COLOR]", url = url , thumbnail= "https://i.imgur.com/2bsfGN5.jpg" , fanart="https://i.imgur.com/2bsfGN5.jpg", folder = False , isPlayable = True ) 
 
 ######################### SportZonline #########################
@@ -3658,56 +3861,58 @@ def acestream (params):
 
 
 def adictosdeporte ( params ):
-    url = params.get("url")  
-    header = [ ]
-    header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0" ] )
-    header . append ( [ "Referer" , "https://adictosaldeporte.com/" ] )
-    read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
-    url = read_url . strip ( )    
-    bloque = plugintools.find_single_match(url,'<center><div class="imagenes">(.*?)</div></center></div>')
-    matches = re.findall(r'(?s)<a href="(.*?)" title="(.*?) en.*?><img src="(.*?)"',bloque)
-    for url,title,thumb in matches: 
-        plugintools . add_item ( action = 'adictos1' , title = title, url ='https:'+ url,thumbnail ='https://adictosalatele.com'+ thumb , fanart="http://perillas.mendelux.es/1xyz/kodivertido/KODIVERTIDOX.gif", folder =False,isPlayable= True)
-def adictos ( params ):
-    url = params.get("url")  
-    header = [ ]
-    header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0" ] )
-    header . append ( [ "Referer" , "https://adictosaldeporte.com/" ] )
-    read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
-    url = read_url . strip ( )    
-    bloque = plugintools.find_single_match(url,'<div class="imagenes">(.*?)</h4>')
-    matches = re.findall(r'(?s)<td>.*?<a href="(.*?)" title="(.*?) en.*?><img src="(.*?)"',bloque)
-    for url,title,thumb in matches: 
-        plugintools . add_item ( action = 'adictos1' , title = title, url ='https:'+ url,thumbnail ='https://adictosalatele.com'+ thumb , fanart="http://perillas.mendelux.es/1xyz/kodivertido/KODIVERTIDOX.gif", folder =False,isPlayable= True)
-def adictos1 ( params ):
+    url = params.get ( "url" )
+    request_headers = []
+    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
+    read_url, response_headers = plugintools.read_body_and_headers ( url , headers = request_headers )
+    url = read_url.strip ()
+    #url = body.strip ().decode ("utf-8" , "ignore")
+    
+    matches = plugintools.find_multiple_matches(url,r'(?s)<td>.*?href=".*?" title=".*?src=".*?"')
+    
+    for match in matches:
+        patron = plugintools.find_single_match ( match , r'(?s)<a href="(.*?)".*?title="(.*?) en.*?src="(.*?)"' )
+        title = patron[1]
+        thumb = "https://adictosalatele.com" + patron[2]
+        url ='https:'+ patron[0]
+        plugintools.add_item ( action = "adictosdeporte1" , title = "[B][UPPERCASE][COLOR yellow]" + title + "[/COLOR][/UPPERCASE][/B]" , url = url , thumbnail = thumb , fanart = "https://i.imgur.com/5UwkEwQ.jpg" , folder =False,isPlayable= True )
+
+def adictosdeporte1 ( params ):
+    
     url = params.get('url')
+   
+    ##########--------------------- WIGISTREAM-----------------############    
     request_headers=[]
     request_headers.append(["User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0"])
     body,response_headers = plugintools.read_body_and_headers(url, headers=request_headers)
     url = body.strip()    
-    if 'adictosalatele' in url:
-        url ='https:'+ plugintools.find_single_match(url,'(?s)<div class="video">.*?src="(.*?)"')
+    if 'adictosaldeporte' in url:
+        url ='https:'+ plugintools.find_single_match(url,'(?s)<div class="iframe-container">.*?src="(.*?)"')
     else:
         url ='https:'+ plugintools.find_single_match(url,'(?s)<center><textarea.*?src="(.*?)"')
-    #plugintools . add_item ( action = "" , title =url,url = url,thumbnail =  "" , fanart="special://home/addons/plugin.video.iberika/tenor.gif", folder = True)
+    
+    url_paso1=url
+    
     request_headers=[]
     request_headers.append(["User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0"])
-    request_headers.append(["Referer","https://adictosalatele.com/tve-1-en-directo-online-gratis/"])
+    request_headers.append(["Referer",url])
+    body,response_headers = plugintools.read_body_and_headers(url, headers=request_headers)
+        
+    url2 = body.strip()   
+    url = plugintools.find_single_match(url2,'(?s)<iframe src="(https.*?wigistream.*?)"')        
+    
+    if url=='':
+        url=url_paso1    
+    
+    request_headers=[]
+    request_headers.append(["User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0"])
+    request_headers.append(["Referer",url])
     body,response_headers = plugintools.read_body_and_headers(url, headers=request_headers)
     url = body.strip()   
-    url = plugintools.find_single_match(url,'(?s)<iframe src="(https.*?wigistream.*?)"')
-    #plugintools . add_item ( action = "" , title =url,url = url,thumbnail =  "" , fanart="special://home/addons/plugin.video.iberika/tenor.gif", folder = True)
-    request_headers=[]
-    request_headers.append(["User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0"])
-    request_headers.append(["Referer","https://adictosalatele.com/tve-1-en-directo-online-gratis/"])
-    body,response_headers = plugintools.read_body_and_headers(url, headers=request_headers)
-    url = body.strip()    
-    pack = plugintools.find_single_match(url,'(?s)(eval\(function\(p,a,c,k,e,d.*?)</script>')
-    unpacked = jsunpack.unpack(pack).replace('\\', '')
-    finalurl = plugintools.find_single_match(unpacked,'(?s)player=new Clappr.Player.*?source."(.*?)"')
-    plugintools . play_resolved_url ( finalurl )                                
-    #plugintools . add_item ( action = "" , title =finalurl,url = finalurl,thumbnail =  "" , fanart="special://home/addons/plugin.video.iberika/tenor.gif", folder =True) 
-
+    url = plugintools.find_single_match(url,'(?s)source.*?(https.*?m3u8.*?).,')
+    
+    plugintools . add_item ( action = "" , title =url, folder = True)
+    plugintools . play_resolved_url ( url )
 
 ##--------- CABECERA tdtchannels-------------##--------- CABECERA tdtchannels-------------##--------- CABECERA tdtchannels-------------##--------- CABECERA tdtchannels-------------##--------- CABECERA tdtchannels-------------##--------- CABECERA tdtchannels-------------##--------- CABECERA tdtchannels-------------##--------- CABECERA tdtchannels-------------##    
  
