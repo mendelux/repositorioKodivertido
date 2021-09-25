@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2818da07-459c-48ce-9fc0-79e6088f3b22" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-10.9.2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-12.0.0.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_repo/addons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_repo/addons.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_repo/addons.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/_repo/addons.xml.md5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-10.9.1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_repo/plugin.video.kodivertido-X/plugin.video.kodivertido-X-10.9.2.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/plugin.video.kodivertido-X/addon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.kodivertido-X/addon.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugin.video.kodivertido-X/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.video.kodivertido-X/default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.kodivertido-X/fanart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugin.video.kodivertido-X/icon.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,6 +231,7 @@
       <workItem from="1620638587900" duration="333000" />
       <workItem from="1621364848610" duration="269000" />
       <workItem from="1621377418049" duration="613000" />
+      <workItem from="1632533227229" duration="806000" />
     </task>
     <servers />
   </component>
@@ -251,6 +254,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/generate_repo_py$generate_repo.coverage" NAME="generate_repo Coverage Results" MODIFIED="1621377431832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_tools" />
+    <SUITE FILE_PATH="coverage/generate_repo_py$generate_repo.coverage" NAME="generate_repo Coverage Results" MODIFIED="1632533474857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_tools" />
   </component>
 </project>
