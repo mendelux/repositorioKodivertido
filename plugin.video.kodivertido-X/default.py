@@ -158,6 +158,9 @@ def main_list(params):
 
             plugintools.add_item(action = "betas" , title = "[COLOR lightpink]KODI[/COLOR][COLOR red]vertido[/COLOR][COLOR lightpink]DO[/COLOR][COLOR red][B] BETAS[/B][/COLOR]" , thumbnail = "https://images.emojiterra.com/google/android-pie/512px/2622.png" , url = "http://perillas.mendelux.es/1xyz/kodivertido/videoclub" , fanart = "https://i.imgur.com/n8F1hk2.jpg" , folder = True )
 
+            plugintools.add_item(action = "vip" , title = "[COLOR red][B]Privados:[COLOR lime]Solo Usuarios Registrados[/B][/COLOR]" , thumbnail = "https://i.ibb.co/K7kB4vy/user.png" , fanart = "https://i.imgur.com/n8F1hk2.jpg" , folder = True )
+
+
         else:
             xbmcgui.Dialog().notification('Info', 'Contraseña Incorrecta', xbmcgui.NOTIFICATION_ERROR, 4000)
             os.remove(password_file)
@@ -3446,6 +3449,103 @@ def canalesd(params):
  
 '''        
  
+ 
+
+
+
+#########################################  Vip   ###########################################   Vip   ###########################################   Vip   ####################################################################################  Vip   ###########################################   Vip   ###########################################   Vip   ###########################################
+##-----------------Vip##-------------------Vip#-------------------#Vip#-----------------------------------------------------------
+##-----------------Vip##-------------------Vip#-------------------#Vip#-----------------------------------------------------------##-----------------Vip##-------------------Vip#-------------------#Vip#-----------------------------------------------------------##-----------------Vip##-------------------Vip#-------------------#Vip#-----------------------------------------------------------##-----------------Vip##-------------------Vip#-------------------#Vip#-----------------------------------------------------------##-----------------Vip##-------------------Vip#-------------------#Vip#-----------------------------------------------------------##-----------------Vip##-------------------Vip#-------------------#Vip#-----------------------------------------------------------##-----------------Vip##-------------------Vip#-------------------#Vip#-----------------------------------------------------------##-----------------Vip##-------------------Vip#-------------------#Vip#-----------------------------------------------------------##-----------------Vip##-------------------Vip#-------------------#Vip#-----------------------------------------------------------##-----------------Vip##-------------------Vip#-------------------#Vip#-----------------------------------------------------------##-----------------Vip##-------------------Vip#-------------------#Vip#-----------------------------------------------------------
+#########################################  Vip   ###########################################   Vip   ###########################################   Vip   ####################################################################################  Vip   ###########################################   Vip   ###########################################   Vip   ###########################################
+
+
+
+def vip(params):
+
+
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] KODIvertiDO X[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.ibb.co/094V2gH/81-Rgxi-BYh-L.png" , fanart = "https://i.ibb.co/YQC3Rhm/fondo-vip.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] VIP[/B][/COLOR]" , thumbnail = "https://i.ibb.co/094V2gH/81-Rgxi-BYh-L.png" , fanart = "https://i.ibb.co/YQC3Rhm/fondo-vip.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] KODIvertiDO X[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.ibb.co/094V2gH/81-Rgxi-BYh-L.png" , fanart = "https://i.ibb.co/YQC3Rhm/fondo-vip.jpg" , folder = False )
+    
+
+
+    plugintools.add_item(action = "", title = "", thumbnail = "https://i.ibb.co/094V2gH/81-Rgxi-BYh-L.png", fanart = "https://i.ibb.co/YQC3Rhm/fondo-vip.jpg", folder = False)
+
+
+    
+    usuarios = {'marcberr': {'nombre': 'Alberto', 'Apellido': 'Marcos', 'password': '1234'},
+            'Manukodi': {'nombre': 'Manu', 'Apellido': 'Valdemoro', 'password': '1111'}}
+    for key in usuarios:
+        plugintools.add_item ( action = "users" , title = key, thumbnail = "https://i.ibb.co/K7kB4vy/user.png", fanart = "https://i.ibb.co/YQC3Rhm/fondo-vip.jpg" , folder = True , isPlayable = False )
+    
+def users(params):    
+    
+
+    dialog = xbmcgui.Dialog()
+
+    d = dialog.input('Introduce tu Contraseña')
+
+    usuarios = {'marcberr': {'nombre': 'Alberto', 'Apellido': 'Marcos', 'password': '1234', 'lista': 'http://stream.iptvesun.com:88/get.php?username=JCE7ABZktANKeUg&password=DUJGCd6kP0xvrPt&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'},
+            'Manukodi': {'nombre': 'Manu', 'Apellido': 'Valdemoro', 'password': '1111', 'lista': 'http://stream.iptvesun.com:88/get.php?username=MAnfeqxENDfHPrc&password=FquT1MHRDagzJoR&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'}}
+
+    user_select = params.get ( "title" )
+    user_passw = usuarios[user_select]['password']
+    user_nombre = usuarios[user_select]['nombre']
+    user_apellido = usuarios[user_select]['Apellido']
+    regex = usuarios[user_select]['regex']
+    regex_lista = r'{0}'.format(regex)  
+
+    if d == usuarios[user_select]['password']:
+
+        
+
+        plugintools.add_item ( action = "" , title = "[B][UPPERCASE][COLOR aqua]" + "----------------------------------------------------" + "[/COLOR][/UPPERCASE][/B]" , thumbnail = "https://i.ibb.co/094V2gH/81-Rgxi-BYh-L.png" , fanart = "https://i.ibb.co/YQC3Rhm/fondo-vip.jpg" , folder = True , isPlayable = False )
+        plugintools.add_item ( action = "" , title = "[B][UPPERCASE][COLOR yellow]" + "- Nombre del User: " + "[COLOR yellow]" + user_nombre + " " + user_apellido + "[/COLOR][/UPPERCASE][/B]" , thumbnail = "https://i.ibb.co/094V2gH/81-Rgxi-BYh-L.png" , fanart = "https://i.ibb.co/YQC3Rhm/fondo-vip.jpg", folder = True , isPlayable = False )        
+        plugintools.add_item ( action = "" , title = "" , thumbnail = "https://i.ibb.co/094V2gH/81-Rgxi-BYh-L.png" , fanart = "https://i.ibb.co/YQC3Rhm/fondo-vip.jpg", folder = True , isPlayable = False )
+        plugintools.add_item ( action = "entar_lista" , title = "[B][UPPERCASE][COLOR yellow]" + user_select + "[COLOR lightpink]" + " Pulsa par entrar." + "[/COLOR][/UPPERCASE][/B]" , plot = user_select, thumbnail = "https://i.ibb.co/094V2gH/81-Rgxi-BYh-L.png" , fanart = "https://i.ibb.co/YQC3Rhm/fondo-vip.jpg"  , folder = True , isPlayable = False )
+        plugintools.add_item ( action = "" , title = "[B][UPPERCASE][COLOR aqua]" + "----------------------------------------------------" + "[/COLOR][/UPPERCASE][/B]" , thumbnail = "https://i.ibb.co/094V2gH/81-Rgxi-BYh-L.png" , fanart = "https://i.ibb.co/YQC3Rhm/fondo-vip.jpg" , folder = True , isPlayable = False )
+       
+        
+        xbmcgui.Dialog().notification('Info', 'Contraseña correcta.Cargando la lista IPTV........ !!!', xbmcgui.NOTIFICATION_INFO, 4000)
+    else:
+        xbmcgui.Dialog().notification('Info', 'CONTRASEÑA INCORRECTA !!!', xbmcgui.NOTIFICATION_ERROR, 4000)
+        vip(params)
+
+
+def entar_lista(params):
+
+
+
+    usuarios = {'marcberr': {'nombre': 'Alberto', 'Apellido': 'Marcos', 'password': '1234', 'lista': 'http://stream.iptvesun.com:88/get.php?username=JCE7ABZktANKeUg&password=DUJGCd6kP0xvrPt&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'},
+            'Manukodi': {'nombre': 'Manu', 'Apellido': 'Valdemoro', 'password': '1111', 'lista': 'http://stream.iptvesun.com:88/get.php?username=MAnfeqxENDfHPrc&password=FquT1MHRDagzJoR&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'}}
+
+    user_select = params.get ( "plot" )
+    user_passw = usuarios[user_select]['password']
+    user_nombre = usuarios[user_select]['nombre']
+    user_apellido = usuarios[user_select]['Apellido']
+    regex = usuarios[user_select]['regex']
+    regex_lista = r'{0}'.format(regex)  
+
+    url3 = usuarios[user_select]['lista']
+    categorias = []
+    request_headers = []
+    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0"] )
+    read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
+    url = read_url.strip ()
+
+        #matches = re.findall( r'(?s)#EXTINF:-1.*?tvg-name="(.*?)".*?logo="(.*?)".*?group-title="(.*?)".*?\n(http://mu03ye.wanicelife.com:8880/.*?/\S{2,})', url, re.DOTALL )
+    matches = re.findall( regex_lista, url, re.DOTALL )
+    for grup_title, name, thumb, url in matches:
+        if grup_title == 'ES':  
+            plugintools.add_item ( action = "resolve_without_resolveurl" , title = "[B][UPPERCASE][COLOR yellow]" + name + "[/COLOR][/UPPERCASE][/B]" , url = url , thumbnail = thumb , fanart = thumb , folder = False , isPlayable = True )
+        elif grup_title == 'ES-4K':
+            plugintools.add_item ( action = "resolve_without_resolveurl" , title = "[B][UPPERCASE][COLOR lime]" + name + '  4K' + "[/COLOR][/UPPERCASE][/B]" , url = url , thumbnail = thumb , fanart = thumb , folder = False , isPlayable = True )
+        else:
+            pass
 
 
 
