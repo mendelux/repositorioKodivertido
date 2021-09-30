@@ -719,7 +719,10 @@ def kodivertido_iptv(params):
     plugintools.add_item(action = "kodivertido12" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR lime]X[COLOR greenyellow]-[COLOR dodgerblue] IPTV [COLOR magenta] 12[/B][/COLOR]" , thumbnail = "https://i.imgur.com/30Tq1VI.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
 
 
-    #plugintools.add_item(action = "kodivertido13" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR lime]X[COLOR greenyellow]-[COLOR dodgerblue] IPTV [COLOR magenta] 13[/B][/COLOR]" , thumbnail = "https://i.imgur.com/30Tq1VI.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+    plugintools.add_item(action = "kodivertido13" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR lime]X[COLOR greenyellow]-[COLOR dodgerblue] IPTV [COLOR magenta] 13[/B][/COLOR]" , thumbnail = "https://i.imgur.com/30Tq1VI.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+
+
+    plugintools.add_item(action = "kodivertido14" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR lime]X[COLOR greenyellow]-[COLOR dodgerblue] IPTV [COLOR magenta] 14[/B][/COLOR]" , thumbnail = "https://i.imgur.com/30Tq1VI.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
 
 
 
@@ -1231,6 +1234,51 @@ def kodivertido12(params):
             plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + nuevo_name + "[/COLOR][/B]", url = url, thumbnail = thumb, fanart = thumb, folder = False , isPlayable = True )
         else:
             pass
+
+
+
+##--------- CABECERA    kodivertido13-------------##--------- CABECERA    kodivertido13-------------##--------- CABECERA    kodivertido13-------------##--------- CABECERA    kodivertido13-------------##--------- CABECERA    kodivertido13-------------##--------- CABECERA    kodivertido13-------------##--------- CABECERA    kodivertido13-------------##--------- CABECERA    kodivertido13-------------##
+
+
+def kodivertido13(params):
+    
+    
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] KODIvertiDO X[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/UkdNAKr.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "" , title = "[B][COLOR white]M  [COLOR cyan]E  [COLOR yellow]N  [COLOR aqua]U    [COLOR orangered]LISTA[COLOR yellow]--[COLOR greenyellow] IPTV 13 [/B][/COLOR]" , thumbnail = "https://i.imgur.com/UkdNAKr.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
+
+
+    plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR lime]------------------------------[COLOR aqua] KODIvertiDO X[COLOR lime]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , thumbnail = "https://i.imgur.com/UkdNAKr.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False )
+    
+
+
+    plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/UkdNAKr.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg", folder = False)
+
+
+    
+    url3 = "http://server.hdiptv.world:8080/get.php?username=visiontv38922&password=sx7vXQwYrE&type=m3u_plus&output=mpegts"  
+    header = []
+    header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0" ] )
+    read_url , read_header = plugintools . read_body_and_headers ( url3 , headers = header )
+    url = read_url.strip ()  
+    
+    #matches = re.findall(r'(?s)#EXTINF.*?name="([^"]+).*?logo="([^"]+).*?group-title="([^"]+).*?(http.*?)\s', url, re.DOTALL)
+    matches = re.findall(r'(?s)#EXTINF.*?name="ESP:([^"]+).*?(http://.*?:\d{1,5}/.*?/.*?/\d{1,5})', url, re.DOTALL)
+     
+         
+    for name, url in matches:          
+        name_nuevo = name.strip ()
+        plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name_nuevo + "[/COLOR][/B]", url = url, thumbnail = "https://i.imgur.com/UkdNAKr.jpg", fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
+
+  
+
+
+
+
+
+
+
 
 
 '''   
@@ -3477,8 +3525,11 @@ def vip(params):
 
 
     
-    usuarios = {'marcberr': {'nombre': 'Alberto', 'Apellido': 'Marcos', 'password': '1234'},
-            'Manukodi': {'nombre': 'Manu', 'Apellido': 'Valdemoro', 'password': '1111'}}
+    usuarios = {'Titi': {'nombre': 'Titi', 'Apellido': 'Titi', 'password': 'titi777', 'lista': 'http://stream.iptvesun.com:88/get.php?username=OMtBhKKhfyvCDAv&password=YGMLCCjN6Zjxf8E&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'},
+                'Fran': {'nombre': 'Francisco', 'Apellido': 'Figueroa', 'password': 'fran777', 'lista': 'http://stream.iptvesun.com:88/get.php?username=JCE7ABZktANKeUg&password=DUJGCd6kP0xvrPt&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'},
+                'Manukodi': {'nombre': 'Manu', 'Apellido': 'Valdemoro', 'password': '1111', 'lista': 'http://stream.iptvesun.com:88/get.php?username=MAnfeqxENDfHPrc&password=FquT1MHRDagzJoR&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'},
+                'Thor': {'nombre': 'Pruebas', 'Apellido': 'Test', 'password': 'test777', 'lista': 'http://mu03ye.wanicelife.com:8880/get.php?username=YALM4648&password=ihwa5o9z6&type=m3u_plus&output=mpegts','regex': '(?s)#EXTINF.*?name="ES\d{1,4}:([^"]+).*?logo="(.*?)".*?group-title="([^"]+).*?(http://.*?/.*?/.*?/\d{1,})'}}
+
     for key in usuarios:
         plugintools.add_item ( action = "users" , title = key, thumbnail = "https://i.ibb.co/K7kB4vy/user.png", fanart = "https://i.ibb.co/YQC3Rhm/fondo-vip.jpg" , folder = True , isPlayable = False )
     
@@ -3489,8 +3540,10 @@ def users(params):
 
     d = dialog.input('Introduce tu Contraseña')
 
-    usuarios = {'marcberr': {'nombre': 'Alberto', 'Apellido': 'Marcos', 'password': '1234', 'lista': 'http://stream.iptvesun.com:88/get.php?username=JCE7ABZktANKeUg&password=DUJGCd6kP0xvrPt&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'},
-            'Manukodi': {'nombre': 'Manu', 'Apellido': 'Valdemoro', 'password': '1111', 'lista': 'http://stream.iptvesun.com:88/get.php?username=MAnfeqxENDfHPrc&password=FquT1MHRDagzJoR&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'}}
+    usuarios = {'Titi': {'nombre': 'Titi', 'Apellido': 'Titi', 'password': 'titi777', 'lista': 'http://stream.iptvesun.com:88/get.php?username=OMtBhKKhfyvCDAv&password=YGMLCCjN6Zjxf8E&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'},
+                'Fran': {'nombre': 'Francisco', 'Apellido': 'Figueroa', 'password': 'fran777', 'lista': 'http://stream.iptvesun.com:88/get.php?username=JCE7ABZktANKeUg&password=DUJGCd6kP0xvrPt&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'},
+                'Manukodi': {'nombre': 'Manu', 'Apellido': 'Valdemoro', 'password': '1111', 'lista': 'http://stream.iptvesun.com:88/get.php?username=MAnfeqxENDfHPrc&password=FquT1MHRDagzJoR&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'},
+                'Thor': {'nombre': 'Pruebas', 'Apellido': 'Test', 'password': 'test777', 'lista': 'http://mu03ye.wanicelife.com:8880/get.php?username=YALM4648&password=ihwa5o9z6&type=m3u_plus&output=mpegts','regex': '(?s)#EXTINF.*?name="ES\d{1,4}:([^"]+).*?logo="(.*?)".*?group-title="([^"]+).*?(http://.*?/.*?/.*?/\d{1,})'}}
 
     user_select = params.get ( "title" )
     user_passw = usuarios[user_select]['password']
@@ -3520,8 +3573,10 @@ def entar_lista(params):
 
 
 
-    usuarios = {'marcberr': {'nombre': 'Alberto', 'Apellido': 'Marcos', 'password': '1234', 'lista': 'http://stream.iptvesun.com:88/get.php?username=JCE7ABZktANKeUg&password=DUJGCd6kP0xvrPt&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'},
-            'Manukodi': {'nombre': 'Manu', 'Apellido': 'Valdemoro', 'password': '1111', 'lista': 'http://stream.iptvesun.com:88/get.php?username=MAnfeqxENDfHPrc&password=FquT1MHRDagzJoR&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'}}
+    usuarios = {'Titi': {'nombre': 'Titi', 'Apellido': 'Titi', 'password': 'titi777', 'lista': 'http://stream.iptvesun.com:88/get.php?username=OMtBhKKhfyvCDAv&password=YGMLCCjN6Zjxf8E&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'},
+                'Fran': {'nombre': 'Francisco', 'Apellido': 'Figueroa', 'password': 'fran777', 'lista': 'http://stream.iptvesun.com:88/get.php?username=JCE7ABZktANKeUg&password=DUJGCd6kP0xvrPt&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'},
+                'Manukodi': {'nombre': 'Manu', 'Apellido': 'Valdemoro', 'password': '1111', 'lista': 'http://stream.iptvesun.com:88/get.php?username=MAnfeqxENDfHPrc&password=FquT1MHRDagzJoR&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?.(.*?)".*?logo="(.*?)".*?(http://stream.iptvesun.com:.*?/.*?/.*?/\S{2,})'},
+                'Thor': {'nombre': 'Pruebas', 'Apellido': 'Test', 'password': 'test777', 'lista': 'http://mu03ye.wanicelife.com:8880/get.php?username=YALM4648&password=ihwa5o9z6&type=m3u_plus&output=mpegts','regex': '(?s)#EXTINF.*?name="ES\d{1,4}:([^"]+).*?logo="(.*?)".*?group-title="([^"]+).*?(http://.*?/.*?/.*?/\d{1,})'}}
 
     user_select = params.get ( "plot" )
     user_passw = usuarios[user_select]['password']
@@ -3533,19 +3588,62 @@ def entar_lista(params):
     url3 = usuarios[user_select]['lista']
     categorias = []
     request_headers = []
-    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0"] )
+    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"] )
     read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
     url = read_url.strip ()
 
         #matches = re.findall( r'(?s)#EXTINF:-1.*?tvg-name="(.*?)".*?logo="(.*?)".*?group-title="(.*?)".*?\n(http://mu03ye.wanicelife.com:8880/.*?/\S{2,})', url, re.DOTALL )
     matches = re.findall( regex_lista, url, re.DOTALL )
-    for grup_title, name, thumb, url in matches:
-        if grup_title == 'ES':  
-            plugintools.add_item ( action = "resolve_without_resolveurl" , title = "[B][UPPERCASE][COLOR yellow]" + name + "[/COLOR][/UPPERCASE][/B]" , url = url , thumbnail = thumb , fanart = thumb , folder = False , isPlayable = True )
-        elif grup_title == 'ES-4K':
-            plugintools.add_item ( action = "resolve_without_resolveurl" , title = "[B][UPPERCASE][COLOR lime]" + name + '  4K' + "[/COLOR][/UPPERCASE][/B]" , url = url , thumbnail = thumb , fanart = thumb , folder = False , isPlayable = True )
+    if user_select == "Manukodi" or user_select == "Titi" or user_select == "Fran":
+        for grup_title, name, thumb, url in matches:
+            if grup_title == 'ES':  
+                plugintools.add_item ( action = "resolve_without_resolveurl" , title = "[B][UPPERCASE][COLOR yellow]" + name + "[/COLOR][/UPPERCASE][/B]" , url = url , thumbnail = thumb , fanart = thumb , folder = False , isPlayable = True )
+            elif grup_title == 'ES-4K':
+                plugintools.add_item ( action = "resolve_without_resolveurl" , title = "[B][UPPERCASE][COLOR lime]" + name + '  4K' + "[/COLOR][/UPPERCASE][/B]" , url = url , thumbnail = thumb , fanart = thumb , folder = False , isPlayable = True )
+            else:
+                pass
+    elif user_select == "Thor":
+            
+        categorias = []
+        url = "http://mu03ye.wanicelife.com:8880/get.php?username=YALM4648&password=ihwa5o9z6&type=m3u_plus&output=mpegts"  
+        header = []
+        header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0" ] )
+        read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
+        url = read_url.strip ()  
+        matches = plugintools.find_multiple_matches(url, 'group-title="([^"]+)') 
+        for categoria in sorted(matches): 
+            if categoria not in categorias: 
+                categorias.append(categoria)              
+        categorias.append("Todos")
+        for x in sorted(categorias):
+            if "ES" in x:
+                plugintools . add_item ( action = "fran_opciones" , title =  x , url = x, thumbnail =  "https://i.ibb.co/094V2gH/81-Rgxi-BYh-L.png" , fanart="https://i.imgur.com/d3Lq6JS.jpg", folder = True, isPlayable = False ) 
+    else:
+        pass
+
+def fran_opciones(params):
+
+    categoria = params.get("title")
+    url3 = "http://mu03ye.wanicelife.com:8880/get.php?username=YALM4648&password=ihwa5o9z6&type=m3u_plus&output=mpegts"
+    request_headers = [ ]
+    request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0"] )
+    read_url, response_headers = plugintools.read_body_and_headers ( url3 , headers = request_headers )
+    url = read_url.strip ( )        
+        
+    matches = re.findall(r'(?s)#EXTINF.*?name="(.*?)".*?logo="(.*?)".*?group-title="([^"]+).*?(http.*?)\s', url, re.DOTALL)       
+            
+    for name, thumb, grupo_canales, url in matches:                  
+        if categoria in grupo_canales:
+            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = thumb, fanart = thumb , folder = False , isPlayable = True )
+        elif categoria == "Todos":
+            plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = thumb, fanart = thumb , folder = False , isPlayable = True )
         else:
-            pass
+            pass 
+
+
+
+
+
 
 
 
