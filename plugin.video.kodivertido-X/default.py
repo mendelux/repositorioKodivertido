@@ -683,7 +683,7 @@ def kodivertido_iptv(params):
     plugintools.add_item(action = "", title = "", thumbnail = "https://i.imgur.com/E1eqVTq.jpg", fanart = "https://i.imgur.com/mdBw4t6.jpg", folder = False)
     
 
-    #plugintools.add_item(action = "kodivertido1" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR lime]X[COLOR greenyellow]-[COLOR dodgerblue] IPTV [COLOR magenta] 1[/B][/COLOR]" , thumbnail = "https://i.imgur.com/30Tq1VI.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+    plugintools.add_item(action = "kodivertido1" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR lime]X[COLOR greenyellow]-[COLOR dodgerblue] IPTV [COLOR magenta] 1[/B][/COLOR]" , thumbnail = "https://i.imgur.com/30Tq1VI.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
 
 
     #plugintools.add_item(action = "kodivertido2" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR lime]X[COLOR greenyellow]-[COLOR dodgerblue] IPTV [COLOR magenta] 2[/B][/COLOR]" , thumbnail = "https://i.imgur.com/30Tq1VI.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
@@ -704,7 +704,7 @@ def kodivertido_iptv(params):
     plugintools.add_item(action = "kodivertido7" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR lime]X[COLOR greenyellow]-[COLOR dodgerblue] IPTV [COLOR magenta] 7[/B][/COLOR]" , thumbnail = "https://i.imgur.com/30Tq1VI.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
     
     
-    #plugintools.add_item(action = "kodivertido8" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR lime]X[COLOR greenyellow]-[COLOR dodgerblue] IPTV [COLOR magenta] 8[/B][/COLOR]" , thumbnail = "https://i.imgur.com/30Tq1VI.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
+    plugintools.add_item(action = "kodivertido8" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR lime]X[COLOR greenyellow]-[COLOR dodgerblue] IPTV [COLOR magenta] 8[/B][/COLOR]" , thumbnail = "https://i.imgur.com/30Tq1VI.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
 
 
     #plugintools.add_item(action = "kodivertido9" , title = "[B][COLOR white]KODI[COLOR cyan]verti[COLOR yellow]DO [COLOR lime]X[COLOR greenyellow]-[COLOR dodgerblue] IPTV [COLOR magenta] 9[/B][/COLOR]" , thumbnail = "https://i.imgur.com/30Tq1VI.jpg" , fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = True )
@@ -748,16 +748,16 @@ def kodivertido1(params):
     
      
     
-    url = "http://thewordpad.in:80/get.php?username=andoni&password=andoni&type=m3u_plus&output=ts"
+    url = "http://player.ukwtv.com/get.php?username=3173859397809243&password=2598854265&type=m3u_plus&output=mpegts" # para 3 StreamKodes
     request_headers = [ ]
     request_headers.append ( ["User-Agent" , "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0"] )
     read_url, response_headers = plugintools.read_body_and_headers ( url , headers = request_headers )
     url = read_url.strip ( )
     
-    matches = re.findall(r'(?s)#EXTINF:-1.*?tvg-name="(.*?)".*?logo="(.*?)".*?group-title="(.*?)".*?\n(http://thewordpad.in:8880.*?\d{2,6})', url, re.DOTALL)
+    matches = re.findall(r'(?s)#EXTINF:-1.*?name=".*?\s(.*?)".*?logo="(.*?)".*?group-title="(.*?)".*?(http://.*?/.*?/.*?/\d{1,})', url, re.DOTALL)
               
     for name, thumb, grupo_canales, url in matches:                            
-        if "ESPAÑA" in grupo_canales:    
+        if "ESPANA" in grupo_canales:    
             plugintools.add_item (action = "resolve_without_resolveurl", title = "[B][COLOR yellow]" + name + "[/COLOR][/B]", url = url, thumbnail = thumb, fanart = "https://i.imgur.com/d3Lq6JS.jpg" , folder = False , isPlayable = True )
         
         else:
@@ -1001,17 +1001,17 @@ def kodivertido7(params):    # esta ok
 
     
     categorias = []
-    url = "http://la.iptvdinmax.eu:2052/get.php?username=Roque&password=Roque&type=m3u"  
+    url = "http://la.iptvdinmax.eu:2052/get.php?username=Roque&password=Roque&type=m3u_plus&output=mpegts"  
     header = []
     header . append ( [ "User-Agent" , "Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0" ] )
     read_url , read_header = plugintools . read_body_and_headers ( url , headers = header )
     url = read_url.strip ()  
     
     #matches = re.findall(r'(?s)#EXTINF.*?name="([^"]+).*?logo="([^"]+).*?group-title="([^"]+).*?(http.*?)\s', url, re.DOTALL)
-    matches = re.findall(r'(?s)#EXTINF:-1,\|(.*?)\|.*?.(.*?)\n(.*?)\s', url, re.DOTALL)
+    matches = re.findall(r'(?s)#EXTINF:-1.*?name="\|(.*?)\|.*?\s(.*?)".*?logo="(.*?)".*?group-title="(.*?)".*?(http://.*?/.*?/.*?/\d{1,})', url, re.DOTALL)
      
          
-    for grupo, name, url in matches:                  
+    for grupo, name, logo, grup_title, url in matches:                  
         
         if grupo == 'ES':
             name_nuevo = name.strip()
@@ -1022,7 +1022,7 @@ def kodivertido7(params):    # esta ok
         else:
             pass
 
-'''
+
 
 ##--------- CABECERA   kodivertido8-------------##--------- CABECERA   kodivertido8-------------##--------- CABECERA   kodivertido8-------------##--------- CABECERA   kodivertido8-------------##--------- CABECERA   kodivertido8-------------##--------- CABECERA   kodivertido8-------------##--------- CABECERA   kodivertido8-------------##--------- CABECERA   kodivertido8-------------##
 
@@ -1066,7 +1066,7 @@ def kodivertido8(params):
         else:
             pass
 
-
+'''
 
 ##--------- CABECERA    kodivertido9-------------##--------- CABECERA    kodivertido9-------------##--------- CABECERA    kodivertido9-------------##--------- CABECERA    kodivertido9-------------##--------- CABECERA    kodivertido9-------------##--------- CABECERA    kodivertido9-------------##--------- CABECERA    kodivertido9-------------##--------- CABECERA    kodivertido9-------------##
 
@@ -3536,7 +3536,7 @@ def vip(params):
                 'Libre3': {'nombre': 'libre3', 'Apellido': 'libre3', 'password': 'libre3777', 'fechas': 'Alta: 30-09-2021 // Caduca: 30-09-2022', 'lista': 'http://toptentv.xyz/get.php?username=3143235159892653&password=2598854265&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|ES\|.*?(.*?)".*?logo="(.*?)".*?group-title="(.*?\s).*?(http://.*?/.*?/.*?/\d{1,})'}}
 
     for key in usuarios:
-        plugintools.add_item ( action = "users" , title = key, thumbnail = "https://i.ibb.co/K7kB4vy/user.png", fanart = "https://i.ibb.co/YQC3Rhm/fondo-vip.jpg" , folder = True , isPlayable = False )
+        plugintools.add_item ( action = "users" , title = '[B][UPPERCASE][COLOR gold]' + key + '[/COLOR][/UPPERCASE][/B]', plot = key, thumbnail = "https://i.ibb.co/K7kB4vy/user.png", fanart = "https://i.ibb.co/YQC3Rhm/fondo-vip.jpg" , folder = True , isPlayable = False )
     
 def users(params):    
     
@@ -3552,10 +3552,10 @@ def users(params):
                 'Conan-Oyarzun': {'nombre': 'Conan-Oyarzun', 'Apellido': 'Conan-Oyarzun', 'password': 'conan777', 'fechas': 'Alta: 29-09-2021 // Caduca: 29-09-2022', 'lista': 'http://mu03ye.wanicelife.com:8880/get.php?username=YALM4648&password=ihwa5o9z6&type=m3u_plus&output=mpegts','regex': '(?s)#EXTINF:-1.*?name=".*?:(.*?)".*?logo="(.*?)".*?group-title="(.*?)".*?(http://.*?/.*?/.*?/\d{1,})'},
                 'Rafa Bera': {'nombre': 'Rafa Bera', 'Apellido': 'Rafa Bera', 'password': 'rafa777', 'fechas': 'Alta: 29-09-2021 // Caduca: 29-09-2022', 'lista': 'http://mu03ye.wanicelife.com:8880/get.php?username=YALM4648&password=ihwa5o9z6&type=m3u_plus&output=mpegts','regex': '(?s)#EXTINF:-1.*?name=".*?:(.*?)".*?logo="(.*?)".*?group-title="(.*?)".*?(http://.*?/.*?/.*?/\d{1,})'},
                 'Libre1': {'nombre': 'libre1', 'Apellido': 'libre1', 'password': 'libre1777', 'fechas': 'Alta: 30-09-2021 // Caduca: 30-09-2022', 'lista': 'http://toptentv.xyz/get.php?username=3143235159892653&password=2598854265&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name=".*?\s(.*?)".*?logo="(.*?)".*?group-title="(.*?)".*?(http://.*?/.*?/.*?/\d{1,})'},
-                'Libre2': {'nombre': 'libre2', 'Apellido': 'libre2', 'password': 'libre2777', 'fechas': 'Alta: 30-09-2021 // Caduca: 30-09-2022', 'lista': 'http://toptentv.xyz/get.php?username=3143235159892653&password=2598854265&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|ES\|.*?(.*?)".*?logo="(.*?)".*?group-title="(.*?\s).*?(http://.*?/.*?/.*?/\d{1,})'},
-                'Libre3': {'nombre': 'libre3', 'Apellido': 'libre3', 'password': 'libre3777', 'fechas': 'Alta: 30-09-2021 // Caduca: 30-09-2022', 'lista': 'http://toptentv.xyz/get.php?username=3143235159892653&password=2598854265&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name="\|ES\|.*?(.*?)".*?logo="(.*?)".*?group-title="(.*?\s).*?(http://.*?/.*?/.*?/\d{1,})'}}
+                'Libre2': {'nombre': 'libre2', 'Apellido': 'libre2', 'password': 'libre2777', 'fechas': 'Alta: 30-09-2021 // Caduca: 30-09-2022', 'lista': 'http://toptentv.xyz/get.php?username=3143235159892653&password=2598854265&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name=".*?\s(.*?)".*?logo="(.*?)".*?group-title="(.*?)".*?(http://.*?/.*?/.*?/\d{1,})'},
+                'Libre3': {'nombre': 'libre3', 'Apellido': 'libre3', 'password': 'libre3777', 'fechas': 'Alta: 30-09-2021 // Caduca: 30-09-2022', 'lista': 'http://toptentv.xyz/get.php?username=3143235159892653&password=2598854265&output=ts&type=m3u_plus','regex': '(?s)#EXTINF:-1.*?name=".*?\s(.*?)".*?logo="(.*?)".*?group-title="(.*?)".*?(http://.*?/.*?/.*?/\d{1,})'}}
 
-    user_select = params.get ( "title" )
+    user_select = params.get ( "plot" )
     user_passw = usuarios[user_select]['password']
     user_nombre = usuarios[user_select]['nombre']
     user_apellido = usuarios[user_select]['Apellido']
