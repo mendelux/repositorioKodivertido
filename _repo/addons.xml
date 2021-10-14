@@ -33,7 +33,7 @@
 </addon>
 
 <addon
-	id="plugin.video.kodivertido-X" version="12.6.0" name="[B][COLOR white]KODI[COLOR gold]verti[COLOR yellow]DO[COLOR lime] X[/COLOR][/B]" provider-name="equipo KODIvertiDO">
+	id="plugin.video.kodivertido-X" version="12.7.0" name="[B][COLOR white]KODI[COLOR gold]verti[COLOR yellow]DO[COLOR lime] X[/COLOR][/B]" provider-name="equipo KODIvertiDO">
 <requires>
     <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
