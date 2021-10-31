@@ -13,12 +13,7 @@ import xbmcgui
 import xbmcaddon
 import xbmcplugin
 import plugintools
-import unicodedata
-import base64
 import requests
-import shutil
-import base64
-import time
 import six
 import xbmcvfs
 addon = xbmcaddon.Addon()

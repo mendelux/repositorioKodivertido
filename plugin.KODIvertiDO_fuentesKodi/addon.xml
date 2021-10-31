@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="2.0" encoding="UTF-8"?>
 <addon
 	id="plugin.KODIvertiDO_fuentesKodi" version="1.0" name="[B][COLOR white]KODIvertiDO_[COLOR gold]fuentesKodi[/COLOR][/B]" provider-name="equipo KODIvertiDO">
-<requires>
-    <import addon="plugin.video.youtube" /> 
+<requires> 
     <import addon="script.module.requests" />
     <import addon="script.module.resolveurl" />
     <import addon="script.module.six" />
@@ -14,7 +13,7 @@
                 <platform>all</platform>
 		<summary lang="en">KODIvertiDO_fuentesKodi</summary>
 		<summary lang="da">KODIvertiDO_fuentesKodi</summary>
-		<description lang="en">[B][LOWERCASE][CAPITALIZE][COLOR white]KODIvertiDO_fuentesKodi addon dedicado añadir las fuentes actualizadas[COLOR aqua] para KODI.Para consultas y resolver problemas  unete  a nuestro grupo de telegram [COLOR yellow]@Kodivertido Team[/COLOR][/CAPITALIZE][/LOWERCASE][/B]</description>
+		<description lang="en">[B][COLOR white]KODIvertiDO_fuentesKodi actualiza las fuentes de vuestro KODI con las fuentes mas recientes.[COLOR blue]Para consultas y resolver problemas unete a nuestro grupo de telegram[COLOR yellow] ** [COLOR lightblue] KODIvertiDO[COLOR blue]TEAM [COLOR yellow] ** [/COLOR][/B]</description>
 		<website></website>
 		<license>GPL 2.0</license>
 		<platform>all</platform>
