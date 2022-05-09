@@ -32,7 +32,7 @@
 </addon>
 
 <addon
-	id="plugin.video.kodivertido-X" version="20.0.0" name="[B][COLOR white]KODI[COLOR gold]verti[COLOR yellow]DO[COLOR lime] X[/COLOR][/B]" provider-name="equipo KODIvertiDO">
+	id="plugin.video.kodivertido-X" version="20.1.0" name="[B][COLOR white]KODI[COLOR gold]verti[COLOR yellow]DO[COLOR lime] X[/COLOR][/B]" provider-name="equipo KODIvertiDO">
 <requires>
     <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
@@ -60,8 +60,36 @@
 		<platform>all</platform>
 <assets>
         <icon>icon.gif</icon>
-  <screenshot>resources/screenshots/screenshot1.jpg</screenshot>
-  <screenshot>resources/screenshots/screenshot2.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot1.gif</screenshot>
+  <screenshot>resources/screenshots/screenshot2.gif</screenshot>
+  <screenshot>resources/screenshots/screenshot3.jpg</screenshot>
+        <fanart>fanart.jpg</fanart>
+</assets>
+		<language>es</language>
+	</extension>
+</addon>
+
+<addon
+	id="plugin.video.KODIvertiDOstream" version="1.0" name="[B][COLOR white]KODI[COLOR gold]verti[COLOR yellow]DO[COLOR lime]stream[/COLOR][/B]" provider-name="equipo KODIvertiDO TEAM">
+<requires>
+    <import addon="script.module.requests" />
+    <import addon="script.module.resolveurl" />
+  </requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+                <platform>all</platform>
+		<summary lang="en">KODIvertiDOstream</summary>
+		<summary lang="da">KODIvertiDOstream</summary>
+		<description lang="en">[B][LOWERCASE][CAPITALIZE][COLOR white]KODIvertiDOstream esta realizado para concer un Addon de video y como ejemplo de lo que podemos hacer con python en Kodi.Un saludo a toda esa buena gente de KODIvertiDO TEAM[COLOR aqua] Todo un placer [COLOR yellow]Mendelux[/COLOR][/CAPITALIZE][/LOWERCASE][/B]</description>
+		<website></website>
+		<license>GPL 2.0</license>
+		<platform>all</platform>
+<assets>
+        <icon>icon.png</icon>
+  <screenshot>resources/screenshots/screenshot1.png</screenshot>
+  <screenshot>resources/screenshots/screenshot2.gif</screenshot>
   <screenshot>resources/screenshots/screenshot3.jpg</screenshot>
   <screenshot>resources/screenshots/screenshot4.jpg</screenshot>
   <screenshot>resources/screenshots/screenshot5.jpg</screenshot>

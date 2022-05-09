@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.kodivertido-X" version="20.0.0" name="[B][COLOR white]KODI[COLOR gold]verti[COLOR yellow]DO[COLOR lime] X[/COLOR][/B]" provider-name="equipo KODIvertiDO">
+	id="plugin.video.kodivertido-X" version="20.1.0" name="[B][COLOR white]KODI[COLOR gold]verti[COLOR yellow]DO[COLOR lime] X[/COLOR][/B]" provider-name="equipo KODIvertiDO">
 <requires>
     <import addon="plugin.video.youtube" /> 
     <import addon="script.module.requests" />
@@ -28,13 +28,11 @@
 		<platform>all</platform>
 <assets>
         <icon>icon.gif</icon>
-  <screenshot>resources/screenshots/screenshot1.jpg</screenshot>
-  <screenshot>resources/screenshots/screenshot2.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot1.gif</screenshot>
+  <screenshot>resources/screenshots/screenshot2.gif</screenshot>
   <screenshot>resources/screenshots/screenshot3.jpg</screenshot>
-  <screenshot>resources/screenshots/screenshot4.jpg</screenshot>
-  <screenshot>resources/screenshots/screenshot5.jpg</screenshot>
         <fanart>fanart.jpg</fanart>
-    </assets>        
+</assets>        
 		<language>es</language>
 	</extension>
 </addon>
