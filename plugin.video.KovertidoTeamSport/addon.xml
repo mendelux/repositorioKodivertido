@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+	id="plugin.video.KovertidoTeamSport" version="1.0" name="[B][COLOR white]Kodi[COLOR gold]verti[COLOR yellow]do[COLOR gold]Team[COLOR lime]Sport[/COLOR][/B]" provider-name="equipo KODIvertiDO TEAM">
+<requires>
+    <import addon="script.module.requests" />
+    <import addon="script.module.resolveurl" /> 
+  </requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>	
+	<extension point="xbmc.addon.metadata">
+                <platform>all</platform>
+		<summary lang="en">KovertidoTeamSport</summary>
+		<summary lang="da">KovertidoTeamSport</summary>
+		<description lang="en">
+[COLOR white]Complemento gratuito que no aloja ningun contenido.               Todo el contenido se encuentra en internet.No se acepta ninguna responsabilidad por el uso de este addon.[/COLOR]</description>
+		<website></website>
+		<license>GPL 2.0</license>
+		<platform>all</platform>
+<assets>
+        <icon>icon.gif</icon>
+  <screenshot>resources/screenshots/screenshot1.gif</screenshot>
+  <screenshot>resources/screenshots/screenshot2.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot3.png</screenshot>
+        <fanart>fanart.jpg</fanart>
+    </assets>        
+		<language>es</language>
+	</extension>
+</addon>
